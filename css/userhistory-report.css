@@ -1,0 +1,233 @@
+.content-wrap main .table table tr .label div{
+	width: auto;
+}
+.content-wrap main .table table tr td{
+	text-align: center;
+}
+.content-wrap main .table table .text-left{
+	text-align: left;
+}
+.content-wrap main .table table .text-left-pad{
+	padding-left: 0.83vw;
+}
+.content-wrap main .table table tr td{
+	padding: 0.7vw 0;
+}
+.content-wrap main .table table tr .two-column span:first-child{
+	float: left;
+	padding-left: 2.6vw;
+}
+.content-wrap main .table table tr .two-column span:last-child{
+	float: right;
+	padding-right: 2.6vw;
+}
+.content-wrap main .table table tr .five-column span{
+	display: inline-block;
+	width: 18%;
+	text-align: center;
+}
+.content-wrap main .table table tr .three-column span{
+	width: 33%;
+	display: inline-block;
+	text-align: center;
+}
+.content-wrap main .table table tr td .export{
+	text-align: center;
+    border: none;
+    font-size: 0.93vw;
+    background-color: #c30d23;
+    color: #fff;
+    padding: 0.8vw 2.5vw;
+    border-radius: 4px;
+    display: inline-block;
+    width: auto;
+    height: auto;
+}
+.content-wrap main .table table tr td .print{
+	text-align: center;
+    border: none;
+    font-size: 0.93vw;
+    background-color: #61a4fc;
+    color: #fff;
+    padding: 0.8vw 2.5vw;
+    border-radius: 4px;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    margin-left: 2.5vw;
+}
+/*选择导出时间的弹窗*/
+.time-overlay{
+	width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 100;
+}
+.time-content{
+	width: 28vw;
+    margin: 0 auto;
+    background-color: #fff;
+    margin-top: 13%;
+    padding-bottom: 1vw;
+}
+.time-title{
+	width: 100%;
+    background-color: #C30D23;
+    position: relative;
+    padding: 0.5vw 0;
+}
+.time-title span{
+	color: #fff;
+    font-size: 0.83vw;
+    padding-left: 0.4vw;
+}
+.time-title img{
+	position: absolute;
+    right: 0.4vw;
+    width: 0.83vw;
+    top: 50%;
+    margin-top: -0.4vw;
+}
+.time-con table{
+	width: 93%;
+    margin: 0 auto;
+    margin-top: 1.6vw;
+    table-layout: fixed;
+}
+.time-con table tr .label{
+	background-color: #F3F4F7;
+	color: #666;
+	padding: 0.4vw 0.6vw;
+}
+.time-con table tbody tr td{
+	border: 1px solid #aaa;
+    font-size: 0.72vw;
+    color: #666;
+    text-align: center;
+    position: relative;
+}
+.time-con table tbody tr td input,select{
+	width: 100%;
+	height: 100%;
+	border: none;
+	resize: none;
+	font-size: 0.72vw;
+}
+.time-con table tfoot tr td{
+	text-align: center;
+	
+}
+.time-con table tfoot tr td input[type='submit']{
+	width: 6.25vw;
+    height: 2vw;
+    background-color: #C30D23;
+    color: #fff;
+    font-size: 0.83vw;
+    border: none;
+    border-radius: 5px;
+    margin-top: 1.6vw;
+    margin-right: 1.6vw;
+}
+.time-con table tfoot tr td input[type='reset']{
+	width: 6.25vw;
+    height: 2vw;
+    background-color: #ccc;
+    color: #fff;
+    font-size: 0.83vw;
+    border: none;
+    border-radius: 5px;
+    margin-top: 1.6vw;
+    margin-right: 1.6vw;
+}
+/*导出成功的弹窗*/
+.export-overlay{
+	width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 100;
+}
+.export-content{
+	width: 28vw;
+    margin: 0 auto;
+    background-color: #fff;
+    margin-top: 13%;
+    padding-bottom: 1vw;
+}
+.export-title{
+	width: 100%;
+    background-color: #C30D23;
+    position: relative;
+    padding: 0.5vw 0;
+}
+.export-title span{
+	color: #fff;
+    font-size: 0.83vw;
+    padding-left: 0.4vw;
+}
+.export-title img{
+	position: absolute;
+    right: 0.4vw;
+    width: 0.83vw;
+    top: 50%;
+    margin-top: -0.4vw;
+}
+.export-con h2{
+	text-align: center;
+	font-size: 1.1vw;
+	font-weight: bold;
+	margin-top: 1.2vw;
+}
+.export-con p{
+	text-align: center;
+	font-size: 0.83vw;
+	margin-top: 0.8vw;
+}
+.export-con a{
+	width: 6.25vw;
+	height: 2vw;
+	display: block;
+	text-align: center;
+	line-height: 2vw;
+	font-size: 0.83vw;
+	background-color: #C30D23;
+	color: #fff;
+	margin: 0 auto;
+	border-radius: 4px;
+	margin-top: 0.8vw;
+	margin-bottom: 0.8vw;
+	cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

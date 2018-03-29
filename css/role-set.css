@@ -1,0 +1,89 @@
+.content-wrap .li-wrapper ul li div{
+	padding: 0.8vw 0;
+	border-bottom: 1px solid #EFEFEF;
+	cursor: pointer;
+	
+}
+.content-wrap .li-wrapper ul li .xiala i{
+	width: 0.6vw;
+	height: 0.52vw;
+	background: url(../img/xiala.png) no-repeat center center;
+	background-size: cover;
+	display: inline-block;
+	margin-right: 0.72vw;
+}
+.content-wrap .li-wrapper ul li .shouqi i{
+	width: 0.52vw;
+	height: 0.6vw;
+	background: url(../img/shouhui.png) no-repeat center center;
+	background-size: cover; 
+	display: inline-block;
+	margin-right: 0.72vw;
+}
+.content-wrap .li-wrapper ul li div input[type='checkbox']{
+	width: 0.72vw;
+	height: 0.72vw;
+	background: url(../img/weixuanzhong.png) no-repeat center center;
+	background-size: cover;
+	border: none;
+	-webkit-appearance: none;
+	margin-right:0.4vw ;
+}
+.content-wrap .li-wrapper ul li div input[type='checkbox']:checked{
+	background: url(../img/xuanzhong.png) no-repeat center center;
+	background-size: cover;
+}
+.content-wrap .li-wrapper ul li .first-div{
+	padding-left: 0.8vw;
+	border-bottom: 2px solid #EFEFEF;
+}
+.content-wrap .li-wrapper ul li div span{
+	vertical-align: middle;
+}
+.content-wrap .li-wrapper ul li .first-div span{
+	font-size: 1vw;
+	color: #333;
+}
+.content-wrap .li-wrapper ul li .second-div{
+	padding-left: 3.3vw;
+}
+.content-wrap .li-wrapper ul li .second-div span{
+	font-size: 0.93vw;
+	color: #333;
+}
+.content-wrap .li-wrapper ul li .three-div{
+	padding-left: 5.8vw;
+}
+.content-wrap .li-wrapper ul li .three-div span{
+	font-size: 0.83vw;
+	color: #333;
+}
+.content-wrap .li-wrapper ul li .four-div{
+	padding-left: 8.2vw;
+}
+.content-wrap .li-wrapper ul li .four-div span{
+	font-size: 0.72vw;
+	color: #666;
+}
+.content-wrap .li-wrapper .second-ul{
+	display: none;
+}
+.content-wrap .li-wrapper .three-ul{
+	display: none;
+}
+.content-wrap .check-form .buttons{
+	text-align: center;
+	margin-top: 3vw;
+}
+.content-wrap .check-form .buttons input{
+	font-size: 0.93vw;
+	color: #fff;
+	padding: 0.8vw 3vw;
+	border-radius: 4px;
+	background-color: #C30D23;
+	border: none;
+}
+.content-wrap .check-form .buttons input[type='reset']{
+	background-color: #ccc;
+	margin-left: 2.5vw;
+}

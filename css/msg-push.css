@@ -1,0 +1,166 @@
+.msg-overlay{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.3);
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: none;
+	z-index: 100;
+}
+.msg-overlay .msg-content{
+	width: 28vw;
+	margin: 0 auto;
+	background-color: #fff;
+	margin-top: 13%;
+}
+.msg-overlay .msg-content .msg-title{
+	width: 100%;
+	background-color: #C30D23;
+	position: relative;
+	padding: 0.5vw 0;
+}
+.msg-overlay .msg-content .msg-title span{
+	color: #fff;
+	font-size: 0.83vw;
+	padding-left: 0.4vw;
+}
+.msg-overlay .msg-content .msg-title img{
+	position: absolute;
+	right: 0.4vw;
+	width: 0.83vw;
+	top: 50%;
+	margin-top: -0.4vw;
+}
+.msg-overlay .msg-content .msg-con{
+	padding-top: 2vw;
+	padding-bottom: 1vw;
+	padding-left: 2vw;
+	padding-right: 2vw;
+}
+.msg-overlay .msg-content .msg-con select{
+	width: 11vw;
+    border-color: #e0e0e0;
+    font-size: 0.83vw;
+    padding: 0.6vw 0;
+    padding-left: 0.4vw;
+    margin-right: 1.1vw;
+}
+.msg-overlay .msg-content .msg-con .top input[type='date']{
+	padding-top: calc(0.6vw - 1.5px);
+    padding-bottom: calc(0.6vw - 1.5px);
+    margin-right: 0.6vw;
+}
+.msg-overlay .msg-content .msg-con .top input{
+	width: 11vw;
+    border-color: #e0e0e0;
+    font-size: 0.83vw;
+    padding: 0.6vw 0;
+    padding-left: 0.4vw;
+}
+.msg-overlay .msg-content .msg-con textarea{
+	width: calc(100% - 0.4vw);
+    font-size: 0.83vw;
+    border-color: #e0e0e0;
+    resize: none;
+    padding-top: 0.6vw;
+    padding-left: 0.4vw;
+    margin-top: 1.6vw;
+}
+.msg-overlay .msg-content .msg-con .anniu-jihe input{
+	padding: 0.4vw 2vw;
+    border: none;
+    font-size: 0.93vw;
+    color: #fff;
+    border-radius: 4px;
+    margin-top: 1.6vw;
+}
+.msg-overlay .msg-content .msg-con .anniu-jihe input[type='submit']{
+	background-color: #C30D23;
+	margin-right: 1.6vw;
+	margin-left: 4.9vw;
+}
+.msg-overlay .msg-content .msg-con .anniu-jihe input[type='reset']{
+	background-color: #ccc;
+}
+/*查看推送消息弹窗*/
+.check-overlay{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.3);
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: none;
+	z-index: 100;
+}
+.check-overlay .msg-content{
+	width: 28vw;
+	margin: 0 auto;
+	background-color: #fff;
+	margin-top: 13%;
+}
+.check-overlay .msg-content .msg-title{
+	width: 100%;
+	background-color: #C30D23;
+	position: relative;
+	padding: 0.5vw 0;
+}
+.check-overlay .msg-content .msg-title span{
+	color: #fff;
+	font-size: 0.83vw;
+	padding-left: 0.4vw;
+}
+.check-overlay .msg-content .msg-title img{
+	position: absolute;
+	right: 0.4vw;
+	width: 0.83vw;
+	top: 50%;
+	margin-top: -0.4vw;
+}
+.check-overlay .msg-content .msg-con{
+	padding-top: 2vw;
+	padding-bottom: 2vw;
+	padding-left: 2vw;
+	padding-right: 2vw;
+}
+.check-overlay .msg-content .msg-con select{
+	width: 11vw;
+    border-color: #e0e0e0;
+    font-size: 0.83vw;
+    padding: 0.6vw 0;
+    padding-left: 0.4vw;
+    margin-right: 1.1vw;
+}
+.check-overlay .msg-content .msg-con .top input{
+	width: 11vw;
+    border-color: #e0e0e0;
+    font-size: 0.83vw;
+    padding: 0.6vw 0;
+    padding-left: 0.4vw;
+}
+.check-overlay .msg-content .msg-con textarea{
+	width: calc(100% - 0.4vw);
+    font-size: 0.83vw;
+    border-color: #e0e0e0;
+    resize: none;
+    padding-top: 0.6vw;
+    padding-left: 0.4vw;
+    margin-top: 1.6vw;
+}
+.check-overlay .msg-content .msg-con .anniu-jihe input{
+	padding: 0.4vw 2vw;
+    border: none;
+    font-size: 0.93vw;
+    color: #fff;
+    border-radius: 4px;
+    margin-top: 1.6vw;
+}
+.check-overlay .msg-content .msg-con .anniu-jihe input[type='submit']{
+	background-color: #C30D23;
+	margin-right: 1.6vw;
+	margin-left: 4.9vw;
+}
+.check-overlay .msg-content .msg-con .anniu-jihe input[type='reset']{
+	background-color: #ccc;
+}

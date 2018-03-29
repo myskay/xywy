@@ -1,0 +1,1389 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>用户管理-用户健康履历</title>
+		<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+		<link rel="stylesheet" type="text/css" href="css/initialize.css"/>
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="css/add-user.css"/>
+		<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/valiform.css"/>
+		<link rel="stylesheet" type="text/css" href="css/userhealth-info.css"/>
+		<link rel="stylesheet" type="text/css" href="css/userhealth-record.css"/>
+		<script src="js/jquery.js"></script>
+		<script src="js/common.js"></script>
+		<script src="js/forget.js"></script>
+		<script src="js/jquery-ui.min.js"></script>
+		<script src="js/Validform.js"></script>
+		<script src="js/userhealth-record.js"></script>
+	</head>
+	<body>
+		<!--导航栏-->
+		<header>
+			<div class="header-con">
+				<div class="header-logo">
+				   <a href="#"><img src="img/shouye-logo.png"/></a>
+			    </div>
+			    <div class="search">
+			    	<img src="img/sousuo.png" id="search-box"/>
+			    </div>
+			    <!--搜索框-->
+			   <div id="sb-search" class="sb-search">
+			    			<form>
+			    				<input class="sb-search-input" placeholder="请输入用户名或手机号"  type="text" value="" name="search" id="search"/>
+			    				<input class="sb-search-submit" type="submit" value="" />
+			    				<span class="sb-icon-search"><img src="img/white-sousuo.png"/></span>
+			    			</form>
+			    </div>
+			    <ul class="header-nav">
+			    	<li><a href="index.html" >首页</a></li>
+			    	<li><a href="user-manage.html">用户管理</a></li>
+			    	<li><a href="wtist-meter.html">设备管理</a></li>
+			    	<li><a href="todo-sos.html">工单管理</a></li>
+			    	<li><a href="startup.html">运营管理</a></li>
+			    	<li><a href="service-list.html">系统管理</a></li>
+			    	<li><a href="useradd-count.html">数据统计</a></li>
+			    </ul>
+			    <div class="header-personal">
+			    	<div class="upload">
+			    		<!--<input type="file" name="file" title="Change" class="form-control doc " multiple="multiple" id="doc">-->
+			    		<img src="img/touxiang.png" class="img1"/>
+			    	</div>
+			    	<div class="personal">
+			    		<p class="name">吃吃</p>
+			    		<p class="role">角色:<span>客服组</span></p>
+			    	</div>
+			    	<div style="clear: both;"></div>
+			    		<ul class="personal-xiala">
+			    		    <li class="gaimima"><a href="#">修改密码</a></li>
+			    		    <li class="quit"><a href="#">退出登录</a></li>
+			    	    </ul>
+			    </div>
+			    <div style="clear: both;"></div>
+			</div>
+		</header>
+		<!--导航栏结束-->
+        <!--修改密码弹窗-->
+		<div class="revise-overlay">
+	        <div class="revise-content">
+		         <div class="con-title">
+			        <span class="">修改密码</span>
+			        <img src="img/guanbi.png" class="close"/>
+		         </div>
+		         <div class="container">
+			        <form class="form-signin">
+				         <div class="login-wrap">
+					       <input type="text" class="form-text tel-box" placeholder="请输入绑定的手机号" maxlength="11" id="tel-box">
+				        </div>
+				        <div class="mask">
+					        <div class="code-alert">获取验证码成功</div>
+				        </div>
+				       <div class="login-else">
+					        <input type="text" placeholder="请输入验证码" class="form-text test-code" id="code-box">
+					        <button class="getcode" type="button" id="send">发送</button>
+				       </div>
+
+				       <p class="alert-box"></p>
+				       <div class="login-else login-pwd">
+					       <input type="password" placeholder="请输入新密码" class="form-text test-code" id="pwd1">
+					       <button class="getcode" type="button" id="showhidePwd"></button>
+				       </div>
+				       <div class="login-else login-text">
+					       <input type="text" placeholder="请输入新密码" class="form-text test-code" id="pwd2">
+					       <button class="getcode" type="button" id="hideshowPwd"></button>
+				       </div>
+				       <input type="submit" value="确定" class="login">
+			        </form>
+		        </div>
+	        </div>
+        </div>
+		<!--退出登录弹窗-->
+		<div class="quit-overlay">
+			<div class="quit-content">
+		         <div class="con-title">
+			        <span class="">退出登录</span>
+			        <img src="img/guanbi.png" class="close"/>
+		         </div>
+		         <div class="quit-con">
+		   	        <p>确定要退出后台系统吗?</p>
+		   	        <div class="quit-jihe">
+		   	           <button class="sure">确认</button>
+		   	           <button class="cancel">返回</button>
+		   	        </div>
+		        </div>
+		  </div>
+		</div>
+	    <!--主要内容-->
+	    <section class="content-wrap">
+	    	<div class="container">
+	    		<aside>
+	    			<ul class="aside-ul">
+	    				<li class="li">
+	    					<span class="li-title selected" onclick="window.location.href='user-manage.html'">用户管理<img src="img/left-fanhui.png"/></span>
+	    					<ul>
+	    						<li><a href="add-user.html">新增用户</a></li>
+	    					</ul>
+	    				</li>
+	    			</ul>
+	    		</aside>
+	    		<main>
+	    			<ul>
+	    				<li><a href="add-user.html">用户基本信息</a></li>
+	    				<li><a href="user-aboutperson.html">用户关联人信息</a></li>
+	    				<li><a href="userhealth-info.html">用户健康信息</a></li>
+	    				<li><a href="userhealth-record.html">用户健康履历</a></li>
+	    				<li><a href="userdrug-record.html">用户用药记录</a></li>
+	    				<li><a href="usertest-record.html">用户体检记录</a></li>
+	    				<li><a href="user-hobby.html">用户特长爱好</a></li>
+	    				<li><a href="userabout-info.html">挂钩服务者信息</a></li>
+	    				<div style="clear: both;"></div>
+	    			</ul>
+	    			<div class="form">
+	    				<form>
+	    					<!--疾病列表-->
+	    					<table class="disease-table">
+	    						<thead>
+	    							<tr>
+	    								<td colspan="7">疾病列表</td>
+	    							</tr>
+	    							<tr>
+	    								<td colspan="7">
+	    									<button>新增</button>
+	    								</td>
+	    							</tr>
+	    						</thead>
+	    						<tbody>
+	    							<tr>
+	    								<td>序号</td>
+	    								<td>疾病名称</td>
+	    								<td>确诊时间</td>
+	    								<td>确诊医院或社区</td>
+	    								<td>目前状态</td>
+	    								<td>备注</td>
+	    								<td>操作</td>
+	    							</tr>
+	    							<tr>
+	    								<td>1</td>
+	    								<td>强直性脊柱炎</td>
+	    								<td>2017-1-8</td>
+	    								<td>天通中医院</td>
+	    								<td>治疗中</td>
+	    								<td>正在化疗</td>
+	    								<td>
+	    									<a class="check-disease"><img src="img/chakanxiangqing.png"/></a>
+	    								    <a class="revise-disease"><img src="img/xiugaixinxi.png"/></a>
+	    								</td>
+	    							</tr>
+	    						</tbody>
+	    					</table>
+                            <!--手术列表-->
+                            <table class="ops-table">
+	    						<thead>
+	    							<tr>
+	    								<td colspan="7">手术列表</td>
+	    							</tr>
+	    							<tr>
+	    								<td colspan="7">
+	    									<button>新增</button>
+	    								</td>
+	    							</tr>
+	    						</thead>
+	    						<tbody>
+	    							<tr>
+	    								<td>序号</td>
+	    								<td>手术</td>
+	    								<td>手术时间</td>
+	    								<td>医院名称</td>
+	    								<td>备注</td>
+	    								<td>操作</td>
+	    							</tr>
+	    							<tr>
+	    								<td>1</td>
+	    								<td>强直性脊柱炎</td>
+	    								<td>2017-1-8</td>
+	    								<td>天通中医院</td>
+	    								<td>治疗中</td>
+	    								<td>
+	    									<a class="check-ops"><img src="img/chakanxiangqing.png"/></a>
+	    								    <a class="revise-ops"><img src="img/xiugaixinxi.png"/></a>
+	    								</td>
+	    							</tr>
+	    						</tbody>
+	    					</table>
+                            <!--外伤列表-->
+                            <table class="trauma-table">
+	    						<thead>
+	    							<tr>
+	    								<td colspan="7">外伤列表</td>
+	    							</tr>
+	    							<tr>
+	    								<td colspan="7">
+	    									<button>新增</button>
+	    								</td>
+	    							</tr>
+	    						</thead>
+	    						<tbody>
+	    							<tr>
+	    								<td>序号</td>
+	    								<td>外伤名称</td>
+	    								<td>发生时间</td>
+	    								<td>医院名称</td>
+	    								<td>备注</td>
+	    								<td>操作</td>
+	    							</tr>
+	    							<tr>
+	    								<td>1</td>
+	    								<td>骨折</td>
+	    								<td>2017-1-8</td>
+	    								<td>天通中医院</td>
+	    								<td>治疗中</td>
+	    								<td>
+	    									<a class="check-trauma"><img src="img/chakanxiangqing.png"/></a>
+	    								    <a class="revise-trauma"><img src="img/xiugaixinxi.png"/></a>
+	    								</td>
+	    							</tr>
+	    						</tbody>
+	    					</table>
+                            <!--输血列表-->
+                            <table class="blood-table">
+	    						<thead>
+	    							<tr>
+	    								<td colspan="7">输血列表</td>
+	    							</tr>
+	    							<tr>
+	    								<td colspan="7">
+	    									<button>新增</button>
+	    								</td>
+	    							</tr>
+	    						</thead>
+	    						<tbody>
+	    							<tr>
+	    								<td>序号</td>
+	    								<td>输血原因</td>
+	    								<td>发生时间</td>
+	    								<td>输血量</td>
+	    								<td>备注</td>
+	    								<td>操作</td>
+	    							</tr>
+	    							<tr>
+	    								<td>1</td>
+	    								<td>输血</td>
+	    								<td>2017-1-8</td>
+	    								<td>天通中医院</td>
+	    								<td>治疗中</td>
+	    								<td>
+	    									<a class="check-blood"><img src="img/chakanxiangqing.png"/></a>
+	    								    <a class="revise-blood"><img src="img/xiugaixinxi.png"/></a>
+	    								</td>
+	    							</tr>
+	    						</tbody>
+	    					</table>
+                            <!--家族史列表-->
+                            <table class="family-table">
+	    						<thead>
+	    							<tr>
+	    								<td colspan="7">家族史列表</td>
+	    							</tr>
+	    							<tr>
+	    								<td colspan="7">
+	    									<button>新增</button>
+	    								</td>
+	    							</tr>
+	    						</thead>
+	    						<tbody>
+	    							<tr>
+	    								<td>序号</td>
+	    								<td>关系</td>
+	    								<td>疾病名称</td>
+	    								<td>备注</td>
+	    								<td>操作</td>
+	    							</tr>
+	    							<tr>
+	    								<td>1</td>
+	    								<td>母女</td>
+	    								<td>心脏病</td>
+	    								<td>治疗中</td>
+	    								<td>
+	    									<a class="check-family"><img src="img/chakanxiangqing.png"/></a>
+	    								    <a class="revise-family"><img src="img/xiugaixinxi.png"/></a>
+	    								</td>
+	    							</tr>
+	    						</tbody>
+	    					</table>
+	    					<!--遗传病史列表-->
+	    					<table class="history-table">
+	    						<thead>
+	    							<tr>
+	    								<td colspan="7">遗传病史列表</td>
+	    							</tr>
+	    							<tr>
+	    								<td colspan="7">
+	    									<button>新增</button>
+	    								</td>
+	    							</tr>
+	    						</thead>
+	    						<tbody>
+	    							<tr>
+	    								<td>序号</td>
+	    								<td>疾病名称</td>
+	    								<td>确认感染时间</td>
+	    								<td>诊断医院</td>
+	    								<td>备注</td>
+	    								<td>操作</td>
+	    							</tr>
+	    							<tr>
+	    								<td>1</td>
+	    								<td>心脏病</td>
+	    								<td>2015</td>
+	    								<td>医院</td>
+	    								<td>治疗中</td>
+	    								<td>
+	    									<a class="check-history"><img src="img/chakanxiangqing.png"/></a>
+	    								    <a class="revise-history"><img src="img/xiugaixinxi.png"/></a>
+	    								</td>
+	    							</tr>
+	    						</tbody>
+	    					</table>
+                            <!--就诊记录表-->	    					
+                            <table class="hospital-table">
+	    						<thead>
+	    							<tr>
+	    								<td colspan="7">就诊记录表</td>
+	    							</tr>
+	    							<tr>
+	    								<td colspan="7">
+	    									<button>新增</button>
+	    								</td>
+	    							</tr>
+	    						</thead>
+	    						<tbody>
+	    							<tr>
+	    								<td>序号</td>
+	    								<td>就诊医院</td>
+	    								<td>就诊时间</td>
+	    								<td>就诊科室</td>
+	    								<td>操作</td>
+	    							</tr>
+	    							<tr>
+	    								<td>1</td>
+	    								<td>天通苑</td>
+	    								<td>2018</td>
+	    								<td>外科</td>
+	    								<td>
+	    									<a class="check-hospital"><img src="img/chakanxiangqing.png"/></a>
+	    								    <a class="revise-hospital"><img src="img/xiugaixinxi.png"/></a>
+	    								</td>
+	    							</tr>
+	    						</tbody>
+	    					</table>
+     				   </form>
+     				   <form>
+     				   	  <!--药物过敏史列表-->
+                            <table class="drug-table">
+	    						<thead>
+	    							<tr>
+	    								<td colspan="7">药物过敏史列表</td>
+	    							</tr>
+	    							<tr>
+	    								<td colspan="7">
+	    									<button>新增</button>
+	    								</td>
+	    							</tr>
+	    						</thead>
+	    						<tbody>
+	    							<tr>
+	    								<td width="10%">抗生类药物</td>
+	    								<td width="90%">
+	    									<input type="checkbox" name="name"/>
+	    									<label>青霉素</label>
+	    								</td>
+	    							</tr>
+	    							<tr>
+	    								<td>磺胺类药物</td>
+	    								<td colspan="6">
+	    									<input type="checkbox" name="name"/>
+	    									<label>长效磺胺</label>
+	    								</td>
+	    							</tr>
+	    							<tr>
+	    								<td>镇定安眠药</td>
+	    								<td colspan="6">
+	    									<input type="checkbox" name="name"/>
+	    									<label>安眠</label>
+	    								</td>
+	    							</tr>
+	    							<tr>
+	    								<td>解热镇痛药</td>
+	    								<td colspan="6">
+	    									<input type="checkbox" name="name"/>
+	    									<label>阿莫西林</label>
+	    								</td>
+	    							</tr>
+	    							<tr>
+	    								<td>麻醉用药</td>
+	    								<td colspan="6">
+	    									<input type="checkbox" name="name"/>
+	    									<label>普鲁卡因</label>
+	    								</td>
+	    							</tr>
+	    							<tr>
+	    								<td>血清制剂</td>
+	    								<td colspan="6">
+	    									<input type="checkbox" name="name"/>
+	    									<label>动物血清</label>
+	    								</td>
+	    							</tr>
+	    							<tr>
+	    								<td>丸药</td>
+	    								<td colspan="6">
+	    									<input type="checkbox" name="name"/>
+	    									<label>六神丸</label>
+	    								</td>
+	    							</tr>
+	    							<tr>
+	    								<td>其他过敏药</td>
+	    								<td colspan="6">
+	    									<input type="checkbox" name="name"/>
+	    									<label>头孢</label>
+	    								</td>
+	    							</tr>
+	    						</tbody>
+	    					</table>
+	    					<!--是否残疾-->
+	    					<table class="drug-table">
+	    						<thead>
+	    							<tr>
+	    								<td colspan="7">药物过敏史列表</td>
+	    							</tr>
+	    						</thead>
+	    						<tbody>
+	    							<tr>
+	    								<td>选择选项</td>
+	    								<td colspan="6">
+	    									<input type="checkbox" name="name"/>
+	    									<label>无残疾</label>
+	    									<input type="checkbox" name="name"/>
+	    									<label>听力残疾</label>
+	    									<input type="checkbox" name="name"/>
+	    									<label>言语残疾</label>
+	    									<input type="checkbox" name="name"/>
+	    									<label>肢体残疾</label>
+	    									<input type="checkbox" name="name"/>
+	    									<label>智力残疾</label>
+	    									<input type="checkbox" name="name"/>
+	    									<label>视力残疾</label>
+	    									<input type="checkbox" name="name"/>
+	    									<label>精神残疾 </label>
+	    								</td>
+	    							</tr>
+	    							<tr>
+	    								<td>残疾证号</td>
+	    								<td colspan="6">
+	    									<input type="text" placeholder="请在此输入残疾证号" />
+	    								</td>
+	    							</tr>
+	    						</tbody>
+	    						<tfoot>
+	    							<tr>
+	    								<td colspan="7">
+	    									<input type="submit" value="确定" />
+	    								</td>
+	    							</tr>
+	    						</tfoot>
+	    					</table>
+     				   </form>
+	    			</div>
+	    		</main>
+	    		<div style="clear: both;"></div>
+	    	</div>
+	    </section>
+	    <!--新增疾病列表弹窗-->
+        <div class="disease-overlay">
+            <div class="disease-content">
+                <div class="disease-title">
+                    <span>新增疾病</span>
+                    <img src="img/guanbi.png" class="close" />
+                </div>
+                <div class="disease-con">
+                    <form class="check-form">
+                        <table>
+	                        <tbody>
+	                        	 <tr>
+		                           <td class="label">疾病名称</td>
+		                           <td colspan="2"><input type="text" dataType='*'/></td>
+	                             </tr>
+	                             <tr>
+		                           <td class="label">确诊时间</td>
+		                           <td colspan="2"><input type="date" dataType='*'/></td>
+	                             </tr>
+	                             <tr>
+		                           <td class="label">诊断医院或社区</td>
+		                           <td colspan="2"><input type="text" dataType='*'/></td>
+	                             </tr>
+	                             <tr>
+		                           <td class="label">现在状态</td>
+		                           <td colspan="2">
+			                             <select dataType='*'>
+				                             <option>--请选择--</option>
+				                             <option value="1">有好转</option>
+				                             <option value="2">无好转</option>
+				                             <option value="3">痊愈</option>
+			                             </select>
+		                            </td>
+	                               </tr>
+	                               <tr>
+		                             <td class="label">备注</td>
+		                              <td colspan="2">
+			                           <textarea rows="5" dataType='*'></textarea>
+		                              </td>
+	                                </tr>
+	                        </tbody>
+	                         <tfoot>
+	                         	<tr>
+	 	                          <td colspan="3">
+			                            <input type="submit" value="确定" />
+			                            <input type="reset" value="取消" />
+		                          </td>
+	                            </tr>
+	                         </tfoot>
+                        </table>
+                    </form>
+                 </div>
+             </div>
+         </div>
+	    <!--查看疾病列表弹窗-->
+	    <div class="checkdisease-overlay">
+            <div class="checkdisease-content">
+                <div class="checkdisease-title">
+                    <span>查看疾病</span>
+                    <img src="img/guanbi.png" class="close" />
+                </div>
+                <div class="checkdisease-con">
+                        <table>
+	                        <tbody>
+	                        	 <tr>
+		                           <td class="label">疾病名称</td>
+		                           <td colspan="2"><input type="text" value="感冒"/></td>
+	                             </tr>
+	                             <tr>
+		                           <td class="label">确诊时间</td>
+		                           <td colspan="2"><input type="date" value="2018"/></td>
+	                             </tr>
+	                             <tr>
+		                           <td class="label">诊断医院或社区</td>
+		                           <td colspan="2"><input type="text" value="天通苑"/></td>
+	                             </tr>
+	                             <tr>
+		                           <td class="label">现在状态</td>
+		                           <td colspan="2">
+			                             <select >
+				                             <option>--请选择--</option>
+				                             <option value="1" selected="selected">有好转</option>
+				                             <option value="2">无好转</option>
+				                             <option value="3">痊愈</option>
+			                             </select>
+		                            </td>
+	                               </tr>
+	                               <tr>
+		                             <td class="label">备注</td>
+		                              <td colspan="2">
+			                           <textarea rows="5">
+			                           	无
+			                           </textarea>
+		                              </td>
+	                                </tr>
+	                        </tbody>
+                        </table>
+                 </div>
+             </div>
+         </div>
+	    <!--修改疾病列表弹窗-->
+	    <div class="revisedisease-overlay">
+            <div class="revisedisease-content">
+                <div class="revisedisease-title">
+                    <span>修改疾病</span>
+                    <img src="img/guanbi.png" class="close" />
+                </div>
+                <div class="revisedisease-con">
+                    <form class="check-form">
+                        <table>
+	                        <tbody>
+	                        	 <tr>
+		                           <td class="label">疾病名称</td>
+		                           <td colspan="2"><input type="text" dataType='*'/></td>
+	                             </tr>
+	                             <tr>
+		                           <td class="label">确诊时间</td>
+		                           <td colspan="2"><input type="date" dataType='*'/></td>
+	                             </tr>
+	                             <tr>
+		                           <td class="label">诊断医院或社区</td>
+		                           <td colspan="2"><input type="text" dataType='*'/></td>
+	                             </tr>
+	                             <tr>
+		                           <td class="label">现在状态</td>
+		                           <td colspan="2">
+			                             <select dataType='*'>
+				                             <option>--请选择--</option>
+				                             <option value="1">有好转</option>
+				                             <option value="2">无好转</option>
+				                             <option value="3">痊愈</option>
+			                             </select>
+		                            </td>
+	                               </tr>
+	                               <tr>
+		                             <td class="label">备注</td>
+		                              <td colspan="2">
+			                           <textarea rows="5" dataType='*'></textarea>
+		                              </td>
+	                                </tr>
+	                        </tbody>
+	                         <tfoot>
+	                         	<tr>
+	 	                          <td colspan="3">
+			                            <input type="submit" value="确定" />
+			                            <input type="reset" value="取消" />
+		                          </td>
+	                            </tr>
+	                         </tfoot>
+                        </table>
+                    </form>
+                 </div>
+             </div>
+         </div>
+	    <!--新增手术列表弹窗-->
+	    <div class="ops-overlay">
+            <div class="ops-content">
+                <div class="ops-title">
+                    <span>新增手术</span>
+                    <img src="img/guanbi.png" class="close" />
+                </div>
+                <div class="ops-con">
+                    <form class="check-form">
+                        <table>
+	                        <tbody>
+	                        	 <tr>
+		                           <td class="label">手术名称</td>
+		                           <td colspan="2"><input type="text" dataType='*'/></td>
+	                             </tr>
+	                             <tr>
+		                           <td class="label">手术时间</td>
+		                           <td colspan="2"><input type="date" dataType='*'/></td>
+	                             </tr>
+	                             <tr>
+		                           <td class="label">医院名称</td>
+		                           <td colspan="2"><input type="text" dataType='*'/></td>
+	                             </tr>
+	                               <tr>
+		                             <td class="label">备注</td>
+		                              <td colspan="2">
+			                           <textarea rows="5" dataType='*'></textarea>
+		                              </td>
+	                                </tr>
+	                        </tbody>
+	                         <tfoot>
+	                         	<tr>
+	 	                          <td colspan="3">
+			                            <input type="submit" value="确定" />
+			                            <input type="reset" value="取消" />
+		                          </td>
+	                            </tr>
+	                         </tfoot>
+                        </table>
+                    </form>
+                 </div>
+             </div>
+         </div>
+        <!--查看手术弹窗-->
+        <div class="checkops-overlay">
+            <div class="checkops-content">
+                <div class="checkops-title">
+                    <span>查看手术</span>
+                    <img src="img/guanbi.png" class="close" />
+                </div>
+                <div class="checkops-con">
+                        <table>
+	                        <tbody>
+	                        	 <tr>
+		                           <td class="label">手术名称</td>
+		                           <td colspan="2"><input type="text" dataType='*'/></td>
+	                             </tr>
+	                             <tr>
+		                           <td class="label">手术时间</td>
+		                           <td colspan="2"><input type="date" dataType='*'/></td>
+	                             </tr>
+	                             <tr>
+		                           <td class="label">医院名称</td>
+		                           <td colspan="2"><input type="text" dataType='*'/></td>
+	                             </tr>
+	                               <tr>
+		                             <td class="label">备注</td>
+		                              <td colspan="2">
+			                           <textarea rows="5" dataType='*'></textarea>
+		                              </td>
+	                                </tr>
+	                        </tbody>
+                        </table>
+                 </div>
+             </div>
+         </div>
+        <!--修改手术弹窗-->
+        <div class="reviseops-overlay">
+            <div class="reviseops-content">
+                <div class="reviseops-title">
+                    <span>修改手术</span>
+                    <img src="img/guanbi.png" class="close" />
+                </div>
+                <div class="reviseops-con">
+                    <form class="check-form">
+                        <table>
+	                        <tbody>
+	                        	 <tr>
+		                           <td class="label">手术名称</td>
+		                           <td colspan="2"><input type="text" dataType='*'/></td>
+	                             </tr>
+	                             <tr>
+		                           <td class="label">手术时间</td>
+		                           <td colspan="2"><input type="date" dataType='*'/></td>
+	                             </tr>
+	                             <tr>
+		                           <td class="label">医院名称</td>
+		                           <td colspan="2"><input type="text" dataType='*'/></td>
+	                             </tr>
+	                               <tr>
+		                             <td class="label">备注</td>
+		                              <td colspan="2">
+			                           <textarea rows="5" dataType='*'></textarea>
+		                              </td>
+	                                </tr>
+	                        </tbody>
+	                         <tfoot>
+	                         	<tr>
+	 	                          <td colspan="3">
+			                            <input type="submit" value="确定" />
+			                            <input type="reset" value="取消" />
+		                          </td>
+	                            </tr>
+	                         </tfoot>
+                        </table>
+                    </form>
+                 </div>
+             </div>
+         </div>
+	    <!--新增外伤弹窗-->
+	     <div class="trauma-overlay">
+            <div class="trauma-content">
+                <div class="trauma-title">
+                    <span>新增外伤</span>
+                    <img src="img/guanbi.png" class="close" />
+                </div>
+                <div class="trauma-con">
+                    <form class="check-form">
+                        <table>
+	                        <tbody>
+	                        	 <tr>
+		                           <td class="label">手术名称</td>
+		                           <td colspan="2"><input type="text" dataType='*'/></td>
+	                             </tr>
+	                             <tr>
+		                           <td class="label">手术时间</td>
+		                           <td colspan="2"><input type="date" dataType='*'/></td>
+	                             </tr>
+	                             <tr>
+		                           <td class="label">医院名称</td>
+		                           <td colspan="2"><input type="text" dataType='*'/></td>
+	                             </tr>
+	                               <tr>
+		                             <td class="label">备注</td>
+		                              <td colspan="2">
+			                           <textarea rows="5" dataType='*'></textarea>
+		                              </td>
+	                                </tr>
+	                        </tbody>
+	                         <tfoot>
+	                         	<tr>
+	 	                          <td colspan="3">
+			                            <input type="submit" value="确定" />
+			                            <input type="reset" value="取消" />
+		                          </td>
+	                            </tr>
+	                         </tfoot>
+                        </table>
+                    </form>
+                 </div>
+             </div>
+         </div>
+	     <!--查看外伤弹窗-->
+	     <div class="checktrauma-overlay">
+            <div class="checktrauma-content">
+                <div class="checktrauma-title">
+                    <span>查看外伤</span>
+                    <img src="img/guanbi.png" class="close" />
+                </div>
+                <div class="checktrauma-con">
+                        <table>
+	                        <tbody>
+	                        	 <tr>
+		                           <td class="label">手术名称</td>
+		                           <td colspan="2"><input type="text" dataType='*'/></td>
+	                             </tr>
+	                             <tr>
+		                           <td class="label">手术时间</td>
+		                           <td colspan="2"><input type="date" dataType='*'/></td>
+	                             </tr>
+	                             <tr>
+		                           <td class="label">医院名称</td>
+		                           <td colspan="2"><input type="text" dataType='*'/></td>
+	                             </tr>
+	                               <tr>
+		                             <td class="label">备注</td>
+		                              <td colspan="2">
+			                           <textarea rows="5" dataType='*'></textarea>
+		                              </td>
+	                                </tr>
+	                        </tbody>
+                        </table>
+                 </div>
+             </div>
+         </div>
+	     <!--修改外伤的弹窗-->
+	     <div class="revisetrauma-overlay">
+            <div class="revisetrauma-content">
+                <div class="revisetrauma-title">
+                    <span>修改外伤</span>
+                    <img src="img/guanbi.png" class="close" />
+                </div>
+                <div class="revisetrauma-con">
+                    <form class="check-form">
+                        <table>
+	                        <tbody>
+	                        	 <tr>
+		                           <td class="label">手术名称</td>
+		                           <td colspan="2"><input type="text" dataType='*'/></td>
+	                             </tr>
+	                             <tr>
+		                           <td class="label">手术时间</td>
+		                           <td colspan="2"><input type="date" dataType='*'/></td>
+	                             </tr>
+	                             <tr>
+		                           <td class="label">医院名称</td>
+		                           <td colspan="2"><input type="text" dataType='*'/></td>
+	                             </tr>
+	                               <tr>
+		                             <td class="label">备注</td>
+		                              <td colspan="2">
+			                           <textarea rows="5" dataType='*'></textarea>
+		                              </td>
+	                                </tr>
+	                        </tbody>
+	                         <tfoot>
+	                         	<tr>
+	 	                          <td colspan="3">
+			                            <input type="submit" value="确定" />
+			                            <input type="reset" value="取消" />
+		                          </td>
+	                            </tr>
+	                         </tfoot>
+                        </table>
+                    </form>
+                 </div>
+             </div>
+         </div>
+	     <!--新增输血的弹窗-->
+	     <div class="blood-overlay">
+            <div class="blood-content">
+                <div class="blood-title">
+                    <span>新增输血</span>
+                    <img src="img/guanbi.png" class="close" />
+                </div>
+                <div class="blood-con">
+                    <form class="check-form">
+                        <table>
+	                        <tbody>
+	                        	 <tr>
+		                           <td class="label">输血原因</td>
+		                           <td colspan="2"><input type="text" dataType='*'/></td>
+	                             </tr>
+	                             <tr>
+		                           <td class="label">输血时间</td>
+		                           <td colspan="2"><input type="date" dataType='*'/></td>
+	                             </tr>
+	                             <tr>
+		                           <td class="label">输血量</td>
+		                           <td colspan="2"><input type="text" dataType='*'/></td>
+	                             </tr>
+	                               <tr>
+		                             <td class="label">备注</td>
+		                              <td colspan="2">
+			                           <textarea rows="5" dataType='*'></textarea>
+		                              </td>
+	                                </tr>
+	                        </tbody>
+	                         <tfoot>
+	                         	<tr>
+	 	                          <td colspan="3">
+			                            <input type="submit" value="确定" />
+			                            <input type="reset" value="取消" />
+		                          </td>
+	                            </tr>
+	                         </tfoot>
+                        </table>
+                    </form>
+                 </div>
+             </div>
+         </div>
+	     <!--查看输血的弹窗-->
+	      <div class="checkblood-overlay">
+            <div class="checkblood-content">
+                <div class="checkblood-title">
+                    <span>查看输血</span>
+                    <img src="img/guanbi.png" class="close" />
+                </div>
+                <div class="checkblood-con">
+                        <table>
+	                        <tbody>
+	                        	 <tr>
+		                           <td class="label">输血原因</td>
+		                           <td colspan="2"><input type="text" dataType='*'/></td>
+	                             </tr>
+	                             <tr>
+		                           <td class="label">输血时间</td>
+		                           <td colspan="2"><input type="date" dataType='*'/></td>
+	                             </tr>
+	                             <tr>
+		                           <td class="label">输血量</td>
+		                           <td colspan="2"><input type="text" dataType='*'/></td>
+	                             </tr>
+	                               <tr>
+		                             <td class="label">备注</td>
+		                              <td colspan="2">
+			                           <textarea rows="5" dataType='*'></textarea>
+		                              </td>
+	                                </tr>
+	                        </tbody>
+                        </table>
+                 </div>
+             </div>
+         </div>
+	      <!--修改输血的弹窗-->
+	      <div class="reviseblood-overlay">
+            <div class="reviseblood-content">
+                <div class="reviseblood-title">
+                    <span>修改输血</span>
+                    <img src="img/guanbi.png" class="close" />
+                </div>
+                <div class="reviseblood-con">
+                    <form class="check-form">
+                        <table>
+	                        <tbody>
+	                        	 <tr>
+		                           <td class="label">输血原因</td>
+		                           <td colspan="2"><input type="text" dataType='*'/></td>
+	                             </tr>
+	                             <tr>
+		                           <td class="label">输血时间</td>
+		                           <td colspan="2"><input type="date" dataType='*'/></td>
+	                             </tr>
+	                             <tr>
+		                           <td class="label">输血量</td>
+		                           <td colspan="2"><input type="text" dataType='*'/></td>
+	                             </tr>
+	                               <tr>
+		                             <td class="label">备注</td>
+		                              <td colspan="2">
+			                           <textarea rows="5" dataType='*'></textarea>
+		                              </td>
+	                                </tr>
+	                        </tbody>
+	                         <tfoot>
+	                         	<tr>
+	 	                          <td colspan="3">
+			                            <input type="submit" value="确定" />
+			                            <input type="reset" value="取消" />
+		                          </td>
+	                            </tr>
+	                         </tfoot>
+                        </table>
+                    </form>
+                 </div>
+             </div>
+         </div>
+	      <!--新增家族史列表-->
+	      <div class="family-overlay">
+            <div class="family-content">
+                <div class="family-title">
+                    <span>新增家族史</span>
+                    <img src="img/guanbi.png" class="close" />
+                </div>
+                <div class="family-con">
+                    <form class="check-form">
+                        <table>
+	                        <tbody>
+	                        	 <tr>
+		                           <td class="label">疾病名称</td>
+		                           <td colspan="2"><input type="text" dataType='*'/></td>
+	                             </tr>
+	                             <tr>
+		                           <td class="label">关系</td>
+		                           <td colspan="2"><input type="text" dataType='*'/></td>
+	                             </tr>
+	                               <tr>
+		                             <td class="label">备注</td>
+		                              <td colspan="2">
+			                           <textarea rows="5" dataType='*'></textarea>
+		                              </td>
+	                                </tr>
+	                        </tbody>
+	                         <tfoot>
+	                         	<tr>
+	 	                          <td colspan="3">
+			                            <input type="submit" value="确定" />
+			                            <input type="reset" value="取消" />
+		                          </td>
+	                            </tr>
+	                         </tfoot>
+                        </table>
+                    </form>
+                 </div>
+             </div>
+         </div>
+           <!--查看家族史的弹窗-->
+           <div class="checkfamily-overlay">
+            <div class="checkfamily-content">
+                <div class="checkfamily-title">
+                    <span>查看家族史</span>
+                    <img src="img/guanbi.png" class="close" />
+                </div>
+                <div class="checkfamily-con">
+                        <table>
+	                        <tbody>
+	                        	 <tr>
+		                           <td class="label">疾病名称</td>
+		                           <td colspan="2"><input type="text" /></td>
+	                             </tr>
+	                             <tr>
+		                           <td class="label">关系</td>
+		                           <td colspan="2"><input type="text" /></td>
+	                             </tr>
+	                               <tr>
+		                             <td class="label">备注</td>
+		                              <td colspan="2">
+			                           <textarea rows="5" ></textarea>
+		                              </td>
+	                                </tr>
+	                        </tbody>
+                        </table>
+                 </div>
+             </div>
+         </div>
+           	<!--修改家族史的弹窗-->
+           <div class="revisefamily-overlay">
+            <div class="revisefamily-content">
+                <div class="revisefamily-title">
+                    <span>修改家族史</span>
+                    <img src="img/guanbi.png" class="close" />
+                </div>
+                <div class="revisefamily-con">
+                    <form class="check-form">
+                        <table>
+	                        <tbody>
+	                        	 <tr>
+		                           <td class="label">疾病名称</td>
+		                           <td colspan="2"><input type="text" dataType='*'/></td>
+	                             </tr>
+	                             <tr>
+		                           <td class="label">关系</td>
+		                           <td colspan="2"><input type="text" dataType='*'/></td>
+	                             </tr>
+	                               <tr>
+		                             <td class="label">备注</td>
+		                              <td colspan="2">
+			                           <textarea rows="5" dataType='*'></textarea>
+		                              </td>
+	                                </tr>
+	                        </tbody>
+	                         <tfoot>
+	                         	<tr>
+	 	                          <td colspan="3">
+			                            <input type="submit" value="确定" />
+			                            <input type="reset" value="取消" />
+		                          </td>
+	                            </tr>
+	                         </tfoot>
+                        </table>
+                    </form>
+                 </div>
+             </div>
+         </div>
+	       <!--新增遗传史的弹窗-->
+	       <div class="history-overlay">
+            <div class="history-content">
+                <div class="history-title">
+                    <span>新增遗传史</span>
+                    <img src="img/guanbi.png" class="close" />
+                </div>
+                <div class="history-con">
+                    <form class="check-form">
+                        <table>
+	                        <tbody>
+	                        	 <tr>
+		                           <td class="label">疾病名称</td>
+		                           <td colspan="2"><input type="text" dataType='*'/></td>
+	                             </tr>
+	                             <tr>
+		                           <td class="label">确认感染时间</td>
+		                           <td colspan="2"><input type="date" dataType='*'/></td>
+	                             </tr>
+	                             <tr>
+		                           <td class="label">诊断医院</td>
+		                           <td colspan="2"><input type="text" dataType='*'/></td>
+	                             </tr>
+	                               <tr>
+		                             <td class="label">备注</td>
+		                              <td colspan="2">
+			                           <textarea rows="5" dataType='*'></textarea>
+		                              </td>
+	                                </tr>
+	                        </tbody>
+	                         <tfoot>
+	                         	<tr>
+	 	                          <td colspan="3">
+			                            <input type="submit" value="确定" />
+			                            <input type="reset" value="取消" />
+		                          </td>
+	                            </tr>
+	                         </tfoot>
+                        </table>
+                    </form>
+                 </div>
+             </div>
+         </div>
+           <!--查看遗传史的弹窗-->
+            <div class="checkhistory-overlay">
+            <div class="checkhistory-content">
+                <div class="checkhistory-title">
+                    <span>修改遗传史</span>
+                    <img src="img/guanbi.png" class="close" />
+                </div>
+                <div class="checkhistory-con">
+                        <table>
+	                        <tbody>
+	                        	 <tr>
+		                           <td class="label">疾病名称</td>
+		                           <td colspan="2"><input type="text" dataType='*'/></td>
+	                             </tr>
+	                             <tr>
+		                           <td class="label">确认感染时间</td>
+		                           <td colspan="2"><input type="date" dataType='*'/></td>
+	                             </tr>
+	                             <tr>
+		                           <td class="label">诊断医院</td>
+		                           <td colspan="2"><input type="text" dataType='*'/></td>
+	                             </tr>
+	                               <tr>
+		                             <td class="label">备注</td>
+		                              <td colspan="2">
+			                           <textarea rows="5" dataType='*'></textarea>
+		                              </td>
+	                                </tr>
+	                        </tbody>
+                        </table>
+                 </div>
+             </div>
+         </div>
+           <!--修改遗传史的弹窗-->
+           <div class="revisehistory-overlay">
+            <div class="revisehistory-content">
+                <div class="revisehistory-title">
+                    <span>修改遗传史</span>
+                    <img src="img/guanbi.png" class="close" />
+                </div>
+                <div class="revisehistory-con">
+                    <form class="check-form">
+                        <table>
+	                        <tbody>
+	                        	 <tr>
+		                           <td class="label">疾病名称</td>
+		                           <td colspan="2"><input type="text" dataType='*'/></td>
+	                             </tr>
+	                             <tr>
+		                           <td class="label">确认感染时间</td>
+		                           <td colspan="2"><input type="date" dataType='*'/></td>
+	                             </tr>
+	                             <tr>
+		                           <td class="label">诊断医院</td>
+		                           <td colspan="2"><input type="text" dataType='*'/></td>
+	                             </tr>
+	                               <tr>
+		                             <td class="label">备注</td>
+		                              <td colspan="2">
+			                           <textarea rows="5" dataType='*'></textarea>
+		                              </td>
+	                                </tr>
+	                        </tbody>
+	                         <tfoot>
+	                         	<tr>
+	 	                          <td colspan="3">
+			                            <input type="submit" value="确定" />
+			                            <input type="reset" value="取消" />
+		                          </td>
+	                            </tr>
+	                         </tfoot>
+                        </table>
+                    </form>
+                 </div>
+             </div>
+         </div>
+            <!--新增就诊纪录列表-->
+           <div class="hospital-overlay">
+            <div class="hospital-content">
+                <div class="hospital-title">
+                    <span>新增就诊</span>
+                    <img src="img/guanbi.png" class="close" />
+                </div>
+                <div class="hospital-con">
+                    <form class="check-form">
+                        <table>
+	                        <tbody>
+	                        	 <tr>
+		                           <td class="label">就诊医院</td>
+		                           <td colspan="2"><input type="text" dataType='*'/></td>
+	                             </tr>
+	                             <tr>
+		                           <td class="label">就诊时间</td>
+		                           <td colspan="2"><input type="date" dataType='*'/></td>
+	                             </tr>
+	                             <tr>
+		                           <td class="label">就诊科室</td>
+		                           <td colspan="2"><input type="text" dataType='*'/></td>
+	                             </tr>
+	                               <tr>
+		                             <td class="label">备注</td>
+		                              <td colspan="2">
+			                           <textarea rows="5" dataType='*'></textarea>
+		                              </td>
+	                                </tr>
+	                        </tbody>
+	                         <tfoot>
+	                         	<tr>
+	 	                          <td colspan="3">
+			                            <input type="submit" value="确定" />
+			                            <input type="reset" value="取消" />
+		                          </td>
+	                            </tr>
+	                         </tfoot>
+                        </table>
+                    </form>
+                 </div>
+             </div>
+         </div>
+           <!--查看就诊弹窗-->            
+           <div class="checkhospital-overlay">
+            <div class="checkhospital-content">
+                <div class="checkhospital-title">
+                    <span>查看就诊</span>
+                    <img src="img/guanbi.png" class="close" />
+                </div>
+                <div class="checkhospital-con">
+                        <table>
+	                        <tbody>
+	                        	 <tr>
+		                           <td class="label">就诊医院</td>
+		                           <td colspan="2"><input type="text" dataType='*'/></td>
+	                             </tr>
+	                             <tr>
+		                           <td class="label">就诊时间</td>
+		                           <td colspan="2"><input type="date" dataType='*'/></td>
+	                             </tr>
+	                             <tr>
+		                           <td class="label">就诊科室</td>
+		                           <td colspan="2"><input type="text" dataType='*'/></td>
+	                             </tr>
+	                               <tr>
+		                             <td class="label">备注</td>
+		                              <td colspan="2">
+			                           <textarea rows="5" dataType='*'></textarea>
+		                              </td>
+	                                </tr>
+	                        </tbody>
+                        </table>
+                 </div>
+             </div>
+         </div>
+           <!--修改就诊弹窗-->            
+            <div class="revisehospital-overlay">
+            <div class="revisehospital-content">
+                <div class="revisehospital-title">
+                    <span>修改就诊</span>
+                    <img src="img/guanbi.png" class="close" />
+                </div>
+                <div class="revisehospital-con">
+                    <form class="check-form">
+                        <table>
+	                        <tbody>
+	                        	 <tr>
+		                           <td class="label">就诊医院</td>
+		                           <td colspan="2"><input type="text" dataType='*'/></td>
+	                             </tr>
+	                             <tr>
+		                           <td class="label">就诊时间</td>
+		                           <td colspan="2"><input type="date" dataType='*'/></td>
+	                             </tr>
+	                             <tr>
+		                           <td class="label">就诊科室</td>
+		                           <td colspan="2"><input type="text" dataType='*'/></td>
+	                             </tr>
+	                               <tr>
+		                             <td class="label">备注</td>
+		                              <td colspan="2">
+			                           <textarea rows="5" dataType='*'></textarea>
+		                              </td>
+	                                </tr>
+	                        </tbody>
+	                         <tfoot>
+	                         	<tr>
+	 	                          <td colspan="3">
+			                            <input type="submit" value="确定" />
+			                            <input type="reset" value="取消" />
+		                          </td>
+	                            </tr>
+	                         </tfoot>
+                        </table>
+                    </form>
+                 </div>
+             </div>
+         </div>
+           <!--新增药物过敏弹窗-->
+           <div class="drug-overlay">
+            <div class="drug-content">
+                <div class="drug-title">
+                    <span>新增药物过敏史</span>
+                    <img src="img/guanbi.png" class="close" />
+                </div>
+                <div class="drug-con">
+                    <form class="check-form">
+                        <table>
+	                        <tbody>
+	                        	 <tr>
+		                           <td class="label">过敏药品名称</td>
+		                           <td colspan="2"><input type="text" dataType='*'/></td>
+	                            </tr>
+	                        </tbody>
+	                         <tfoot>
+	                         	<tr>
+	 	                          <td colspan="3">
+			                            <input type="submit" value="确定" />
+			                            <input type="reset" value="取消" />
+		                          </td>
+	                            </tr>
+	                         </tfoot>
+                        </table>
+                    </form>
+                 </div>
+             </div>
+         </div>
+           
+           
+	</body>
+</html>

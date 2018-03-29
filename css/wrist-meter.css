@@ -1,0 +1,46 @@
+.wrist-search{
+	padding: 0.8vw 0;
+    border-bottom: 0.4vw solid #F3F4F7;
+}
+.wrist-search form{
+	float: left;
+}
+.wrist-search form .line-text{
+	width: 10vw;
+    font-size: 0.72vw;
+    background-color: #f3f4f7;
+    border-color: #e0e0e0;
+    padding: 0.4vw;
+    margin-left: 0.8vw;
+    border-radius: 4px;
+}
+.wrist-search form .button{
+	width: 2.9vw;
+    border: none;
+    background-color: #e0e0e0;
+    color: #c30d23;
+    border-radius: 4px;
+    padding: 0.58vw 0;
+    font-size: 0.72vw;
+    margin-left: 0.8vw;
+}
+.wrist-search  .anniu-jihe{
+	float: right;
+}
+.wrist-search .anniu-jihe li{
+	float: left;
+	cursor: pointer;
+	margin-right: 0.8vw;
+}
+.wrist-search .anniu-jihe li a{
+	width: 3.64vw;
+    display: block;
+    border-radius: 20px;
+    text-align: center;
+    padding: 0.3vw 0;
+    background-color: #F3F4F7;
+}
+.wrist-search .anniu-jihe li .active{
+	background-color: #C30C23;
+	color: #fff;
+}

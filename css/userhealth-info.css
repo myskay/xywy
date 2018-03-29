@@ -1,0 +1,6 @@
+.content-wrap main .table table tr .thead{
+	text-align: left;
+}
+.content-wrap main .table table tr td input{
+	width: 60%;
+}

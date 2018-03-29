@@ -1,0 +1,18 @@
+.service-overlay .service-content{
+	width: 27vw;
+}
+.service-overlay .service-content .service-con table{
+	width: 25vw;
+}
+.checkservice-overlay .checkservice-content{
+	width: 27vw;
+}
+.checkservice-overlay .checkservice-content .checkservice-con table{
+	width: 25vw;
+}
+.reviseservice-overlay .reviseservice-content{
+	width: 27vw;
+}
+.reviseservice-overlay .reviseservice-content .reviseservice-con table{
+	width: 25vw;
+}

@@ -1,0 +1,115 @@
+.content-wrap main .check-form table tr .file div{
+	display: inline-block;
+	width: 5vw;
+	height: 4vw;
+	background-color: #F3F4F7;
+	border: 1px solid #ccc;
+	position: relative;
+	margin-right: 0.8vw;
+}
+.content-wrap main .check-form table tr .file{
+	padding: 0.8vw;
+}
+.content-wrap main .check-form table tr .file div input[type='file']{
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+}
+.content-wrap main .check-form table tr .file div .img1{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 9;
+}
+.content-wrap main .check-form table tr .file div .img1[src='']{
+	visibility: hidden;
+}
+/*选项卡的切换*/
+.content-wrap main .check-form table tr .border-top-none{
+	border-top: none;
+   border-bottom-color: #c30d23;
+}
+.content-wrap main .check-form table tr .border-top-none ul li{
+	float: left;
+    border-bottom: none;
+    margin-bottom: -1px;
+    padding: 0.4vw;
+    margin-right: 0.4vw;
+}
+.content-wrap main .check-form table tr .border-top-none ul li a{
+	color: #666;
+	cursor: pointer;
+}
+.content-wrap main .check-form table .first td{
+	border-color: #c30c23;
+	position: relative;
+	height: 9vw;
+}
+.content-wrap main .check-form table .first td section:last-child{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	display: none;
+}
+.content-wrap main .check-form table .first td textarea{
+	border-top: none;
+	font-size: 0.72vw;
+}
+.content-wrap main .check-form table .first td div{
+	text-align: right;
+    margin-right: 0.8vw;
+    padding-bottom: 0.8vw;
+}
+.content-wrap main .check-form table .first td div input[type='submit']{
+	width: 2.9vw;
+    border: none;
+    background-color: #c30d23;
+    color: #fff;
+    border-radius: 1vw;
+    padding: 0.4vw 0;
+    font-size: 0.72vw;
+    margin-left: 0.8vw;
+}
+.content-wrap main .check-form table .first td div input[type='reset']{
+	width: 2.9vw;
+    border: none;
+    background-color: #ccc;
+    color: #fff;
+    border-radius: 1vw;
+    padding: 0.4vw 0;
+    font-size: 0.72vw;
+    margin-left: 0.8vw;
+}
+   /*切换选项卡的选中样式*/
+.content-wrap main .check-form table tr .border-top-none ul li.active{
+	border: 1px solid #e0e0e0;
+	background-color: #F3F4F7;
+	border-color: #c30d23;
+	border-bottom: none;
+}
+.content-wrap main .check-form table tr .border-top-none ul li.active a{
+	color: #C30D23;
+}
+/*切换选项卡的样式结束*/
+.content-wrap main .check-form table tr .border-top-none label{
+	margin-right: 2vw;
+}
+.content-wrap main .check-form table tr .border-bottom-none{
+	border-bottom: none;
+}
+.content-wrap main .check-form table tr textarea{
+	width: calc(100% - 0.4vw);
+    height: 100%;
+    border: none;
+    resize: none;
+    border-top: 1px solid #aaa;
+    padding-left: 0.4vw;
+}
+

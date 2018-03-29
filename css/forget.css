@@ -1,0 +1,29 @@
+body{
+	background: url(../img/bgt.png) no-repeat;
+	background-size: 100% 100%;
+}
+.login-else{
+	margin-bottom: calc(32px - 0.9vw);
+}
+.login-pwd button{
+	background: url(../img/biyan.png) no-repeat center center;
+	width: 1.1vw;
+	height: 0.5vw;
+	background-size: 100% 100%;
+	bottom: 1.1vw !important;
+	border-left: none !important;
+} 
+.login-text button{
+	background: url(../img/zhengyan.png) no-repeat center center;
+	width: 1.1vw;
+	height: 0.5vw;
+	background-size: 100% 100%;
+	bottom: 1.1vw !important;
+	border-left: none !important;
+}
+.login-text{
+	display: none;
+}
+.getcode{
+	z-index: 100;
+}

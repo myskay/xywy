@@ -1,0 +1,301 @@
+/*新增体检表的弹窗*/
+.test-overlay{
+	position: fixed;
+	bottom: 0;
+	right: 0;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.3);
+    display: none;
+}
+.test-overlay .test-content{
+	width: 52vw;
+    margin: 0 auto;
+    background-color: #fff;
+    margin-top: 5vw;
+}
+.test-overlay .test-content .test-title{
+	background-color: #c30d23;
+    position: relative;
+    padding: 0.8vw 0;
+}
+.test-overlay .test-content .test-title span{
+	font-size: 0.83vw;
+    color: #fff;
+    display: inline-block;
+    padding-left: 0.4vw;
+}
+.test-overlay .test-content .test-title img{
+	width: 0.83vw;
+    height: 0.83vw;
+    display: inline-block;
+    position: absolute;
+    right: 0.4vw;
+    top: 0.8vw;
+}
+.test-overlay .test-content .test-con{
+	width: 29vw;
+	margin: 0 auto;
+	height: 60vh;
+}
+.test-overlay .test-content .test-con .file{
+	width: 100%;
+    height:30vh;
+    position: relative;
+    margin-top: 2.5vw;
+}
+.test-overlay .test-content .test-con .file input{
+	position: absolute;
+    width: 100%;
+    height: 100%;
+    border: none;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: 11;
+}
+.test-overlay .test-content .test-con .file button{
+	font-size: 0.93vw;
+    color: #fff;
+    background-color: #c30d23;
+    border: none;
+    padding: 0.8vw 1.3vw;
+    border-radius: 4px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 9;
+}
+.test-overlay .test-content .test-con .file img{
+	position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+.test-overlay .test-content .test-con .file img[src='']{
+	opacity: 0;
+}
+.test-overlay .test-content .test-con  input[type='submit']{
+	text-align: center;
+    border: none;
+    font-size: 0.93vw;
+    background-color: #c30d23;
+    color: #fff;
+    padding: 0.8vw 2.5vw;
+    border-radius: 4px;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    margin-right: 1.6vw;
+    margin-left: 7.5vw;
+}
+.test-overlay .test-content .test-con  input[type='reset']{
+	text-align: center;
+    border: none;
+    font-size: 0.93vw;
+    background-color: #ccc;
+    color: #fff;
+    padding: 0.8vw 2.5vw;
+    border-radius: 4px;
+    display: inline-block;
+    width: auto;
+    height: auto;
+}
+.test-overlay .test-content .test-con .form-bottom {
+	padding: 3vw 0;
+	display: none;
+}
+/*查看体检表的弹窗*/
+.checktest-overlay{
+	position: fixed;
+	bottom: 0;
+	right: 0;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.3);
+    display: none;
+}
+.checktest-overlay .checktest-content{
+	width: 52vw;
+    margin: 0 auto;
+    background-color: #fff;
+    margin-top: 5vw;
+}
+.checktest-overlay .checktest-content .checktest-title{
+	background-color: #c30d23;
+    position: relative;
+    padding: 0.8vw 0;
+}
+.checktest-overlay .checktest-content .checktest-title span{
+	font-size: 0.83vw;
+    color: #fff;
+    display: inline-block;
+    padding-left: 0.4vw;
+}
+.checktest-overlay .checktest-content .checktest-title img{
+	width: 0.83vw;
+    height: 0.83vw;
+    display: inline-block;
+    position: absolute;
+    right: 0.4vw;
+    top: 0.8vw;
+}
+.checktest-overlay .checktest-content .checktest-con{
+	width: 29vw;
+	margin: 0 auto;
+	height: 60vh;
+}
+.checktest-overlay .checktest-content .checktest-con .file{
+	width: 100%;
+    height: 30vh;
+    position: relative;
+    margin-top: 2.5vw;
+}
+.checktest-overlay .checktest-content .checktest-con .file input{
+	position: absolute;
+    width: 100%;
+    height: 100%;
+    border: none;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: 11;
+}
+.checktest-overlay .checktest-content .checktest-con .file button{
+	font-size: 0.93vw;
+    color: #fff;
+    background-color: #c30d23;
+    border: none;
+    padding: 0.8vw 1.3vw;
+    border-radius: 4px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 9;
+}
+.checktest-overlay .checktest-content .checktest-con .file img{
+	position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+.checktest-overlay .checktest-content .checktest-con .file img[src='']{
+	opacity: 0;
+}
+/*修改体检表的弹窗*/
+.revisetest-overlay{
+	position: fixed;
+	bottom: 0;
+	right: 0;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.3);
+    display: none;
+}
+.revisetest-overlay .revisetest-content{
+	width: 52vw;
+    margin: 0 auto;
+    background-color: #fff;
+    margin-top: 5vw;
+}
+.revisetest-overlay .revisetest-content .revisetest-title{
+	background-color: #c30d23;
+    position: relative;
+    padding: 0.8vw 0;
+}
+.revisetest-overlay .revisetest-content .revisetest-title span{
+	font-size: 0.83vw;
+    color: #fff;
+    display: inline-block;
+    padding-left: 0.4vw;
+}
+.revisetest-overlay .revisetest-content .revisetest-title img{
+	width: 0.83vw;
+    height: 0.83vw;
+    display: inline-block;
+    position: absolute;
+    right: 0.4vw;
+    top: 0.8vw;
+}
+.revisetest-overlay .revisetest-content .revisetest-con{
+	width: 29vw;
+	margin: 0 auto;
+	height: 60vh;
+}
+.revisetest-overlay .revisetest-content .revisetest-con .file{
+	width: 100%;
+    height: 30vh;
+    position: relative;
+    margin-top: 2.5vw;
+}
+.revisetest-overlay .revisetest-content .revisetest-con .file input{
+	position: absolute;
+    width: 100%;
+    height: 100%;
+    border: none;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: 11;
+}
+.revisetest-overlay .revisetest-content .revisetest-con .file button{
+	font-size: 0.93vw;
+    color: #fff;
+    background-color: #c30d23;
+    border: none;
+    padding: 0.8vw 1.3vw;
+    border-radius: 4px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 9;
+}
+.revisetest-overlay .revisetest-content .revisetest-con .file img{
+	position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+.revisetest-overlay .revisetest-content .revisetest-con .file img[src='']{
+	opacity: 0;
+}
+.revisetest-overlay .revisetest-content .revisetest-con  input[type='submit']{
+	text-align: center;
+    border: none;
+    font-size: 0.93vw;
+    background-color: #c30d23;
+    color: #fff;
+    padding: 0.8vw 2.5vw;
+    border-radius: 4px;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    margin-right: 1.6vw;
+    margin-left: 7.5vw;
+}
+.revisetest-overlay .revisetest-content .revisetest-con  input[type='reset']{
+	text-align: center;
+    border: none;
+    font-size: 0.93vw;
+    background-color: #ccc;
+    color: #fff;
+    padding: 0.8vw 2.5vw;
+    border-radius: 4px;
+    display: inline-block;
+    width: auto;
+    height: auto;
+}
+.revisetest-overlay .revisetest-content .revisetest-con .form-bottom {
+	padding: 3vw 0;
+	display: none;
+}
+

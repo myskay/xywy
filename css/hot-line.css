@@ -1,0 +1,79 @@
+.content-wrap main .line-search{
+	padding: 0.8vw 0;
+	border-bottom: 0.4vw solid #F3F4F7;
+}
+.content-wrap main .line-search span{
+	background-color: #C30C23;
+	padding: 0.4vw 0.7vw;
+	display: inline-block;
+	margin-left: 0.4vw;
+}
+.content-wrap main .line-search span a{
+	font-size: 0.72vw;
+	color: #fff;
+}
+.content-wrap main .line-search form{
+	display: inline-block;
+	float: right;
+}
+.content-wrap main .line-search .line-text{
+	width: 8.75vw;
+    font-size: 0.72vw;
+    background-color: #f3f4f7;
+    border-color: #e0e0e0;
+    padding:  0.4vw;
+    margin-left: 0.8vw;
+    border-radius: 4px;
+}
+.content-wrap main .line-search .button{
+	width: 2.9vw;
+    border: none;
+    background-color: #c30d23;
+    color: #fff;
+    border-radius: 1vw;
+    padding: 0.4vw 0;
+    font-size: 0.72vw;
+    margin-left: 0.8vw;
+}
+.content-wrap main .line-search input[type='reset']{
+	background-color: #ccc;
+	margin-right: 0.8vw;
+}
+.content-wrap main table{
+	width: 100%;
+}
+.content-wrap main table tr th{
+	font-size: 0.73vw;
+    padding: 0.6vw 1.3vw;
+    background-color: #efefef;
+    border-right: 0.1vw solid #fff;
+}
+.content-wrap main table tr td{
+	text-align: center;
+	padding: 0.8vw 0;
+    font-size: 0.72vw;
+    color: #666;
+}
+.content-wrap main table tr:nth-child(odd) td{
+	background-color: #fff;
+}
+.content-wrap main table tr:nth-child(odd) td{
+	background-color: #FAF9F9;
+}
+.content-wrap main table tr td:last-child{
+	color: #C30D23;
+}
+.content-wrap main table tbody tr td a{
+	display: inline-block;
+}
+.content-wrap main table tbody tr td a img{
+	display: inline-block;
+	width: 0.93vw;
+}
+.content-wrap main table tbody tr td:last-child a{
+	color: #c30c23;
+	margin-left: 0.4vw;
+}
+.content-wrap main table tr td.wait{
+	color: #C30C23;
+}

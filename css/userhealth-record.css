@@ -1,0 +1,1897 @@
+.content-wrap .form{
+	padding: 0 0.8vw;
+	margin-top: 1.6vw;
+}
+.content-wrap .form table{
+	margin-bottom: 1.6vw;
+	width: 100%;
+}
+.content-wrap .form table thead{
+	width: 100%;
+	border-left: 1px solid #E9E8E8;
+	border-right: 1px solid #E9E8E8;
+}
+.content-wrap .form table tbody{
+	width: 100%;
+	border-left: 1px solid #E9E8E8;
+	border-right: 1px solid #E9E8E8;
+}
+.content-wrap .form table thead tr:first-child td{
+	font-size: 0.93vw;
+    color: #c30d23;
+    padding: 0.8vw;
+    background-color: #ecebeb;
+}
+.content-wrap .form table thead tr td button{
+	font-size: 0.72vw;
+    color: #c30d23;
+    border: 1px solid #c30d23;
+    padding: 0.3vw 0.6vw;
+    background-color: #faf6f7;
+    border-radius: 4px;
+    margin-left: 0.8vw;
+    margin-top: 0.3vw;
+    margin-bottom: 0.3vw;
+}
+.content-wrap .form table tbody tr td{
+	text-align: center;
+	font-size: 0.72vw;
+	padding: 1.3vw 0;
+	border-bottom: 1px solid #E9E8E8;
+}
+.content-wrap .form table tbody tr:first-child td{
+	font-size: 0.83vw;
+	color: #333;
+	padding: 0.6vw 0;
+	border-top: 1px solid #E9E8E8;
+}
+.content-wrap .form table tbody tr:first-child td:first-child{
+	text-align: left;
+	padding-left: 0.8vw;
+}
+.content-wrap .form table tbody tr td:first-child{
+	text-align: left;
+	padding-left: 1.6vw;
+}
+.content-wrap .form table tbody tr td a{
+	display: inline-block;
+	margin-right: 0.8vw;
+}
+.content-wrap .form table tbody tr td a:last-child{
+	margin-right: 0;
+}
+.content-wrap .form table tbody tr td a img{
+	width: 0.83vw;
+	height: 0.83vw;
+	display: inline-block;
+}
+/*新增疾病的弹窗*/
+.disease-overlay{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.3);
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: none;
+	z-index: 100;
+}
+.disease-overlay .disease-content{
+	width: 28vw;
+	margin: 0 auto;
+	background-color: #fff;
+	margin-top: 13%;
+	padding-bottom: 1vw;
+}
+.disease-overlay .disease-content .disease-title{
+	width: 100%;
+	background-color: #C30D23;
+	position: relative;
+	padding: 0.5vw 0;
+}
+.disease-overlay .disease-content .disease-title span{
+	color: #fff;
+	font-size: 0.83vw;
+	padding-left: 0.4vw;
+}
+.disease-overlay .disease-content .disease-title img{
+	position: absolute;
+	right: 0.4vw;
+	width: 0.83vw;
+	top: 50%;
+	margin-top: -0.4vw;
+}
+.disease-content table{
+	width: 93%;
+	margin: 0 auto;
+	margin-top: 1.6vw;
+}
+.disease-content table tbody tr td{
+	border: 1px solid #aaa;
+	font-size: 0.72vw;
+	color: #666;
+	text-align: center;
+	position: relative;
+}
+.disease-content table tbody tr td input,select,textarea{
+	width: 100%;
+	height: 98%;
+	border: none;
+	resize: none;
+	font-size: 0.72vw;
+}
+.disease-content table tbody tr td .Validform_checktip{
+	position: absolute;
+    top: 50%;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    transform: translateY(-50%);
+}
+.disease-content table tr .label{
+	background-color: #F3F4F7;
+	color: #666;
+	padding: 0.4vw 0.6vw;
+}
+.disease-content table tfoot tr td{
+	text-align: center;
+}
+.disease-content table tfoot tr td input{
+	width: 6.25vw;
+	height: 2vw;
+	background-color: #ccc;
+	color: #fff;
+	font-size: 0.83vw;
+	border: none;
+	border-radius: 5px;
+	margin-top: 1.6vw;
+}
+.disease-content table tfoot tr td input[type='submit']{
+	background-color: #C30D23;
+	margin-right: 1.6vw;
+}
+/*查看疾病列表的弹窗*/
+.checkdisease-overlay{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.3);
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: none;
+	z-index: 100;
+}
+.checkdisease-overlay .checkdisease-content{
+	width: 28vw;
+	margin: 0 auto;
+	background-color: #fff;
+	margin-top: 13%;
+	padding-bottom: 2vw;
+}
+.checkdisease-overlay .checkdisease-content .checkdisease-title{
+	width: 100%;
+	background-color: #C30D23;
+	position: relative;
+	padding: 0.5vw 0;
+}
+.checkdisease-overlay .checkdisease-content .checkdisease-title span{
+	color: #fff;
+	font-size: 0.83vw;
+	padding-left: 0.4vw;
+}
+.checkdisease-overlay .checkdisease-content .checkdisease-title img{
+	position: absolute;
+	right: 0.4vw;
+	width: 0.83vw;
+	top: 50%;
+	margin-top: -0.4vw;
+}
+.checkdisease-content table{
+	width: 93%;
+	margin: 0 auto;
+	margin-top: 1.6vw;
+}
+.checkdisease-content table tbody tr td{
+	border: 1px solid #aaa;
+	font-size: 0.72vw;
+	color: #666;
+	text-align: center;
+	position: relative;
+}
+.checkdisease-content table tbody tr td input,select,textarea{
+	width: 100%;
+	height: 98%;
+	border: none;
+	resize: none;
+	font-size: 0.72vw;
+	text-align: center;
+}
+.checkdisease-content table tbody tr td .Validform_checktip{
+	position: absolute;
+    top: 50%;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    transform: translateY(-50%);
+}
+.checkdisease-content table tr .label{
+	background-color: #F3F4F7;
+	color: #666;
+	padding: 0.4vw 0.6vw;
+}
+.checkdisease-content table tfoot tr td{
+	text-align: center;
+}
+.checkdisease-content table tfoot tr td input{
+	width: 6.25vw;
+	height: 2vw;
+	background-color: #ccc;
+	color: #fff;
+	font-size: 0.83vw;
+	border: none;
+	border-radius: 5px;
+	margin-top: 1.6vw;
+}
+.checkdisease-content table tfoot tr td input[type='submit']{
+	background-color: #C30D23;
+}
+/*修改疾病的弹窗*/
+.revisedisease-overlay{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.3);
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: none;
+	z-index: 100;
+}
+.revisedisease-overlay .revisedisease-content{
+	width: 28vw;
+	margin: 0 auto;
+	background-color: #fff;
+	margin-top: 13%;
+	padding-bottom: 1vw;
+}
+.revisedisease-overlay .revisedisease-content .revisedisease-title{
+	width: 100%;
+	background-color: #C30D23;
+	position: relative;
+	padding: 0.5vw 0;
+}
+.revisedisease-overlay .revisedisease-content .revisedisease-title span{
+	color: #fff;
+	font-size: 0.83vw;
+	padding-left: 0.4vw;
+}
+.revisedisease-overlay .revisedisease-content .revisedisease-title img{
+	position: absolute;
+	right: 0.4vw;
+	width: 0.83vw;
+	top: 50%;
+	margin-top: -0.4vw;
+}
+.revisedisease-content table{
+	width: 93%;
+	margin: 0 auto;
+	margin-top: 1.6vw;
+}
+.revisedisease-content table tbody tr td{
+	border: 1px solid #aaa;
+	font-size: 0.72vw;
+	color: #666;
+	text-align: center;
+	position: relative;
+}
+.revisedisease-content table tbody tr td input,select,textarea{
+	width: 100%;
+	height: 98%;
+	border: none;
+	resize: none;
+	font-size: 0.72vw;
+}
+.revisedisease-content table tbody tr td .Validform_checktip{
+	position: absolute;
+    top: 50%;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    transform: translateY(-50%);
+}
+.revisedisease-content table tr .label{
+	background-color: #F3F4F7;
+	color: #666;
+	padding: 0.4vw 0.6vw;
+}
+.revisedisease-content table tfoot tr td{
+	text-align: center;
+}
+.revisedisease-content table tfoot tr td input{
+	width: 6.25vw;
+	height: 2vw;
+	background-color: #ccc;
+	color: #fff;
+	font-size: 0.83vw;
+	border: none;
+	border-radius: 5px;
+	margin-top: 1.6vw;
+}
+.revisedisease-content table tfoot tr td input[type='submit']{
+	background-color: #C30D23;
+	margin-right: 1.6vw;
+}
+/*新增手术的弹窗*/
+.ops-overlay{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.3);
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: none;
+	z-index: 100;
+}
+.ops-overlay .ops-content{
+	width: 28vw;
+	margin: 0 auto;
+	background-color: #fff;
+	margin-top: 13%;
+	padding-bottom: 1vw;
+}
+.ops-overlay .ops-content .ops-title{
+	width: 100%;
+	background-color: #C30D23;
+	position: relative;
+	padding: 0.5vw 0;
+}
+.ops-overlay .ops-content .ops-title span{
+	color: #fff;
+	font-size: 0.83vw;
+	padding-left: 0.4vw;
+}
+.ops-overlay .ops-content .ops-title img{
+	position: absolute;
+	right: 0.4vw;
+	width: 0.83vw;
+	top: 50%;
+	margin-top: -0.4vw;
+}
+.ops-content table{
+	width: 93%;
+	margin: 0 auto;
+	margin-top: 1.6vw;
+}
+.ops-content table tbody tr td{
+	border: 1px solid #aaa;
+	font-size: 0.72vw;
+	color: #666;
+	text-align: center;
+	position: relative;
+}
+.ops-content table tbody tr td input,select,textarea{
+	width: 100%;
+	height: 98%;
+	border: none;
+	resize: none;
+	font-size: 0.72vw;
+}
+.ops-content table tbody tr td .Validform_checktip{
+	position: absolute;
+    top: 50%;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    transform: translateY(-50%);
+}
+.ops-content table tr .label{
+	background-color: #F3F4F7;
+	color: #666;
+	padding: 0.4vw 0.6vw;
+}
+.ops-content table tfoot tr td{
+	text-align: center;
+}
+.ops-content table tfoot tr td input{
+	width: 6.25vw;
+	height: 2vw;
+	background-color: #ccc;
+	color: #fff;
+	font-size: 0.83vw;
+	border: none;
+	border-radius: 5px;
+	margin-top: 1.6vw;
+}
+.ops-content table tfoot tr td input[type='submit']{
+	background-color: #C30D23;
+	margin-right: 1.6vw;
+}
+/*查看手术列表的弹窗*/
+.checkops-overlay{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.3);
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: none;
+	z-index: 100;
+}
+.checkops-overlay .checkops-content{
+	width: 28vw;
+	margin: 0 auto;
+	background-color: #fff;
+	margin-top: 13%;
+	padding-bottom: 2vw;
+}
+.checkops-overlay .checkops-content .checkops-title{
+	width: 100%;
+	background-color: #C30D23;
+	position: relative;
+	padding: 0.5vw 0;
+}
+.checkops-overlay .checkops-content .checkops-title span{
+	color: #fff;
+	font-size: 0.83vw;
+	padding-left: 0.4vw;
+}
+.checkops-overlay .checkops-content .checkops-title img{
+	position: absolute;
+	right: 0.4vw;
+	width: 0.83vw;
+	top: 50%;
+	margin-top: -0.4vw;
+}
+.checkops-content table{
+	width: 93%;
+	margin: 0 auto;
+	margin-top: 1.6vw;
+}
+.checkops-content table tbody tr td{
+	border: 1px solid #aaa;
+	font-size: 0.72vw;
+	color: #666;
+	text-align: center;
+	position: relative;
+}
+.checkops-content table tbody tr td input,select,textarea{
+	width: 100%;
+	height: 98%;
+	border: none;
+	resize: none;
+	font-size: 0.72vw;
+	text-align: center;
+}
+.checkops-content table tbody tr td .Validform_checktip{
+	position: absolute;
+    top: 50%;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    transform: translateY(-50%);
+}
+.checkops-content table tr .label{
+	background-color: #F3F4F7;
+	color: #666;
+	padding: 0.4vw 0.6vw;
+}
+/*修改手术的弹窗*/
+.reviseops-overlay{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.3);
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: none;
+	z-index: 100;
+}
+.reviseops-overlay .reviseops-content{
+	width: 28vw;
+	margin: 0 auto;
+	background-color: #fff;
+	margin-top: 13%;
+	padding-bottom: 1vw;
+}
+.reviseops-overlay .reviseops-content .reviseops-title{
+	width: 100%;
+	background-color: #C30D23;
+	position: relative;
+	padding: 0.5vw 0;
+}
+.reviseops-overlay .reviseops-content .reviseops-title span{
+	color: #fff;
+	font-size: 0.83vw;
+	padding-left: 0.4vw;
+}
+.reviseops-overlay .reviseops-content .reviseops-title img{
+	position: absolute;
+	right: 0.4vw;
+	width: 0.83vw;
+	top: 50%;
+	margin-top: -0.4vw;
+}
+.reviseops-content table{
+	width: 93%;
+	margin: 0 auto;
+	margin-top: 1.6vw;
+}
+.reviseops-content table tbody tr td{
+	border: 1px solid #aaa;
+	font-size: 0.72vw;
+	color: #666;
+	text-align: center;
+	position: relative;
+}
+.reviseops-content table tbody tr td input,select,textarea{
+	width: 100%;
+	height: 98%;
+	border: none;
+	resize: none;
+	font-size: 0.72vw;
+}
+.reviseops-content table tbody tr td .Validform_checktip{
+	position: absolute;
+    top: 50%;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    transform: translateY(-50%);
+}
+.reviseops-content table tr .label{
+	background-color: #F3F4F7;
+	color: #666;
+	padding: 0.4vw 0.6vw;
+}
+.reviseops-content table tfoot tr td{
+	text-align: center;
+}
+.reviseops-content table tfoot tr td input{
+	width: 6.25vw;
+	height: 2vw;
+	background-color: #ccc;
+	color: #fff;
+	font-size: 0.83vw;
+	border: none;
+	border-radius: 5px;
+	margin-top: 1.6vw;
+}
+.reviseops-content table tfoot tr td input[type='submit']{
+	background-color: #C30D23;
+	margin-right: 1.6vw;
+}
+/*新增外伤弹窗*/
+.trauma-overlay{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.3);
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: none;
+	z-index: 100;
+}
+.trauma-overlay .trauma-content{
+	width: 28vw;
+	margin: 0 auto;
+	background-color: #fff;
+	margin-top: 13%;
+	padding-bottom: 1vw;
+}
+.trauma-overlay .trauma-content .trauma-title{
+	width: 100%;
+	background-color: #C30D23;
+	position: relative;
+	padding: 0.5vw 0;
+}
+.trauma-overlay .trauma-content .trauma-title span{
+	color: #fff;
+	font-size: 0.83vw;
+	padding-left: 0.4vw;
+}
+.trauma-overlay .trauma-content .trauma-title img{
+	position: absolute;
+	right: 0.4vw;
+	width: 0.83vw;
+	top: 50%;
+	margin-top: -0.4vw;
+}
+.trauma-content table{
+	width: 93%;
+	margin: 0 auto;
+	margin-top: 1.6vw;
+}
+.trauma-content table tbody tr td{
+	border: 1px solid #aaa;
+	font-size: 0.72vw;
+	color: #666;
+	text-align: center;
+	position: relative;
+}
+.trauma-content table tbody tr td input,select,textarea{
+	width: 100%;
+	height: 98%;
+	border: none;
+	resize: none;
+	font-size: 0.72vw;
+}
+.trauma-content table tbody tr td .Validform_checktip{
+	position: absolute;
+    top: 50%;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    transform: translateY(-50%);
+}
+.trauma-content table tr .label{
+	background-color: #F3F4F7;
+	color: #666;
+	padding: 0.4vw 0.6vw;
+}
+.trauma-content table tfoot tr td{
+	text-align: center;
+}
+.trauma-content table tfoot tr td input{
+	width: 6.25vw;
+	height: 2vw;
+	background-color: #ccc;
+	color: #fff;
+	font-size: 0.83vw;
+	border: none;
+	border-radius: 5px;
+	margin-top: 1.6vw;
+}
+.trauma-content table tfoot tr td input[type='submit']{
+	background-color: #C30D23;
+	margin-right: 1.6vw;
+}
+/*查看外伤的弹窗*/
+.checktrauma-overlay{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.3);
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: none;
+	z-index: 100;
+}
+.checktrauma-overlay .checktrauma-content{
+	width: 28vw;
+	margin: 0 auto;
+	background-color: #fff;
+	margin-top: 13%;
+	padding-bottom: 2vw;
+}
+.checktrauma-overlay .checktrauma-content .checktrauma-title{
+	width: 100%;
+	background-color: #C30D23;
+	position: relative;
+	padding: 0.5vw 0;
+}
+.checktrauma-overlay .checktrauma-content .checktrauma-title span{
+	color: #fff;
+	font-size: 0.83vw;
+	padding-left: 0.4vw;
+}
+.checktrauma-overlay .checktrauma-content .checktrauma-title img{
+	position: absolute;
+	right: 0.4vw;
+	width: 0.83vw;
+	top: 50%;
+	margin-top: -0.4vw;
+}
+.checktrauma-content table{
+	width: 93%;
+	margin: 0 auto;
+	margin-top: 1.6vw;
+}
+.checktrauma-content table tbody tr td{
+	border: 1px solid #aaa;
+	font-size: 0.72vw;
+	color: #666;
+	text-align: center;
+	position: relative;
+}
+.checktrauma-content table tbody tr td input,select,textarea{
+	width: 100%;
+	height: 98%;
+	border: none;
+	resize: none;
+	font-size: 0.72vw;
+	text-align: center;
+}
+.checktrauma-content table tbody tr td .Validform_checktip{
+	position: absolute;
+    top: 50%;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    transform: translateY(-50%);
+}
+.checktrauma-content table tr .label{
+	background-color: #F3F4F7;
+	color: #666;
+	padding: 0.4vw 0.6vw;
+}
+/*修改外伤的弹窗*/
+.revisetrauma-overlay{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.3);
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: none;
+	z-index: 100;
+}
+.revisetrauma-overlay .revisetrauma-content{
+	width: 28vw;
+	margin: 0 auto;
+	background-color: #fff;
+	margin-top: 13%;
+	padding-bottom: 1vw;
+}
+.revisetrauma-overlay .revisetrauma-content .revisetrauma-title{
+	width: 100%;
+	background-color: #C30D23;
+	position: relative;
+	padding: 0.5vw 0;
+}
+.revisetrauma-overlay .revisetrauma-content .revisetrauma-title span{
+	color: #fff;
+	font-size: 0.83vw;
+	padding-left: 0.4vw;
+}
+.revisetrauma-overlay .revisetrauma-content .revisetrauma-title img{
+	position: absolute;
+	right: 0.4vw;
+	width: 0.83vw;
+	top: 50%;
+	margin-top: -0.4vw;
+}
+.revisetrauma-content table{
+	width: 93%;
+	margin: 0 auto;
+	margin-top: 1.6vw;
+}
+.revisetrauma-content table tbody tr td{
+	border: 1px solid #aaa;
+	font-size: 0.72vw;
+	color: #666;
+	text-align: center;
+	position: relative;
+}
+.revisetrauma-content table tbody tr td input,select,textarea{
+	width: 100%;
+	height: 98%;
+	border: none;
+	resize: none;
+	font-size: 0.72vw;
+}
+.revisetrauma-content table tbody tr td .Validform_checktip{
+	position: absolute;
+    top: 50%;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    transform: translateY(-50%);
+}
+.revisetrauma-content table tr .label{
+	background-color: #F3F4F7;
+	color: #666;
+	padding: 0.4vw 0.6vw;
+}
+.revisetrauma-content table tfoot tr td{
+	text-align: center;
+}
+.revisetrauma-content table tfoot tr td input{
+	width: 6.25vw;
+	height: 2vw;
+	background-color: #ccc;
+	color: #fff;
+	font-size: 0.83vw;
+	border: none;
+	border-radius: 5px;
+	margin-top: 1.6vw;
+}
+.revisetrauma-content table tfoot tr td input[type='submit']{
+	background-color: #C30D23;
+	margin-right: 1.6vw;
+}
+/*新增输血的弹窗*/
+.blood-overlay{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.3);
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: none;
+	z-index: 100;
+}
+.blood-overlay .blood-content{
+	width: 28vw;
+	margin: 0 auto;
+	background-color: #fff;
+	margin-top: 13%;
+	padding-bottom: 1vw;
+}
+.blood-overlay .blood-content .blood-title{
+	width: 100%;
+	background-color: #C30D23;
+	position: relative;
+	padding: 0.5vw 0;
+}
+.blood-overlay .blood-content .blood-title span{
+	color: #fff;
+	font-size: 0.83vw;
+	padding-left: 0.4vw;
+}
+.blood-overlay .blood-content .blood-title img{
+	position: absolute;
+	right: 0.4vw;
+	width: 0.83vw;
+	top: 50%;
+	margin-top: -0.4vw;
+}
+.blood-content table{
+	width: 93%;
+	margin: 0 auto;
+	margin-top: 1.6vw;
+}
+.blood-content table tbody tr td{
+	border: 1px solid #aaa;
+	font-size: 0.72vw;
+	color: #666;
+	text-align: center;
+	position: relative;
+}
+.blood-content table tbody tr td input,select,textarea{
+	width: 100%;
+	height: 98%;
+	border: none;
+	resize: none;
+	font-size: 0.72vw;
+}
+.blood-content table tbody tr td .Validform_checktip{
+	position: absolute;
+    top: 50%;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    transform: translateY(-50%);
+}
+.blood-content table tr .label{
+	background-color: #F3F4F7;
+	color: #666;
+	padding: 0.4vw 0.6vw;
+}
+.blood-content table tfoot tr td{
+	text-align: center;
+}
+.blood-content table tfoot tr td input{
+	width: 6.25vw;
+	height: 2vw;
+	background-color: #ccc;
+	color: #fff;
+	font-size: 0.83vw;
+	border: none;
+	border-radius: 5px;
+	margin-top: 1.6vw;
+}
+.blood-content table tfoot tr td input[type='submit']{
+	background-color: #C30D23;
+	margin-right: 1.6vw;
+}
+/*查看输血的弹窗*/
+.checkblood-overlay{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.3);
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: none;
+	z-index: 100;
+}
+.checkblood-overlay .checkblood-content{
+	width: 28vw;
+	margin: 0 auto;
+	background-color: #fff;
+	margin-top: 13%;
+	padding-bottom: 2vw;
+}
+.checkblood-overlay .checkblood-content .checkblood-title{
+	width: 100%;
+	background-color: #C30D23;
+	position: relative;
+	padding: 0.5vw 0;
+}
+.checkblood-overlay .checkblood-content .checkblood-title span{
+	color: #fff;
+	font-size: 0.83vw;
+	padding-left: 0.4vw;
+}
+.checkblood-overlay .checkblood-content .checkblood-title img{
+	position: absolute;
+	right: 0.4vw;
+	width: 0.83vw;
+	top: 50%;
+	margin-top: -0.4vw;
+}
+.checkblood-content table{
+	width: 93%;
+	margin: 0 auto;
+	margin-top: 1.6vw;
+}
+.checkblood-content table tbody tr td{
+	border: 1px solid #aaa;
+	font-size: 0.72vw;
+	color: #666;
+	text-align: center;
+	position: relative;
+}
+.checkblood-content table tbody tr td input,select,textarea{
+	width: 100%;
+	height: 98%;
+	border: none;
+	resize: none;
+	font-size: 0.72vw;
+	text-align: center;
+}
+.checkblood-content table tbody tr td .Validform_checktip{
+	position: absolute;
+    top: 50%;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    transform: translateY(-50%);
+}
+.checkblood-content table tr .label{
+	background-color: #F3F4F7;
+	color: #666;
+	padding: 0.4vw 0.6vw;
+}
+/*修改输血的弹窗*/
+.reviseblood-overlay{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.3);
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: none;
+	z-index: 100;
+}
+.reviseblood-overlay .reviseblood-content{
+	width: 28vw;
+	margin: 0 auto;
+	background-color: #fff;
+	margin-top: 13%;
+	padding-bottom: 1vw;
+}
+.reviseblood-overlay .reviseblood-content .reviseblood-title{
+	width: 100%;
+	background-color: #C30D23;
+	position: relative;
+	padding: 0.5vw 0;
+}
+.reviseblood-overlay .reviseblood-content .reviseblood-title span{
+	color: #fff;
+	font-size: 0.83vw;
+	padding-left: 0.4vw;
+}
+.reviseblood-overlay .reviseblood-content .reviseblood-title img{
+	position: absolute;
+	right: 0.4vw;
+	width: 0.83vw;
+	top: 50%;
+	margin-top: -0.4vw;
+}
+.reviseblood-content table{
+	width: 93%;
+	margin: 0 auto;
+	margin-top: 1.6vw;
+}
+.reviseblood-content table tbody tr td{
+	border: 1px solid #aaa;
+	font-size: 0.72vw;
+	color: #666;
+	text-align: center;
+	position: relative;
+}
+.reviseblood-content table tbody tr td input,select,textarea{
+	width: 100%;
+	height: 98%;
+	border: none;
+	resize: none;
+	font-size: 0.72vw;
+}
+.reviseblood-content table tbody tr td .Validform_checktip{
+	position: absolute;
+    top: 50%;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    transform: translateY(-50%);
+}
+.reviseblood-content table tr .label{
+	background-color: #F3F4F7;
+	color: #666;
+	padding: 0.4vw 0.6vw;
+}
+.reviseblood-content table tfoot tr td{
+	text-align: center;
+}
+.reviseblood-content table tfoot tr td input{
+	width: 6.25vw;
+	height: 2vw;
+	background-color: #ccc;
+	color: #fff;
+	font-size: 0.83vw;
+	border: none;
+	border-radius: 5px;
+	margin-top: 1.6vw;
+}
+.reviseblood-content table tfoot tr td input[type='submit']{
+	background-color: #C30D23;
+	margin-right: 1.6vw;
+}
+/*新增家族史的弹窗*/
+.family-overlay{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.3);
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: none;
+	z-index: 100;
+}
+.family-overlay .family-content{
+	width: 28vw;
+	margin: 0 auto;
+	background-color: #fff;
+	margin-top: 13%;
+	padding-bottom: 1vw;
+}
+.family-overlay .family-content .family-title{
+	width: 100%;
+	background-color: #C30D23;
+	position: relative;
+	padding: 0.5vw 0;
+}
+.family-overlay .family-content .family-title span{
+	color: #fff;
+	font-size: 0.83vw;
+	padding-left: 0.4vw;
+}
+.family-overlay .family-content .family-title img{
+	position: absolute;
+	right: 0.4vw;
+	width: 0.83vw;
+	top: 50%;
+	margin-top: -0.4vw;
+}
+.family-content table{
+	width: 93%;
+	margin: 0 auto;
+	margin-top: 1.6vw;
+}
+.family-content table tbody tr td{
+	border: 1px solid #aaa;
+	font-size: 0.72vw;
+	color: #666;
+	text-align: center;
+	position: relative;
+}
+.family-content table tbody tr td input,select,textarea{
+	width: 100%;
+	height: 98%;
+	border: none;
+	resize: none;
+	font-size: 0.72vw;
+}
+.family-content table tbody tr td .Validform_checktip{
+	position: absolute;
+    top: 50%;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    transform: translateY(-50%);
+}
+.family-content table tr .label{
+	background-color: #F3F4F7;
+	color: #666;
+	padding: 0.4vw 0.6vw;
+}
+.family-content table tfoot tr td{
+	text-align: center;
+}
+.family-content table tfoot tr td input{
+	width: 6.25vw;
+	height: 2vw;
+	background-color: #ccc;
+	color: #fff;
+	font-size: 0.83vw;
+	border: none;
+	border-radius: 5px;
+	margin-top: 1.6vw;
+}
+.family-content table tfoot tr td input[type='submit']{
+	background-color: #C30D23;
+	margin-right: 1.6vw;
+}
+/*查看家族史的弹窗*/
+.checkfamily-overlay{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.3);
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: none;
+	z-index: 100;
+}
+.checkfamily-overlay .checkfamily-content{
+	width: 28vw;
+	margin: 0 auto;
+	background-color: #fff;
+	margin-top: 13%;
+	padding-bottom: 2vw;
+}
+.checkfamily-overlay .checkfamily-content .checkfamily-title{
+	width: 100%;
+	background-color: #C30D23;
+	position: relative;
+	padding: 0.5vw 0;
+}
+.checkfamily-overlay .checkfamily-content .checkfamily-title span{
+	color: #fff;
+	font-size: 0.83vw;
+	padding-left: 0.4vw;
+}
+.checkfamily-overlay .checkfamily-content .checkfamily-title img{
+	position: absolute;
+	right: 0.4vw;
+	width: 0.83vw;
+	top: 50%;
+	margin-top: -0.4vw;
+}
+.checkfamily-content table{
+	width: 93%;
+	margin: 0 auto;
+	margin-top: 1.6vw;
+}
+.checkfamily-content table tbody tr td{
+	border: 1px solid #aaa;
+	font-size: 0.72vw;
+	color: #666;
+	text-align: center;
+	position: relative;
+}
+.checkfamily-content table tbody tr td input,select,textarea{
+	width: 100%;
+	height: 98%;
+	border: none;
+	resize: none;
+	font-size: 0.72vw;
+	text-align: center;
+}
+.checkfamily-content table tbody tr td .Validform_checktip{
+	position: absolute;
+    top: 50%;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    transform: translateY(-50%);
+}
+.checkfamily-content table tr .label{
+	background-color: #F3F4F7;
+	color: #666;
+	padding: 0.4vw 0.6vw;
+}
+/*修改家族史的弹窗*/
+.revisefamily-overlay{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.3);
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: none;
+	z-index: 100;
+}
+.revisefamily-overlay .revisefamily-content{
+	width: 28vw;
+	margin: 0 auto;
+	background-color: #fff;
+	margin-top: 13%;
+	padding-bottom: 1vw;
+}
+.revisefamily-overlay .revisefamily-content .revisefamily-title{
+	width: 100%;
+	background-color: #C30D23;
+	position: relative;
+	padding: 0.5vw 0;
+}
+.revisefamily-overlay .revisefamily-content .revisefamily-title span{
+	color: #fff;
+	font-size: 0.83vw;
+	padding-left: 0.4vw;
+}
+.revisefamily-overlay .revisefamily-content .revisefamily-title img{
+	position: absolute;
+	right: 0.4vw;
+	width: 0.83vw;
+	top: 50%;
+	margin-top: -0.4vw;
+}
+.revisefamily-content table{
+	width: 93%;
+	margin: 0 auto;
+	margin-top: 1.6vw;
+}
+.revisefamily-content table tbody tr td{
+	border: 1px solid #aaa;
+	font-size: 0.72vw;
+	color: #666;
+	text-align: center;
+	position: relative;
+}
+.revisefamily-content table tbody tr td input,select,textarea{
+	width: 100%;
+	height: 98%;
+	border: none;
+	resize: none;
+	font-size: 0.72vw;
+}
+.revisefamily-content table tbody tr td .Validform_checktip{
+	position: absolute;
+    top: 50%;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    transform: translateY(-50%);
+}
+.revisefamily-content table tr .label{
+	background-color: #F3F4F7;
+	color: #666;
+	padding: 0.4vw 0.6vw;
+}
+.revisefamily-content table tfoot tr td{
+	text-align: center;
+}
+.revisefamily-content table tfoot tr td input{
+	width: 6.25vw;
+	height: 2vw;
+	background-color: #ccc;
+	color: #fff;
+	font-size: 0.83vw;
+	border: none;
+	border-radius: 5px;
+	margin-top: 1.6vw;
+}
+.revisefamily-content table tfoot tr td input[type='submit']{
+	background-color: #C30D23;
+	margin-right: 1.6vw;
+}
+/*新增遗传史的弹窗*/
+.history-overlay{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.3);
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: none;
+	z-index: 100;
+}
+.history-overlay .history-content{
+	width: 28vw;
+	margin: 0 auto;
+	background-color: #fff;
+	margin-top: 13%;
+	padding-bottom: 1vw;
+}
+.history-overlay .history-content .history-title{
+	width: 100%;
+	background-color: #C30D23;
+	position: relative;
+	padding: 0.5vw 0;
+}
+.history-overlay .history-content .history-title span{
+	color: #fff;
+	font-size: 0.83vw;
+	padding-left: 0.4vw;
+}
+.history-overlay .history-content .history-title img{
+	position: absolute;
+	right: 0.4vw;
+	width: 0.83vw;
+	top: 50%;
+	margin-top: -0.4vw;
+}
+.history-content table{
+	width: 93%;
+	margin: 0 auto;
+	margin-top: 1.6vw;
+}
+.history-content table tbody tr td{
+	border: 1px solid #aaa;
+	font-size: 0.72vw;
+	color: #666;
+	text-align: center;
+	position: relative;
+}
+.history-content table tbody tr td input,select,textarea{
+	width: 100%;
+	height: 98%;
+	border: none;
+	resize: none;
+	font-size: 0.72vw;
+}
+.history-content table tbody tr td .Validform_checktip{
+	position: absolute;
+    top: 50%;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    transform: translateY(-50%);
+}
+.history-content table tr .label{
+	background-color: #F3F4F7;
+	color: #666;
+	padding: 0.4vw 0.6vw;
+}
+.history-content table tfoot tr td{
+	text-align: center;
+}
+.history-content table tfoot tr td input{
+	width: 6.25vw;
+	height: 2vw;
+	background-color: #ccc;
+	color: #fff;
+	font-size: 0.83vw;
+	border: none;
+	border-radius: 5px;
+	margin-top: 1.6vw;
+}
+.history-content table tfoot tr td input[type='submit']{
+	background-color: #C30D23;
+	margin-right: 1.6vw;
+}
+/*查看遗传史的弹窗*/
+.checkhistory-overlay{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.3);
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: none;
+	z-index: 100;
+}
+.checkhistory-overlay .checkhistory-content{
+	width: 28vw;
+	margin: 0 auto;
+	background-color: #fff;
+	margin-top: 13%;
+	padding-bottom: 2vw;
+}
+.checkhistory-overlay .checkhistory-content .checkhistory-title{
+	width: 100%;
+	background-color: #C30D23;
+	position: relative;
+	padding: 0.5vw 0;
+}
+.checkhistory-overlay .checkhistory-content .checkhistory-title span{
+	color: #fff;
+	font-size: 0.83vw;
+	padding-left: 0.4vw;
+}
+.checkhistory-overlay .checkhistory-content .checkhistory-title img{
+	position: absolute;
+	right: 0.4vw;
+	width: 0.83vw;
+	top: 50%;
+	margin-top: -0.4vw;
+}
+.checkhistory-content table{
+	width: 93%;
+	margin: 0 auto;
+	margin-top: 1.6vw;
+}
+.checkhistory-content table tbody tr td{
+	border: 1px solid #aaa;
+	font-size: 0.72vw;
+	color: #666;
+	text-align: center;
+	position: relative;
+}
+.checkhistory-content table tbody tr td input,select,textarea{
+	width: 100%;
+	height: 98%;
+	border: none;
+	resize: none;
+	font-size: 0.72vw;
+	text-align: center;
+}
+.checkhistory-content table tbody tr td .Validform_checktip{
+	position: absolute;
+    top: 50%;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    transform: translateY(-50%);
+}
+.checkhistory-content table tr .label{
+	background-color: #F3F4F7;
+	color: #666;
+	padding: 0.4vw 0.6vw;
+}
+/*修改遗传史的弹窗*/
+.revisehistory-overlay{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.3);
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: none;
+	z-index: 100;
+}
+.revisehistory-overlay .revisehistory-content{
+	width: 28vw;
+	margin: 0 auto;
+	background-color: #fff;
+	margin-top: 13%;
+	padding-bottom: 1vw;
+}
+.revisehistory-overlay .revisehistory-content .revisehistory-title{
+	width: 100%;
+	background-color: #C30D23;
+	position: relative;
+	padding: 0.5vw 0;
+}
+.revisehistory-overlay .revisehistory-content .revisehistory-title span{
+	color: #fff;
+	font-size: 0.83vw;
+	padding-left: 0.4vw;
+}
+.revisehistory-overlay .revisehistory-content .revisehistory-title img{
+	position: absolute;
+	right: 0.4vw;
+	width: 0.83vw;
+	top: 50%;
+	margin-top: -0.4vw;
+}
+.revisehistory-content table{
+	width: 93%;
+	margin: 0 auto;
+	margin-top: 1.6vw;
+}
+.revisehistory-content table tbody tr td{
+	border: 1px solid #aaa;
+	font-size: 0.72vw;
+	color: #666;
+	text-align: center;
+	position: relative;
+}
+.revisehistory-content table tbody tr td input,select,textarea{
+	width: 100%;
+	height: 98%;
+	border: none;
+	resize: none;
+	font-size: 0.72vw;
+	text-align: center;
+}
+.revisehistory-content table tbody tr td .Validform_checktip{
+	position: absolute;
+    top: 50%;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    transform: translateY(-50%);
+}
+.revisehistory-content table tr .label{
+	background-color: #F3F4F7;
+	color: #666;
+	padding: 0.4vw 0.6vw;
+}
+.revisehistory-content table tfoot tr td{
+	text-align: center;
+}
+.revisehistory-content table tfoot tr td input{
+	width: 6.25vw;
+	height: 2vw;
+	background-color: #ccc;
+	color: #fff;
+	font-size: 0.83vw;
+	border: none;
+	border-radius: 5px;
+	margin-top: 1.6vw;
+}
+.revisehistory-content table tfoot tr td input[type='submit']{
+	background-color: #C30D23;
+	margin-right: 1.6vw;
+}
+/*新增就诊的弹窗*/
+.hospital-overlay{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.3);
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: none;
+	z-index: 100;
+}
+.hospital-overlay .hospital-content{
+	width: 28vw;
+	margin: 0 auto;
+	background-color: #fff;
+	margin-top: 13%;
+	padding-bottom: 1vw;
+}
+.hospital-overlay .hospital-content .hospital-title{
+	width: 100%;
+	background-color: #C30D23;
+	position: relative;
+	padding: 0.5vw 0;
+}
+.hospital-overlay .hospital-content .hospital-title span{
+	color: #fff;
+	font-size: 0.83vw;
+	padding-left: 0.4vw;
+}
+.hospital-overlay .hospital-content .hospital-title img{
+	position: absolute;
+	right: 0.4vw;
+	width: 0.83vw;
+	top: 50%;
+	margin-top: -0.4vw;
+}
+.hospital-content table{
+	width: 93%;
+	margin: 0 auto;
+	margin-top: 1.6vw;
+}
+.hospital-content table tbody tr td{
+	border: 1px solid #aaa;
+	font-size: 0.72vw;
+	color: #666;
+	text-align: center;
+	position: relative;
+}
+.hospital-content table tbody tr td input,select,textarea{
+	width: 100%;
+	height: 98%;
+	border: none;
+	resize: none;
+	font-size: 0.72vw;
+	text-align: center;
+}
+.hospital-content table tbody tr td .Validform_checktip{
+	position: absolute;
+    top: 50%;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    transform: translateY(-50%);
+}
+.hospital-content table tr .label{
+	background-color: #F3F4F7;
+	color: #666;
+	padding: 0.4vw 0.6vw;
+}
+.hospital-content table tfoot tr td{
+	text-align: center;
+}
+.hospital-content table tfoot tr td input{
+	width: 6.25vw;
+	height: 2vw;
+	background-color: #ccc;
+	color: #fff;
+	font-size: 0.83vw;
+	border: none;
+	border-radius: 5px;
+	margin-top: 1.6vw;
+}
+.hospital-content table tfoot tr td input[type='submit']{
+	background-color: #C30D23;
+	margin-right: 1.6vw;
+}
+/*查看就诊的弹窗*/
+.checkhospital-overlay{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.3);
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: none;
+	z-index: 100;
+}
+.checkhospital-overlay .checkhospital-content{
+	width: 28vw;
+	margin: 0 auto;
+	background-color: #fff;
+	margin-top: 13%;
+	padding-bottom: 2vw;
+}
+.checkhospital-overlay .checkhospital-content .checkhospital-title{
+	width: 100%;
+	background-color: #C30D23;
+	position: relative;
+	padding: 0.5vw 0;
+}
+.checkhospital-overlay .checkhospital-content .checkhospital-title span{
+	color: #fff;
+	font-size: 0.83vw;
+	padding-left: 0.4vw;
+}
+.checkhospital-overlay .checkhospital-content .checkhospital-title img{
+	position: absolute;
+	right: 0.4vw;
+	width: 0.83vw;
+	top: 50%;
+	margin-top: -0.4vw;
+}
+.checkhospital-content table{
+	width: 93%;
+	margin: 0 auto;
+	margin-top: 1.6vw;
+}
+.checkhospital-content table tbody tr td{
+	border: 1px solid #aaa;
+	font-size: 0.72vw;
+	color: #666;
+	text-align: center;
+	position: relative;
+}
+.checkhospital-content table tbody tr td input,select,textarea{
+	width: 100%;
+	height: 98%;
+	border: none;
+	resize: none;
+	font-size: 0.72vw;
+	text-align: center;
+}
+.checkhospital-content table tbody tr td .Validform_checktip{
+	position: absolute;
+    top: 50%;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    transform: translateY(-50%);
+}
+.checkhospital-content table tr .label{
+	background-color: #F3F4F7;
+	color: #666;
+	padding: 0.4vw 0.6vw;
+}
+/*修改就诊的弹窗*/
+.revisehospital-overlay{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.3);
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: none;
+	z-index: 100;
+}
+.revisehospital-overlay .revisehospital-content{
+	width: 28vw;
+	margin: 0 auto;
+	background-color: #fff;
+	margin-top: 13%;
+	padding-bottom: 1vw;
+}
+.revisehospital-overlay .revisehospital-content .revisehospital-title{
+	width: 100%;
+	background-color: #C30D23;
+	position: relative;
+	padding: 0.5vw 0;
+}
+.revisehospital-overlay .revisehospital-content .revisehospital-title span{
+	color: #fff;
+	font-size: 0.83vw;
+	padding-left: 0.4vw;
+}
+.revisehospital-overlay .revisehospital-content .revisehospital-title img{
+	position: absolute;
+	right: 0.4vw;
+	width: 0.83vw;
+	top: 50%;
+	margin-top: -0.4vw;
+}
+.revisehospital-content table{
+	width: 93%;
+	margin: 0 auto;
+	margin-top: 1.6vw;
+}
+.revisehospital-content table tbody tr td{
+	border: 1px solid #aaa;
+	font-size: 0.72vw;
+	color: #666;
+	text-align: center;
+	position: relative;
+}
+.revisehospital-content table tbody tr td input,select,textarea{
+	width: 100%;
+	height: 98%;
+	border: none;
+	resize: none;
+	font-size: 0.72vw;
+	text-align: center;
+}
+.revisehospital-content table tbody tr td .Validform_checktip{
+	position: absolute;
+    top: 50%;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    transform: translateY(-50%);
+}
+.revisehospital-content table tr .label{
+	background-color: #F3F4F7;
+	color: #666;
+	padding: 0.4vw 0.6vw;
+}
+.revisehospital-content table tfoot tr td{
+	text-align: center;
+}
+.revisehospital-content table tfoot tr td input{
+	width: 6.25vw;
+	height: 2vw;
+	background-color: #ccc;
+	color: #fff;
+	font-size: 0.83vw;
+	border: none;
+	border-radius: 5px;
+	margin-top: 1.6vw;
+}
+.revisehospital-content table tfoot tr td input[type='submit']{
+	background-color: #C30D23;
+	margin-right: 1.6vw;
+}
+/*药物过敏史*/
+.content-wrap .drug-table tbody tr:first-child td:first-child{
+	padding: 1.3vw 0 !important;
+	padding-left: 0.8vw !important;
+}
+.content-wrap .drug-table tbody tr td{
+	border: 1px solid #e9e8e8;
+}
+.content-wrap .drug-table tbody tr td:first-child{
+	padding-left: 0.8vw !important;
+}
+.content-wrap .drug-table tbody tr td:last-child{
+	text-align: left;
+	color: #666!important;
+}
+.content-wrap .drug-table tbody tr td input[type="checkbox"]{
+	margin-left: 0.83vw;
+	width: 0.52vw;
+	height: 0.52vw;
+	background: url(../img/weixuanzhong.png) no-repeat center center;
+	background-size: cover;
+	border: none;
+	-webkit-appearance: none;
+	margin-right: 0.4vw;
+}
+.content-wrap .drug-table tbody tr td input[type="checkbox"]:checked{
+	background: url(../img/xuanzhong.png) no-repeat center center;
+	background-size: cover;
+}
+.content-wrap .drug-table tbody tr td label{
+	vertical-align: middle;
+}
+.content-wrap .drug-table tbody tr td input[type='text']{
+	width: 100%;
+	height: 100%;
+	border: none;
+	font-size: 0.72vw;
+	padding-left: 0.8vw;
+}
+.content-wrap .drug-table tfoot tr td{
+	text-align: center;
+}
+.content-wrap .drug-table tfoot tr td input[type='submit']{
+	font-size: 0.93vw;
+	color: #fff;
+	background-color: #C30D23;
+	padding: 0.8vw 3vw;
+	border: none;
+	margin-top: 3vw;
+	margin-bottom: 3.5vw;
+	border-radius: 4px;
+}
+/*新增药物过敏史弹窗*/
+.drug-overlay{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.3);
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: none;
+	z-index: 100;
+}
+.drug-overlay .drug-content{
+	width: 28vw;
+	margin: 0 auto;
+	background-color: #fff;
+	margin-top: 13%;
+	padding-bottom: 1vw;
+}
+.drug-overlay .drug-content .drug-title{
+	width: 100%;
+	background-color: #C30D23;
+	position: relative;
+	padding: 0.5vw 0;
+}
+.drug-overlay .drug-content .drug-title span{
+	color: #fff;
+	font-size: 0.83vw;
+	padding-left: 0.4vw;
+}
+.drug-overlay .drug-content .drug-title img{
+	position: absolute;
+	right: 0.4vw;
+	width: 0.83vw;
+	top: 50%;
+	margin-top: -0.4vw;
+}
+.drug-content table{
+	width: 93%;
+	margin: 0 auto;
+	margin-top: 1.6vw;
+}
+.drug-content table tbody tr td{
+	border: 1px solid #aaa;
+	font-size: 0.72vw;
+	color: #666;
+	text-align: center;
+	position: relative;
+}
+.drug-content table tbody tr td input,select,textarea{
+	width: 100%;
+	height: 98%;
+	border: none;
+	resize: none;
+	font-size: 0.72vw;
+	text-align: center;
+}
+.drug-content table tbody tr td .Validform_checktip{
+	position: absolute;
+    top: 50%;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    transform: translateY(-50%);
+}
+.drug-content table tr .label{
+	background-color: #F3F4F7;
+	color: #666;
+	padding: 0.4vw 0.6vw;
+}
+.drug-content table tfoot tr td{
+	text-align: center;
+}
+.drug-content table tfoot tr td input{
+	width: 6.25vw;
+	height: 2vw;
+	background-color: #ccc;
+	color: #fff;
+	font-size: 0.83vw;
+	border: none;
+	border-radius: 5px;
+	margin-top: 1.6vw;
+}
+.drug-content table tfoot tr td input[type='submit']{
+	background-color: #C30D23;
+	margin-right: 1.6vw;
+}

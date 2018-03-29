@@ -1,0 +1,78 @@
+.content-wrap main .director-search{
+	padding: 0.8vw 0;
+	padding-left: 0.8vw;
+	border-bottom: 0.4vw solid #F3F4F7;
+}
+.content-wrap main .director-search span{
+	padding: 0.4vw 0.7vw;
+	border: 1px solid #C30C23;
+	display: inline-block;
+}
+.content-wrap main .director-search span a{
+	font-size: 0.72vw;
+	color: #C30C23;
+	display: block;
+}
+/*表格*/
+.content-wrap main table{
+	width: 100%;
+}
+.content-wrap main table tbody tr td{
+	text-align: center;
+}
+.content-wrap main table tbody tr td span{
+	display: inline-block;
+}
+.content-wrap main table tbody tr td span img{
+	display: inline-block;
+}
+.content-wrap main table tr input[type='checkbox']{
+	-webkit-appearance: none;
+    border: none;
+    width: 0.8vw;
+    height: 0.8vw;
+    background: url(../img/weixuanzhong.png) no-repeat center center;
+    background-size: cover;
+    margin-top: 0.2vw;
+}
+.content-wrap main table tr input[type='checkbox']:checked{
+	background: url(../img/xuanzhong.png) no-repeat center center;
+	background-size: cover;
+}
+.content-wrap main table tr th{
+	font-size: 0.73vw;
+    padding: 0.6vw 1.3vw;
+    background-color: #efefef;
+    border-right: 0.1vw solid #fff;
+}
+.content-wrap main table tr th:last-child{
+	border-right: none;
+}
+.content-wrap main table tr label{
+	padding-left: 0.7vw;
+}
+.content-wrap main table tr td{
+	padding: 0.8vw 0;
+	font-size: 0.72vw;
+	color: #666;
+}
+.content-wrap main table tfoot tr td{
+	text-align: center;
+}
+.content-wrap main table tbody tr:nth-child(odd) td{
+	background-color: #fff;
+}
+.content-wrap main table tbody tr:nth-child(even) td{
+	background-color: #faf9f9;
+}
+.content-wrap main table  tr td a{
+	display: inline-block;
+}
+.content-wrap main table  tr td a img{
+	width: 0.93vw;
+	display: inline-block;
+}
+.content-wrap main table  tr td a:last-child{
+	margin-left: 0.8vw;
+}
+

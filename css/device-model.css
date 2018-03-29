@@ -1,0 +1,293 @@
+.content-wrap main{
+	background-color: #F3F4F7;
+}
+.device-search{
+	padding-top: 0.8vw;
+	padding-bottom: 1.1vw;
+	background-color: #fff;
+}
+.device-search form .line-text{
+	width: 8.75vw;
+    font-size: 0.72vw;
+    background-color: #f3f4f7;
+    border-color: #e0e0e0;
+    padding: 0.4vw;
+    margin-left: 0.8vw;
+    border-radius: 4px;
+}
+.device-search form .button{
+	width: 2.9vw;
+    border: none;
+    background-color: #c30d23;
+    color: #fff;
+    border-radius: 1vw;
+    padding: 0.4vw 0;
+    font-size: 0.72vw;
+    margin-left: 0.8vw;
+}
+.device-title{
+	padding: 0.8vw;
+	background-color: #F3F4F7;
+}
+.device-title span{
+	font-size: 0.93vw;
+	color: #C30D23;
+}
+.device-table {
+	background-color: #fff;
+}
+.device-table button{
+	padding: 0.4vw 0.6vw;
+    border-color: #c30d23;
+    background-color: #faf6f7;
+    border-radius: 4px;
+    color: #c30d23;
+    margin: 0.4vw 0;
+    margin-left: 0.8vw;
+    font-size: 0.72vw;
+}
+.device-table table{
+	width: 100%;
+}
+.device-table table tr {
+	border: 1px solid #e9e8e8;
+}
+.device-table table tr th{
+	font-size: 0.83vw;
+	color: #333;
+	padding: 0.6vw 0;
+	background-color: #FAF9F9;
+}
+.device-table table tr td {
+	text-align: center;
+	color: #666;
+	font-size: 0.72vw;
+	padding: 1.3vw 0;
+}
+.device-table table tr td a {
+	display: inline-block;
+}
+.device-table table tr td a:first-child{
+	margin-right: 0.8vw;
+}
+.device-table table tr td a img{
+	width: 0.93vw;
+	height: 0.93vw;
+	display: inline-block;
+}
+/*新增设备弹窗*/
+.adddevice-overlay{
+	width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 100;
+}
+.adddevice-content{
+	width: 28vw;
+    margin: 0 auto;
+    background-color: #fff;
+    margin-top: 13%;
+    padding-bottom: 1vw;
+}
+.adddevice-content .adddevice-title{
+	width: 100%;
+    background-color: #C30D23;
+    position: relative;
+    padding: 0.5vw 0;
+}
+.adddevice-content .adddevice-title span{
+	color: #fff;
+    font-size: 0.83vw;
+    padding-left: 0.4vw;
+}
+.adddevice-content .adddevice-title img{
+	position: absolute;
+    right: 0.4vw;
+    width: 0.83vw;
+    top: 50%;
+    margin-top: -0.4vw;
+}
+.adddevice-content table{
+	width: 93%;
+	margin: 0 auto;
+	margin-top: 1.6vw;
+}
+.adddevice-content table tr td{
+	border: 1px solid #aaa;
+	font-size: 0.72vw;
+	color: #666;
+	text-align: center;
+	padding: 0.4vw 0.7vw;
+}
+.adddevice-content table tr .label{
+	background-color: #F3F4F7;
+	color: #666;
+}
+.adddevice-content table tbody tr td input,select,textarea{
+	width: 100%;
+	height: 100%;
+	border: none;
+	resize: none;
+}
+.adddevice-content table tfoot tr td{
+	text-align: center;
+	border: none;
+}
+.adddevice-content table tfoot tr td input{
+	width: 6.25vw;
+	height: 2vw;
+	background-color: #ccc;
+	color: #fff;
+	font-size: 0.83vw;
+	border: none;
+	border-radius: 5px;
+	margin-top: 1.6vw;
+}
+.adddevice-content table tfoot tr td input[type='submit']{
+	background-color: #C30D23;
+	color: #fff;
+	margin-right: 0.8vw;
+}
+/*查看设备弹窗*/
+.checkdevice-overlay{
+	width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 100;
+}
+.checkdevice-content{
+	width: 28vw;
+    margin: 0 auto;
+    background-color: #fff;
+    margin-top: 13%;
+    padding-bottom: 1vw;
+}
+.checkdevice-content .checkdevice-title{
+	width: 100%;
+    background-color: #C30D23;
+    position: relative;
+    padding: 0.5vw 0;
+}
+.checkdevice-content .checkdevice-title span{
+	color: #fff;
+    font-size: 0.83vw;
+    padding-left: 0.4vw;
+}
+.checkdevice-content .checkdevice-title img{
+	position: absolute;
+    right: 0.4vw;
+    width: 0.83vw;
+    top: 50%;
+    margin-top: -0.4vw;
+}
+.checkdevice-content table{
+	width: 93%;
+	margin: 0 auto;
+	margin-top: 1.6vw;
+}
+.checkdevice-content table tr td{
+	border: 1px solid #aaa;
+	font-size: 0.72vw;
+	color: #666;
+	text-align: center;
+	padding: 0.4vw 0.7vw;
+}
+.checkdevice-content table tr .label{
+	background-color: #F3F4F7;
+	color: #666;
+}
+.checkdevice-content table tbody tr td input,select,textarea{
+	width: 100%;
+	height: 100%;
+	border: none;
+	resize: none;
+}
+.checkdevice-content table tfoot tr td{
+	text-align: center;
+	border: none;
+}
+/*修改设备弹窗*/
+.revisedevice-overlay{
+	width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 100;
+}
+.revisedevice-content{
+	width: 28vw;
+    margin: 0 auto;
+    background-color: #fff;
+    margin-top: 13%;
+    padding-bottom: 1vw;
+}
+.revisedevice-content .revisedevice-title{
+	width: 100%;
+    background-color: #C30D23;
+    position: relative;
+    padding: 0.5vw 0;
+}
+.revisedevice-content .revisedevice-title span{
+	color: #fff;
+    font-size: 0.83vw;
+    padding-left: 0.4vw;
+}
+.revisedevice-content .revisedevice-title img{
+	position: absolute;
+    right: 0.4vw;
+    width: 0.83vw;
+    top: 50%;
+    margin-top: -0.4vw;
+}
+.revisedevice-content table{
+	width: 93%;
+	margin: 0 auto;
+	margin-top: 1.6vw;
+}
+.revisedevice-content table tr td{
+	border: 1px solid #aaa;
+	font-size: 0.72vw;
+	color: #666;
+	text-align: center;
+	padding: 0.4vw 0.7vw;
+}
+.revisedevice-content table tr .label{
+	background-color: #F3F4F7;
+	color: #666;
+}
+.revisedevice-content table tbody tr td input,select,textarea{
+	width: 100%;
+	height: 100%;
+	border: none;
+	resize: none;
+}
+.revisedevice-content table tfoot tr td{
+	text-align: center;
+	border: none;
+}
+.revisedevice-content table tfoot tr td input{
+	width: 6.25vw;
+	height: 2vw;
+	background-color: #ccc;
+	color: #fff;
+	font-size: 0.83vw;
+	border: none;
+	border-radius: 5px;
+	margin-top: 1.6vw;
+}
+.revisedevice-content table tfoot tr td input[type='submit']{
+	background-color: #C30D23;
+	color: #fff;
+	margin-right: 0.8vw;
+}

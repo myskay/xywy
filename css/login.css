@@ -1,0 +1,128 @@
+body{
+	background: url(../img/bgt.png) no-repeat;
+	background-size: 100% 100%;
+}
+.header-con{
+	padding-top: 30px;
+	padding-left: 40px;
+}
+.header-con img{
+	width: 13.2%;
+	height: auto;
+	display: block;
+}
+.container{
+	width: 19.3%;
+	margin: 0 auto;
+	margin-top: 5vw;
+}
+.form-signin-heading{
+	font-size: 1.8vw;
+    color: #333;
+    text-align: center;
+    margin-bottom: 71px;
+}
+.form-text{
+	font-size: 0.9vw;
+    padding-top: 0.9vw;
+    padding-bottom: 0.9vw;
+    padding-left: 0.9vw;
+    width: calc(100% - 0.9vw);
+    border-radius: 27px;
+    border-color: #e0e0e0;
+    margin-bottom: 32px;
+}
+.login-else{
+	width: 100%;
+	position: relative;
+}
+.login-else .img-box{
+	position: absolute;
+    right: 0.3vw;
+    top: 0.5vw;
+}
+.login-else .img-box img{
+	width: 5vw;
+    display: inline-block;
+    height: 2vw;
+}
+.login-else .form-text{
+	margin-bottom: 0;
+}
+.login-else .getcode{
+	position: absolute;
+	bottom: 0.9vw;
+	right: 0.9vw;
+	font-size: 0.9vw;
+	color: #c30d23;
+	padding-left: 1vw;
+	border: none;
+	border-left: 1px solid #e0e0e0;
+	background-color: transparent;
+}
+.checkbox{
+	width: 100%;
+	display: block;
+	margin-top: 0.9vw;
+	margin-bottom: 0.9vw;
+	font-size: 0.72vw;
+}
+.checkbox input{
+	margin-right: 0.4vw;
+	float: left;
+	color: #666;
+}
+.checkbox input[type='checkbox']{
+	-webkit-appearance: none;
+	border: none;
+	width: 0.8vw;
+	height: 0.8vw;
+	background: url(../img/weixuanzhong.png) no-repeat center center;
+	background-size: cover;
+	margin-top: 0.2vw;
+}
+.checkbox input[type='checkbox']:checked{
+	background: url(../img/xuanzhong.png) no-repeat center center;
+	background-size: cover;
+}
+.checkbox span{
+	float: right;
+}
+.checkbox span a{
+	color: #666;
+	text-decoration: blink;
+	cursor: pointer;
+}
+.login{
+	width: 100%;
+	background-color: #C30D23;
+	color: #fff;
+	padding: 0.9vw 0;
+	border-radius: 27px;
+	border: none;
+	letter-spacing: 0.1vw;
+}
+.alert-box{
+	font-size: 0.9vw;
+	color: #C30D23;
+	text-align: center;
+	padding-top: 0.9vw;
+}
+.code-alert{
+	font-size: 0.9vw;
+    text-align: center;
+    background-color: rgba(0,0,0,0.3);
+    color: #fff;
+    width: 10%;
+    padding: 0.2vw 0;
+    border-radius: 27px;
+    position: fixed;
+    top: 50%;
+    left: 45%;
+    display: none;
+}
+ .show{
+	display: block;
+	z-index: 108;
+}
+

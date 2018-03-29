@@ -1,0 +1,130 @@
+.main-cotent{
+	padding: 1.2vw 0;
+	border-bottom: 0.4vw solid #f3f4f7;
+}
+.con-in{
+	width: calc(100% - 2.6vw);
+	margin: 0 auto;
+}
+.con-in .in-part{
+	width: 23%;
+	height: 8.5vw;
+	float: left;
+	margin-right: 2.6%;
+	position: relative;
+}
+.con-in .in-part:nth-child(4){
+	margin-right: 0;
+}
+.con-in .blue{
+	background: url(../img/jbbg-1.png) no-repeat;
+	background-size: cover;
+}
+.con-in .yellow{
+	background: url(../img/jbbg-2.png) no-repeat;
+	background-size: cover;
+}
+.con-in .purple{
+	background: url(../img/jbbg-3.png) no-repeat;
+	background-size: cover;
+}
+.con-in .pink{
+	background: url(../img/jbbg-4.png) no-repeat;
+	background-size: cover;
+}
+.con-in .part-con{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.con-in .part-con p{
+	color: #fff;
+	text-align: center;
+}
+.con-in .part-con .num{
+	font-size: 1.6vw;
+}
+.con-in .part-con .name a{
+	font-size: 0.93vw;
+	padding-top: 1.7vw;
+	display: block;
+	color: #fff;
+}
+.todo-list{
+	border-bottom: 0.4vw solid #f3f4f7;
+}
+.todo-list .list-title{
+	border-bottom: 1px solid #e0e0e0;
+	padding: 1.25vw 0;
+	margin: 0 1.3vw;
+}
+.todo-list .list-content{
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.todo-list .list-title .circle{
+	display: inline-block;
+	width: 0.9vw;
+	height: 0.9vw;
+	background-color: #C30D23;
+	border-radius: 50%;
+}
+.todo-list .list-title .title-name{
+	font-size: 1.25vw;
+	color: #333;
+	font-weight: bold;
+	margin-left: 0.3vw;
+}
+.todo-list .list-con li{
+	width: 33.3333%;
+	float: left;
+	position: relative;
+	height: 14vw;
+}
+.todo-list .list-con li .con-in{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.todo-list .list-con li .con-in .num{
+	text-align: center;
+	font-size: 1.7vw;
+	color: #333;
+	font-weight: bold;
+}
+.todo-list .list-con li .con-in .name{
+	margin-top: 3.2vw;
+	text-align: center;
+}
+.todo-list .list-con li .con-in .name a{
+	font-size: 1vw;
+	color: #666;
+}
+.todo-list .list-title .title-in{
+	float: left;
+}
+.todo-list .list-title .anniu-jihe{
+	float: right;
+}
+.todo-list .list-title .anniu-jihe li{
+	float: left;
+	cursor: pointer;
+	margin-right: 0.8vw;
+}
+.todo-list .list-title .anniu-jihe li a{
+	width: 3.64vw;
+	display: block;
+	border-radius: 20px;
+	text-align: center;
+	padding: 0.3vw 0;
+	background-color: #F3F4F7;
+}
+.todo-list .list-title .anniu-jihe li .active{
+	background-color: #C30D23;
+	color: #fff;
+}
+
+
+

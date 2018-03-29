@@ -1,0 +1,103 @@
+.content-wrap main .goback-wrapper{
+	padding: 0.8vw;
+	border-bottom: 1px solid #efefef;
+}
+.content-wrap main .goback-wrapper a{
+	display: inline-block;
+}
+.content-wrap main .goback-wrapper a img{
+	width: 0.5vw;
+	display: inline-block;
+}
+.content-wrap main .goback-wrapper  span{
+	font-size: 0.93vw;
+	color: #333;
+	display: inline-block;
+	padding-left: 0.7vw;
+}
+.content-wrap main .check-form{
+	margin-top: 4vw;
+}
+.content-wrap main .check-form table{
+	width: 60%;
+	margin: 0 auto;
+	margin-bottom: 48px;
+}
+.content-wrap main .check-form table tr td{
+	font-size: 0.72vw;
+	color: #666;
+	border: 1px solid #ccc;
+}
+.content-wrap main .check-form table tr .chuli-details{
+	height: 5vw;
+}
+.content-wrap main .check-form table tr .chuli-details textarea{
+	width: 100%;
+	height: 100%;
+	border: none;
+	resize: none;
+	border-top: 1px solid #ccc;
+	font-size: 0.72vw;
+}
+.content-wrap main .check-form table tr td input[type='text']{
+	width: 100%;
+	border: none;
+	text-align: center;
+	font-size: 0.72vw;
+	height: 100%;
+}
+.content-wrap main .check-form table tr td select{
+	width: 100%;
+	height: 100%;
+	border: none;
+	text-align: center;
+	font-size: 0.72vw;
+}
+.content-wrap main .check-form table tr td select option{
+	font-size: 0.72vw;
+	background-color: #f1f1f1;
+}
+.content-wrap main .check-form table tr .label{
+	background-color: #F3F4F7;
+	padding: 0.7vw 0;
+	text-align: center;
+}
+.content-wrap main .check-form table tr .label span{
+	color: #C30D23;
+}
+.content-wrap main .check-form table tr .label div{
+	width: 6.6vw;
+}
+.content-wrap main .check-form table tr .label div span{
+	color: #C30D23;
+}
+.content-wrap main .check-form table tr .thead{
+	padding: 0.8vw 0;
+	padding-left: 0.4vw;
+}
+.content-wrap main .check-form table tr .thead span{
+	font-size: 0.83vw;
+	color: #C30C23;
+}
+.content-wrap main .check-form table tr .button{
+	text-align: center;
+	border: none;
+	padding: 48px 0;
+}
+.content-wrap main .check-form table tr .button input{
+	text-align: center;
+	border: none;
+	font-size: 0.93vw;
+    background-color: #c30d23;
+    color: #fff;
+    padding: 0.8vw 2.5vw;
+    border-radius: 4px;
+    display: inline-block;
+    width: auto;
+    height: auto;
+}
+.content-wrap main .check-form  table tr .button .gray{
+	background-color: #ccc;
+	margin-left: 2.5vw;
+	
+}

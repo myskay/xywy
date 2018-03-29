@@ -1,0 +1,145 @@
+
+.content-wrap main ul{
+	background-color: #f3f4f7;
+}
+.content-wrap main ul li{
+	float: left;
+	padding: 0.8vw 1.4vw;
+    border: 1px solid #e0e0e0;
+    background-color: #faf9f9;
+    border-bottom: none;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+.content-wrap main ul li a{
+	font-size: 0.83vw;
+	color: #666;
+}
+.content-wrap main ul .active{
+	background-color: #fff;
+	font-weight: bold;
+}
+.content-wrap main ul .active a{
+	color: #333;
+}
+.content-wrap main .table{
+	margin: 0 3.5vw;
+	margin-top: 4vw;
+}
+.content-wrap main .table table{
+	width: 100%;
+}
+.content-wrap main .table table tr td{
+	font-size: 0.72vw;
+	color: #666;
+	border: 1px solid #ccc;
+	position: relative;
+}
+.content-wrap main .table table tr td input{
+	width: 100%;
+	border: none;
+	text-align: left;
+	font-size: 0.72vw;
+	height: 100%;
+}
+.content-wrap main .table table tr td .Validform_checktip{
+	position: absolute;
+    top: 75%;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    transform: translateY(-50%);
+}
+.content-wrap main .table table tr td select{
+	width: 100%;
+	height: 100%;
+	border: none;
+	text-align: center;
+	font-size: 0.72vw;
+}
+.content-wrap main .table table tr td option{
+	font-size: 0.72vw;
+	background-color: #f1f1f1;
+}
+.content-wrap main .table table tr td option:hover{
+	background-color: #c30d23;
+	color: #fff;
+}
+.content-wrap main .table table tr .label{
+	background-color: #F3F4F7;
+	padding: 0.7vw 0;
+	text-align: center;
+}
+.content-wrap main .table table tr .label div{
+	width: 6.6vw;
+}
+.content-wrap main .table table tr .label div span{
+	color: #C30C23;
+}
+.content-wrap main .table table tr .thead{
+	padding: 0.8vw 0;
+	padding-left: 0.4vw;
+}
+.content-wrap main .table table tr .thead span{
+	font-size: 0.83vw;
+	color: #C30C23;
+}
+.content-wrap main .table table tr .file{
+	position: relative;
+}
+.content-wrap main .table table tr .file input{
+	position: absolute;
+	opacity: 0;
+	z-index: 10;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+}
+.content-wrap main .table table tr .file .img1{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 9;
+}
+.content-wrap main .table table tr .file img[src='']{
+	visibility: hidden;
+}
+.content-wrap main .table table tr .file button{
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 0.72vw;
+    background-color: #c30d23;
+    color: #fff;
+    padding: 0.4vw 0.7vw;
+    border: none;
+    border-radius: 4px;
+    z-index: 9;
+    top: 43%;
+}
+.content-wrap main .table table tr .button{
+	text-align: center;
+	border: none;
+	padding: 48px 0;
+}
+.content-wrap main .table table tr .button input{
+	text-align: center;
+	border: none;
+	font-size: 0.93vw;
+    background-color: #c30d23;
+    color: #fff;
+    padding: 0.8vw 2.5vw;
+    border-radius: 4px;
+    display: inline-block;
+    width: auto;
+    height: auto;
+}
+.content-wrap main .table table tr .button input[type='reset']{
+	background-color: #ccc;
+	margin-left: 2.5vw;
+	
+}

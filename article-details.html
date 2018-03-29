@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>运营管理-文章管理</title>
+		<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+		<link rel="stylesheet" type="text/css" href="css/initialize.css"/>
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="css/startup.css"/>
+		<link rel="stylesheet" type="text/css" href="css/article-manage.css"/>
+		<script src="js/jquery.js"></script>
+		<script src="js/common.js"></script>
+		<script src="js/forget.js"></script>
+		<script src="js/startup.js"></script>
+	</head>
+	<body>
+		<!--导航栏-->
+		<header>
+			<div class="header-con">
+				<div class="header-logo">
+				   <a href="#"><img src="img/shouye-logo.png"/></a>
+			    </div>
+			    <div class="search">
+			    	<img src="img/sousuo.png" id="search-box"/>
+			    </div>
+			    <!--搜索框-->
+			   <div id="sb-search" class="sb-search">
+			    			<form>
+			    				<input class="sb-search-input" placeholder="请输入用户名或手机号"  type="text" value="" name="search" id="search"/>
+			    				<input class="sb-search-submit" type="submit" value="" />
+			    				<span class="sb-icon-search"><img src="img/white-sousuo.png"/></span>
+			    			</form>
+			    </div>
+			    <ul class="header-nav">
+			    	<li><a href="index.html" >首页</a></li>
+			    	<li><a href="user-manage.html">用户管理</a></li>
+			    	<li><a href="wtist-meter.html">设备管理</a></li>
+			    	<li><a href="todo-sos.html">工单管理</a></li>
+			    	<li><a href="startup.html">运营管理</a></li>
+			    	<li><a href="service-list.html">系统管理</a></li>
+			    	<li><a href="useradd-count.html">数据统计</a></li>
+			    </ul>
+			    <div class="header-personal">
+			    	<div class="upload">
+			    		<!--<input type="file" name="file" title="Change" class="form-control doc " multiple="multiple" id="doc">-->
+			    		<img src="img/touxiang.png" class="img1"/>
+			    	</div>
+			    	<div class="personal">
+			    		<p class="name">吃吃</p>
+			    		<p class="role">角色:<span>客服组</span></p>
+			    	</div>
+			    	<div style="clear: both;"></div>
+			    		<ul class="personal-xiala">
+			    		    <li class="gaimima"><a href="#">修改密码</a></li>
+			    		    <li class="quit"><a href="#">退出登录</a></li>
+			    	    </ul>
+			    </div>
+			    <div style="clear: both;"></div>
+			</div>
+		</header>
+		<!--导航栏结束-->
+        <!--修改密码弹窗-->
+		<div class="revise-overlay">
+	        <div class="revise-content">
+		         <div class="con-title">
+			        <span class="">修改密码</span>
+			        <img src="img/guanbi.png" class="close"/>
+		         </div>
+		         <div class="container">
+			        <form class="form-signin">
+				         <div class="login-wrap">
+					       <input type="text" class="form-text tel-box" placeholder="请输入绑定的手机号" maxlength="11" id="tel-box">
+				        </div>
+				        <div class="mask">
+					        <div class="code-alert">获取验证码成功</div>
+				        </div>
+				       <div class="login-else">
+					        <input type="text" placeholder="请输入验证码" class="form-text test-code" id="code-box">
+					        <button class="getcode" type="button" id="send">发送</button>
+				       </div>
+
+				       <p class="alert-box"></p>
+				       <div class="login-else login-pwd">
+					       <input type="password" placeholder="请输入新密码" class="form-text test-code" id="pwd1">
+					       <button class="getcode" type="button" id="showhidePwd"></button>
+				       </div>
+				       <div class="login-else login-text">
+					       <input type="text" placeholder="请输入新密码" class="form-text test-code" id="pwd2">
+					       <button class="getcode" type="button" id="hideshowPwd"></button>
+				       </div>
+				       <input type="submit" value="确定" class="login">
+			        </form>
+		        </div>
+	        </div>
+        </div>
+		<!--退出登录弹窗-->
+		<div class="quit-overlay">
+			<div class="quit-content">
+		         <div class="con-title">
+			        <span class="">退出登录</span>
+			        <img src="img/guanbi.png" class="close"/>
+		         </div>
+		         <div class="quit-con">
+		   	        <p>确定要退出后台系统吗?</p>
+		   	        <div class="quit-jihe">
+		   	           <button class="sure">确认</button>
+		   	           <button class="cancel">返回</button>
+		   	        </div>
+		        </div>
+		  </div>
+		</div>
+	    <!--主要内容-->
+	    <div class="content-wrap">
+	    	<div class="container">
+	    		<aside>
+	    			<ul class="aside-ul">
+	    				<li class="li ">
+	    					<a href="startup.html">
+	    						<span>启动页模板</span>
+	    						<img src="img/heisefanhui.png"/>
+	    					</a>
+	    				</li>
+	    				<li class="li">
+	    					<a href="banner.html">
+	    						<span>Banner模板</span>
+	    						<img src="img/heisefanhui.png"/>
+	    					</a>
+	    				</li>
+	    				<li class="li">
+	    					<a href="msg-push.html">
+	    						<span>消息推送</span>
+	    						<img src="img/heisefanhui.png"/>
+	    					</a>
+	    				</li>
+	    				<li class="li">
+	    					<a href="sns-center.html">
+	    						<span>短信平台</span>
+	    						<img src="img/heisefanhui.png"/>
+	    					</a>
+	    				</li>
+	    				<li class="li">
+	    					<a href="elder-type.html">
+	    						<span>老人类别管理</span>
+	    						<img src="img/heisefanhui.png"/>
+	    					</a>
+	    				</li>
+	    				<li class="li">
+	    					<a href="service-person.html">
+	    						<span>服务人员管理</span>
+	    						<img src="img/heisefanhui.png"/>
+	    					</a>
+	    				</li>
+	    				<li class="li">
+	    					<a href="article-manage.html">
+	    						<span>文章管理</span>
+	    						<img src="img/heisefanhui.png"/>
+	    					</a>
+	    				</li>
+	    			</ul>
+	    		</aside>
+	    		<main>
+	    			<div class="details">
+	    				<div>
+	    					<p class="text-center"><img src="img/dengluzhuce-logo.png"/></p>
+	    			        <p class="text-center">夕阳无忧项目</p>
+	    			        <p class="article">习近平在贺信中表示，值此中越两国人民的传统节日春节即将到来之际，我代表中国共产党和中国人民并以我个人的名义，
+	    				                 向总书记同志，并通过你向越南共产党和越南人民致以诚挚的新春问候和祝福。习近平表示，刚刚过去的2017年是中越关
+	    				               系发展进程中具有重要意义的一年。我同总书记同志再次实现历史性互访，我们达成的广泛共识已经转化为两国交流合作
+	    				              的累累硕果。2017年中越“一带一路”与“两廊一圈”战略对接迈出重要步伐，双边贸易额实现1000亿美元目标，人员
+	    				             往来近1000万人次，两国人民从双边关系发展中有了更多的获得感</p>
+	    				</div>
+	    			</div>
+	    		</main>
+	    		<div style="clear: both;"></div>
+	    	</div>
+	    </div>
+	</body>
+</html>

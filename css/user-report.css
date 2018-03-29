@@ -1,0 +1,24 @@
+.wrist-search{
+	border-bottom: none;
+}
+table tr td div{
+	margin-top: 0.4vw;
+}
+table tr td div:first-child{
+	margin-top: 0;
+}
+table tr td .check-report a{
+	font-size: 0.72vw;
+	color: #fe5362;
+	cursor: pointer;
+}
+table tr td .export-report a{
+	font-size: 0.72vw;
+	color: #f3d332;
+	cursor: pointer;
+}
+table tr td .print-report a{
+	font-size: 0.72vw;
+	color: #60a5fc;
+	cursor: pointer;
+}

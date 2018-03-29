@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>用户管理-用户关联人信息</title>
+		<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+		<link rel="stylesheet" type="text/css" href="css/initialize.css"/>
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="css/add-user.css"/>
+		<link rel="stylesheet" type="text/css" href="css/user-aboutperson.css"/>
+		<link rel="stylesheet" type="text/css" href="css/valiform.css"/>
+		<script src="js/jquery.js"></script>
+		<script src="js/common.js"></script>
+		<script src="js/forget.js"></script>
+		<script src="js/user-aboutperson.js"></script>
+		<script src="js/Validform.js"></script>
+	</head>
+	<body>
+		<!--导航栏-->
+		<header>
+			<div class="header-con">
+				<div class="header-logo">
+				   <a href="#"><img src="img/shouye-logo.png"/></a>
+			    </div>
+			    <div class="search">
+			    	<img src="img/sousuo.png" id="search-box"/>
+			    </div>
+			    <!--搜索框-->
+			   <div id="sb-search" class="sb-search">
+			    			<form>
+			    				<input class="sb-search-input" placeholder="请输入用户名或手机号"  type="text" value="" name="search" id="search"/>
+			    				<input class="sb-search-submit" type="submit" value="" />
+			    				<span class="sb-icon-search"><img src="img/white-sousuo.png"/></span>
+			    			</form>
+			    </div>
+			    <ul class="header-nav">
+			    	<li><a href="index.html" >首页</a></li>
+			    	<li><a href="user-manage.html">用户管理</a></li>
+			    	<li><a href="wtist-meter.html">设备管理</a></li>
+			    	<li><a href="todo-sos.html">工单管理</a></li>
+			    	<li><a href="startup.html">运营管理</a></li>
+			    	<li><a href="service-list.html">系统管理</a></li>
+			    	<li><a href="useradd-count.html">数据统计</a></li>
+			    </ul>
+			    <div class="header-personal">
+			    	<div class="upload">
+			    		<!--<input type="file" name="file" title="Change" class="form-control doc " multiple="multiple" id="doc">-->
+			    		<img src="img/touxiang.png" class="img1"/>
+			    	</div>
+			    	<div class="personal">
+			    		<p class="name">吃吃</p>
+			    		<p class="role">角色:<span>客服组</span></p>
+			    	</div>
+			    	<div style="clear: both;"></div>
+			    		<ul class="personal-xiala">
+			    		    <li class="gaimima"><a href="#">修改密码</a></li>
+			    		    <li class="quit"><a href="#">退出登录</a></li>
+			    	    </ul>
+			    </div>
+			    <div style="clear: both;"></div>
+			</div>
+		</header>
+		<!--导航栏结束-->
+        <!--修改密码弹窗-->
+		<div class="revise-overlay">
+	        <div class="revise-content">
+		         <div class="con-title">
+			        <span class="">修改密码</span>
+			        <img src="img/guanbi.png" class="close"/>
+		         </div>
+		         <div class="container">
+			        <form class="form-signin">
+				         <div class="login-wrap">
+					       <input type="text" class="form-text tel-box" placeholder="请输入绑定的手机号" maxlength="11" id="tel-box">
+				        </div>
+				        <div class="mask">
+					        <div class="code-alert">获取验证码成功</div>
+				        </div>
+				       <div class="login-else">
+					        <input type="text" placeholder="请输入验证码" class="form-text test-code" id="code-box">
+					        <button class="getcode" type="button" id="send">发送</button>
+				       </div>
+
+				       <p class="alert-box"></p>
+				       <div class="login-else login-pwd">
+					       <input type="password" placeholder="请输入新密码" class="form-text test-code" id="pwd1">
+					       <button class="getcode" type="button" id="showhidePwd"></button>
+				       </div>
+				       <div class="login-else login-text">
+					       <input type="text" placeholder="请输入新密码" class="form-text test-code" id="pwd2">
+					       <button class="getcode" type="button" id="hideshowPwd"></button>
+				       </div>
+				       <input type="submit" value="确定" class="login">
+			        </form>
+		        </div>
+	        </div>
+        </div>
+		<!--退出登录弹窗-->
+		<div class="quit-overlay">
+			<div class="quit-content">
+		         <div class="con-title">
+			        <span class="">退出登录</span>
+			        <img src="img/guanbi.png" class="close"/>
+		         </div>
+		         <div class="quit-con">
+		   	        <p>确定要退出后台系统吗?</p>
+		   	        <div class="quit-jihe">
+		   	           <button class="sure">确认</button>
+		   	           <button class="cancel">返回</button>
+		   	        </div>
+		        </div>
+		  </div>
+		</div>
+	    <!--主要内容-->
+	    <div class="content-wrap">
+	    	<div class="container">
+	    		<aside>
+	    			<ul class="aside-ul">
+	    				<li class="li">
+	    					<span class="li-title selected" onclick="window.location.href='user-manage.html'">用户管理<img src="img/left-fanhui.png"/></span>
+	    					<ul>
+	    						<li><a href="add-user.html">新增用户</a></li>
+	    					</ul>
+	    				</li>
+	    			</ul>
+	    		</aside>
+	    		<main>
+	    			<ul>
+	    				<li><a href="add-user.html">用户基本信息</a></li>
+	    				<li><a href="user-aboutperson.html">用户关联人信息</a></li>
+	    				<li><a href="userhealth-info.html">用户健康信息</a></li>
+	    				<li><a href="userhealth-record.html">用户健康履历</a></li>
+	    				<li><a href="userdrug-record.html">用户用药记录</a></li>
+	    				<li><a href="usertest-record.html">用户体检记录</a></li>
+	    				<li><a href="user-hobby.html">用户特长爱好</a></li>
+	    				<li><a href="userabout-info.html">挂钩服务者信息</a></li>
+	    				<div style="clear: both;"></div>
+	    			</ul>
+	    			<div class="add-person">
+	    				<button>新增</button>
+	    			</div>
+	    			<table>
+	    				<thead>
+	    					<tr>
+	    						<th>序号</th>
+	    						<th>姓名</th>
+	    						<th>性别</th>
+	    						<th>联系电话</th>
+	    						<th>账号信息</th>
+	    						<th>关系</th>
+	    						<th>是否同住</th>
+	    						<th>联系地址</th>
+	    						<th>操作</th>
+	    					</tr>
+	    				</thead>
+	    				<tbody>
+	    					<tr>
+	    						<td>1</td>
+	    						<td>张三</td>
+	    						<td>女</td>
+	    						<td>18334770163</td>
+	    						<td>18334770163</td>
+	    						<td>母女</td>
+	    						<td>是</td>
+	    						<td>北京市昌平区天通东苑二区4单元602</td>
+	    						<td>
+	    							<a  class="xiugai-pwd"><img src="img/chongzhimima-.png"/></a>
+	    							<a class="check-about"><img src="img/chakanxiangqing.png"/></a>
+	    							<a class="revise-about"><img src="img/xiugaixinxi.png"/></a>
+	    						</td>
+	    					</tr>
+	    					<tr>
+	    						<td>1</td>
+	    						<td>张三</td>
+	    						<td>女</td>
+	    						<td>18334770163</td>
+	    						<td>18334770163</td>
+	    						<td>母女</td>
+	    						<td>是</td>
+	    						<td>北京市昌平区天通东苑二区4单元602</td>
+	    						<td>
+	    							<a  class="xiugai-pwd"><img src="img/chongzhimima-.png"/></a>
+	    							<a class="check-about"><img src="img/chakanxiangqing.png"/></a>
+	    							<a class="revise-about"><img src="img/xiugaixinxi.png"/></a>
+	    						</td>
+	    					</tr>
+	    				</tbody>
+	    			</table>
+	    		</main>
+	    		<div style="clear: both;"></div>
+	    	</div>
+	    </div>
+	    <!--新增用户关联人的弹窗-->
+	    <div class="addabout-overlay">
+	    	<div class="addabout-content">
+	    		<div class="addabout-title">
+	    			<span>新增用户关联人</span>
+	    			<img src="img/guanbi.png" class="close" />
+	    		</div>
+	    		<form class="check-form">
+	    			<table>
+	    				<tbody>
+	    					<tr>
+	    						<td class="label">姓名</td>
+	    						<td><input type="text" dataType='*'/></td>
+	    						<td class="label">性别</td>
+	    						<td>
+	    							<select dataType="*">
+	    								<option>--请选择--</option>
+	    								<option value="1">男</option>
+	    								<option value="2">女</option>
+	    							</select>
+	    						</td>
+	    					</tr>
+	    					<tr>
+	    						<td class="label">联系电话</td>
+	    						<td><input type="text" dataType="m"/></td>
+	    						<td class="label">账号信息</td>
+	    						<td><input type="text" dataType="*"/></td>
+	    					</tr>
+	    					<tr>
+	    						<td class="label">关系</td>
+	    						<td>
+	    							<select dataType="*">
+	    								<option>--请选择--</option>
+	    								<option value="1">母女</option>
+	    							</select>
+	    						</td>
+	    						<td class="label">是否同住</td>
+	    						<td>
+	    							<select dataType="*">
+	    								<option>--请选择--</option>
+	    								<option value="1">是</option>
+	    								<option value="2">否</option>
+	    							</select>
+	    						</td>
+	    					</tr>
+	    					<tr>
+	    						<td class="label">联系地址</td>
+	    						<td colspan="3">
+	    							<textarea rows="3" dataType="*"></textarea>
+	    						</td>
+	    					</tr>
+	    				</tbody>
+	    				<tfoot>
+	    					<tr>
+	    						<td colspan="4">
+	    							<input type="submit" value="确定" />
+	    							<input type="reset" value="取消" />
+	    						</td>
+	    					</tr>
+	    				</tfoot>
+	    			</table>
+	    		</form>
+	    	</div>
+	    </div>
+	     <!--重置密码的弹窗-->
+	    <div class="reset-overlay">
+	    	<div class="reset-content">
+	    		<div class="con-title">
+			        <span class="">重置用户关联人密码</span>
+			        <img src="img/guanbi.png" class="close"/>
+		         </div>
+		         <div class="reset-con">
+		         	<form class="check-form">
+		         		<table>
+		         			<tbody>
+		         				<tr>
+		         					<td><input type="password" placeholder="请设置新密码" dataType="*6-16" name="password"/></td>
+		         				</tr>
+		         				<tr>
+		         					<td><input type="password" placeholder="请确认新密码" datatype="*6-16" recheck = 'password'/></td>
+		         				</tr>
+		         			</tbody>
+		         			<tfoot>
+		         				<tr>
+		         					<td>
+		         						<input type="submit" value="确认" class="sure"/>
+		         		                <input type="reset" value="取消" class="cancel"/>
+		         					</td>
+		         				</tr>
+		         			</tfoot>
+		         		</table>
+		         		
+		         	</form>
+		         </div>
+	    	</div>
+	    </div>
+	    <!--查看用户关联人的弹窗-->
+	    <div class="checkabout-overlay">
+	    	<div class="checkabout-content">
+	    		<div class="checkabout-title">
+	    			<span>查看用户关联人</span>
+	    			<img src="img/guanbi.png" class="close" />
+	    		</div>
+	    		<form>
+	    			<table>
+	    				<tbody>
+	    					<tr>
+	    						<td class="label">姓名</td>
+	    						<td><input type="text"/></td>
+	    						<td class="label">性别</td>
+	    						<td>
+	    							<select>
+	    								<option>--请选择--</option>
+	    								<option value="1">男</option>
+	    								<option value="2">女</option>
+	    							</select>
+	    						</td>
+	    					</tr>
+	    					<tr>
+	    						<td class="label">联系电话</td>
+	    						<td><input type="text"/></td>
+	    						<td class="label">账号信息</td>
+	    						<td><input type="text"/></td>
+	    					</tr>
+	    					<tr>
+	    						<td class="label">关系</td>
+	    						<td>
+	    							<select>
+	    								<option>--请选择--</option>
+	    								<option value="1">母女</option>
+	    							</select>
+	    						</td>
+	    						<td class="label">是否同住</td>
+	    						<td>
+	    							<select>
+	    								<option>--请选择--</option>
+	    								<option value="1">是</option>
+	    								<option value="2">否</option>
+	    							</select>
+	    						</td>
+	    					</tr>
+	    					<tr>
+	    						<td class="label">联系地址</td>
+	    						<td colspan="3">
+	    							<textarea rows="3"></textarea>
+	    						</td>
+	    					</tr>
+	    				</tbody>
+	    			</table>
+	    		</form>
+	    	</div>
+	    </div>
+	    <!--修改用户关联人的弹窗--> 
+	    <div class="reviseabout-overlay">
+	    	<div class="reviseabout-content">
+	    		<div class="reviseabout-title">
+	    			<span>修改用户关联人</span>
+	    			<img src="img/guanbi.png" class="close" />
+	    		</div>
+	    		<form class="check-form">
+	    			<table>
+	    				<tbody>
+	    					<tr>
+	    						<td class="label">姓名</td>
+	    						<td><input type="text" dataType="*"/></td>
+	    						<td class="label">性别</td>
+	    						<td>
+	    							<select dataType="*">
+	    								<option>--请选择--</option>
+	    								<option value="1">男</option>
+	    								<option value="2">女</option>
+	    							</select>
+	    						</td>
+	    					</tr>
+	    					<tr>
+	    						<td class="label">联系电话</td>
+	    						<td><input type="text" dataType="m"/></td>
+	    						<td class="label">账号信息</td>
+	    						<td><input type="text" dataType="*"/></td>
+	    					</tr>
+	    					<tr>
+	    						<td class="label">关系</td>
+	    						<td>
+	    							<select dataType="*">
+	    								<option>--请选择--</option>
+	    								<option value="1">母女</option>
+	    							</select>
+	    						</td>
+	    						<td class="label">是否同住</td>
+	    						<td>
+	    							<select dataType="*">
+	    								<option>--请选择--</option>
+	    								<option value="1">是</option>
+	    								<option value="2">否</option>
+	    							</select>
+	    						</td>
+	    					</tr>
+	    					<tr>
+	    						<td class="label">联系地址</td>
+	    						<td colspan="3">
+	    							<textarea rows="3" dataType="*"></textarea>
+	    						</td>
+	    					</tr>
+	    				</tbody>
+	    				<tfoot>
+	    					<tr>
+	    						<td colspan="4">
+	    							<input type="submit" value="确定" />
+	    							<input type="reset" value="取消" />
+	    						</td>
+	    					</tr>
+	    				</tfoot>
+	    			</table>
+	    		</form>
+	    	</div>
+	    </div>
+	    <script>
+	    	$(function(){
+	    		$(".selected").siblings().show();
+	    	})
+	    </script>
+	</body>
+</html>

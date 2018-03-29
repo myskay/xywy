@@ -1,0 +1,75 @@
+.content-wrap .form{
+	padding: 0 0.8vw;
+	margin-top: 1.6vw;
+}
+.content-wrap .form table{
+	width: 100%;
+	border-left: 1px solid #E9E8E8;
+	border-right: 1px solid #E9E8E8;
+	margin-bottom: 1.6vw;
+}
+.content-wrap .form table thead tr:first-child td{
+	font-size: 0.93vw;
+    color: #c30d23;
+    padding: 0.8vw;
+    background-color: #ecebeb;
+}
+.content-wrap .form table tbody .submit td{
+	background-color: #ECEBEB;
+	text-align: center !important;
+}
+.content-wrap .form table tbody .submit td input[type='submit']{
+	text-align: center;
+    border: none;
+    font-size: 0.93vw;
+    background-color: #c30d23;
+    color: #fff;
+    padding: 0.8vw 2.5vw;
+    border-radius: 4px;
+    display: inline-block;
+    width: auto;
+    height: auto;
+}
+.content-wrap .form table thead tr td button{
+	font-size: 0.72vw;
+    color: #c30d23;
+    border: 1px solid #c30d23;
+    padding: 0.3vw 0.6vw;
+    background-color: #faf6f7;
+    border-radius: 4px;
+    margin-left: 0.8vw;
+    margin-top: 0.3vw;
+    margin-bottom: 0.3vw;
+}
+.content-wrap .form table tbody tr td{
+	border: 1px solid #e9e8e8;
+	padding: 0.88vw 0;
+}
+.content-wrap .form table tbody tr td:first-child{
+	font-size: 0.83vw;
+	color: #333;
+	text-align: left;
+	padding-left: 0.8vw;
+}
+.content-wrap .form table tbody tr td:last-child{
+	padding-left: 0.8vw;
+}
+.content-wrap .form table tbody tr td label{
+	font-size: 0.72vw;
+	color: #666;
+	vertical-align: middle;
+	margin-right: 4vw;
+}
+.content-wrap .form table tbody tr td input[type='checkbox']{
+	width: 0.5vw;
+	height: 0.5vw;
+	background: url(../img/weixuanzhong.png) no-repeat center center;
+	background-size: cover;
+	border: none;
+	-webkit-appearance: none;
+	margin-right: 0.4vw;
+}
+.content-wrap .form table tbody tr td input[type='checkbox']:checked{
+	background: url(../img/xuanzhong.png) no-repeat center center;
+	background-size: cover;
+}

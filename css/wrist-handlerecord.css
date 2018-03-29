@@ -1,0 +1,78 @@
+.section-search{
+	padding: 0 1.6vw;
+    padding-top: 1.2vw;
+    padding-bottom: 0.6vw;
+}
+.section-search form input[type='date']{
+	font-size: 0.93vw;
+    padding: 0.4vw 0;
+    padding-left: 0.4vw;
+    border-radius: 4px;
+    border-color: #efefef;
+}
+.section-search form input[type='submit']{
+	font-size: 0.93vw;
+	color: #C30D23;
+	padding: 0.6vw 0.7vw;
+	background-color: #e0e0e0;
+	border-radius: 4px;
+	border: none;
+	margin-left: 0.8vw;
+}
+.section-search form a{
+	font-size: 0.93vw;
+    color: #666;
+    padding: 0.6vw 0.8vw;
+    background-color: #f3f4f7;
+    border-radius: 20px;
+    margin-right: 0.8vw;
+    cursor: pointer;
+}
+.section-search form a:last-child{
+	margin-right: 0;
+}
+.section-search form .active{
+	background-color: #C30D23;
+	color: #fff;
+}
+.section-search form:first-child{
+	float: left;
+}
+.section-search form:nth-child(2){
+	float: right;
+}
+.content-wrap table{
+	border: 1px solid #e9e8e8;
+    padding: 0 1.6vw;
+    width: calc(100% - 3.2vw);
+    margin: 0 auto;
+}
+.content-wrap table thead tr th{
+	background-color: #faf9f9;
+	font-size: 0.83vw;
+	color: #333;
+	border-bottom: 1px solid #e9e8e8;
+	padding: 0.6vw 0;
+}
+.content-wrap table thead tr th:first-child{
+	text-align: left;
+	padding-left: 1.2vw;
+}
+.content-wrap table thead tr th:last-child{
+	text-align: right;
+	padding-right: 1.2vw;
+}
+.content-wrap table tbody tr td{
+	text-align: center;
+	font-size: 0.72vw;
+	color: #666;
+	padding: 0.93vw 0;
+}
+.content-wrap table tbody tr td:first-child{
+	text-align: left;
+	padding-left: 1.2vw;
+}
+.content-wrap table tbody tr td:last-child{
+	text-align: right;
+	padding-right: 1.2vw;
+}

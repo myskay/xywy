@@ -1,0 +1,10 @@
+.content-wrap main  table tr td a{
+	display: inline-block;
+}
+.content-wrap main  table tr td a img{
+	width: 0.93vw;
+	display: inline-block;
+}
+.content-wrap main  table tr td a:last-child{
+	margin-left: 0.8vw;
+}

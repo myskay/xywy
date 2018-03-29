@@ -1,0 +1,43 @@
+.content-wrap main .item{
+	border: 1px solid #e0e0e0;
+	width: 95%;
+	margin: 0 auto;
+	margin-top: 2vw;
+}
+.content-wrap main .item div{
+	margin: 1.3vw 1vw;
+	position: relative;
+}
+.content-wrap main .item div a{
+	position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 1vw;
+    cursor: pointer;
+}
+.content-wrap main p{
+	margin-top: 0.5vw;
+	font-size: 0.83vw;
+}
+.content-wrap main p img{
+	width: 10vw;
+	display: block;
+}
+.content-wrap main p img[src='']{
+	opacity: 0;
+}
+.content-wrap main .article{
+	font-size: 0.83vw;
+}
+.content-wrap main .time{
+	font-size: 1vw;
+}
+.content-wrap main .details{
+	margin: 1vw;
+}
+.content-wrap main .details .text-center{
+	text-align: center;
+}
+.content-wrap main .details p img{
+	margin: 0 auto;
+}

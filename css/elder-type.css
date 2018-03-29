@@ -1,0 +1,269 @@
+.elder-title p{
+	font-size: 0.93vw;
+	color: #C30D23;
+	padding: 0.8vw;
+}
+.elder-btn{
+	background-color: #ecebeb;
+	padding: 0.5vw 0.8vw;
+}
+.elder-btn a{
+	font-size: 0.72vw;
+    color: #c30d23;
+    background-color: #faf6f7;
+    border: 1px solid #C30D23;
+    padding: 0.4vw 0.6vw;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+}
+.elder-btn button{
+	font-size: 0.72vw;
+    color: #c30d23;
+    background-color: #faf6f7;
+    border-color: #C30D23;
+    padding: 0.4vw 0.6vw;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.content-wrap table{
+	width: 100%;
+}
+.content-wrap table thead tr th{
+	font-size: 0.83vw;
+	color: #333;
+	background-color: #FAF9F9;
+	padding: 0.6vw 0;
+}
+.content-wrap table tbody tr{
+	border-bottom: 1px solid #E9E8E8;
+}
+.content-wrap table tbody tr td{
+	text-align: center;
+	font-size: 0.72vw;
+	color: #666;
+	padding: 1.3vw 0;
+}
+.content-wrap table tbody tr td a{
+	display: inline-block;
+	margin-right: 0.8vw;
+}
+.content-wrap table tbody tr td a:last-child{
+	margin-right: 0;
+}
+.content-wrap table tbody tr td a img{
+	width: 0.93vw;
+	height: 0.93vw;
+	display: inline-block;
+}
+/*新增老人类别弹窗*/
+.addelder-overlay{
+	width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 100;
+}
+.addelder-content{
+	width: 28vw;
+    margin: 0 auto;
+    background-color: #fff;
+    margin-top: 13%;
+    padding-bottom: 1vw;
+}
+.addelder-content .addelder-title{
+	width: 100%;
+    background-color: #C30D23;
+    position: relative;
+    padding: 0.5vw 0;
+}
+.addelder-content .addelder-title span{
+	color: #fff;
+    font-size: 0.83vw;
+    padding-left: 0.4vw;
+}
+.addelder-content .addelder-title img{
+	position: absolute;
+    right: 0.4vw;
+    width: 0.83vw;
+    top: 50%;
+    margin-top: -0.4vw;
+}
+.addelder-content table{
+	width: 93%;
+	margin: 0 auto;
+	margin-top: 1.6vw;
+}
+.addelder-content table tbody tr td{
+	border: 1px solid #aaa;
+	font-size: 0.72vw;
+	color: #666;
+	text-align: center;
+	padding: 0.4vw 0.7vw;
+}
+.addelder-content table tr .label{
+	background-color: #F3F4F7;
+	color: #666;
+}
+.addelder-content table tfoot tr td{
+	text-align: center;
+}
+.addelder-content table tbody tr td input,textarea{
+	width: 100%;
+	height: 100%;
+	border: none;
+	resize: none;
+}
+.addelder-content table tfoot tr td input{
+	width: 6.25vw;
+	height: 2vw;
+	background-color: #ccc;
+	color: #fff;
+	font-size: 0.83vw;
+	border: none;
+	border-radius: 5px;
+	margin-top: 1.6vw;
+}
+.addelder-content table tfoot tr td input[type='submit']{
+	background-color: #C30D23;
+	margin-right: 0.8vw;
+}
+/*查看老人类别弹窗*/
+.checkelder-overlay{
+	width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 100;
+}
+.checkelder-content{
+	width: 28vw;
+    margin: 0 auto;
+    background-color: #fff;
+    margin-top: 13%;
+    padding-bottom: 1.6vw;
+}
+.checkelder-content .checkelder-title{
+	width: 100%;
+    background-color: #C30D23;
+    position: relative;
+    padding: 0.5vw 0;
+}
+.checkelder-content .checkelder-title span{
+	color: #fff;
+    font-size: 0.83vw;
+    padding-left: 0.4vw;
+}
+.checkelder-content .checkelder-title img{
+	position: absolute;
+    right: 0.4vw;
+    width: 0.83vw;
+    top: 50%;
+    margin-top: -0.4vw;
+}
+.checkelder-content table{
+	width: 93%;
+	margin: 0 auto;
+	margin-top: 1.6vw;
+}
+.checkelder-content table tbody tr td{
+	border: 1px solid #aaa;
+	font-size: 0.72vw;
+	color: #666;
+	text-align: center;
+	padding: 0.4vw 0.7vw;
+}
+.checkelder-content table tr .label{
+	background-color: #F3F4F7;
+	color: #666;
+}
+.checkelder-content table tfoot tr td{
+	text-align: center;
+}
+.checkelder-content table tbody tr td input,textarea{
+	width: 100%;
+	height: 100%;
+	border: none;
+	resize: none;
+}
+/*修改老人类别的弹窗*/
+.reviseelder-overlay{
+	width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 100;
+}
+.reviseelder-content{
+	width: 28vw;
+    margin: 0 auto;
+    background-color: #fff;
+    margin-top: 13%;
+    padding-bottom: 1.6vw;
+}
+.reviseelder-content .reviseelder-title{
+	width: 100%;
+    background-color: #C30D23;
+    position: relative;
+    padding: 0.5vw 0;
+}
+.reviseelder-content .reviseelder-title span{
+	color: #fff;
+    font-size: 0.83vw;
+    padding-left: 0.4vw;
+}
+.reviseelder-content .reviseelder-title img{
+	position: absolute;
+    right: 0.4vw;
+    width: 0.83vw;
+    top: 50%;
+    margin-top: -0.4vw;
+}
+.reviseelder-content table{
+	width: 93%;
+	margin: 0 auto;
+	margin-top: 1.6vw;
+}
+.reviseelder-content table tbody tr td{
+	border: 1px solid #aaa;
+	font-size: 0.72vw;
+	color: #666;
+	text-align: center;
+	padding: 0.4vw 0.7vw;
+}
+.reviseelder-content table tr .label{
+	background-color: #F3F4F7;
+	color: #666;
+}
+.reviseelder-content table tfoot tr td{
+	text-align: center;
+}
+.reviseelder-content table tbody tr td input,textarea{
+	width: 100%;
+	height: 100%;
+	border: none;
+	resize: none;
+}
+.reviseelder-content table tfoot tr td input{
+	width: 6.25vw;
+	height: 2vw;
+	background-color: #ccc;
+	color: #fff;
+	font-size: 0.83vw;
+	border: none;
+	border-radius: 5px;
+	margin-top: 1.6vw;
+}
+.reviseelder-content table tfoot tr td input[type='submit']{
+	background-color: #C30D23;
+	margin-right: 0.8vw;
+}

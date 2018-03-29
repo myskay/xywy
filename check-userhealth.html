@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>用户管理-查看用户健康信息</title>
+		<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+		<link rel="stylesheet" type="text/css" href="css/initialize.css"/>
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="css/add-user.css"/>
+		<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/check-user.css"/>
+		<link rel="stylesheet" type="text/css" href="css/userhealth-info.css"/>
+		<script src="js/jquery.js"></script>
+		<script src="js/common.js"></script>
+		<script src="js/forget.js"></script>
+		<script src="js/jquery-ui.min.js"></script>
+		<script src="js/check-userhealth.js"></script>
+	</head>
+	<body>
+		<!--导航栏-->
+		<header>
+			<div class="header-con">
+				<div class="header-logo">
+				   <a href="#"><img src="img/shouye-logo.png"/></a>
+			    </div>
+			    <div class="search">
+			    	<img src="img/sousuo.png" id="search-box"/>
+			    </div>
+			    <!--搜索框-->
+			   <div id="sb-search" class="sb-search">
+			    			<form>
+			    				<input class="sb-search-input" placeholder="请输入用户名或手机号"  type="text" value="" name="search" id="search"/>
+			    				<input class="sb-search-submit" type="submit" value="" />
+			    				<span class="sb-icon-search"><img src="img/white-sousuo.png"/></span>
+			    			</form>
+			    </div>
+			    <ul class="header-nav">
+			    	<li><a href="index.html">首页</a></li>
+			    	<li><a href="user-manage.html">用户管理</a></li>
+			    	<li><a href="wtist-meter.html">设备管理</a></li>
+			    	<li><a href="todo-sos.html">工单管理</a></li>
+			    	<li><a href="startup.html">运营管理</a></li>
+			    	<li><a href="service-list.html">系统管理</a></li>
+			    	<li><a href="useradd-count.html">数据统计</a></li>
+			    </ul>
+			    <div class="header-personal">
+			    	<div class="upload">
+			    		<!--<input type="file" name="file" title="Change" class="form-control doc " multiple="multiple" id="doc">-->
+			    		<img src="img/touxiang.png" class="img1"/>
+			    	</div>
+			    	<div class="personal">
+			    		<p class="name">吃吃</p>
+			    		<p class="role">角色:<span>客服组</span></p>
+			    	</div>
+			    	<div style="clear: both;"></div>
+			    		<ul class="personal-xiala">
+			    		    <li class="gaimima"><a href="#">修改密码</a></li>
+			    		    <li class="quit"><a href="#">退出登录</a></li>
+			    	    </ul>
+			    </div>
+			    <div style="clear: both;"></div>
+			</div>
+		</header>
+		<!--导航栏结束-->
+        <!--修改密码弹窗-->
+		<div class="revise-overlay">
+	        <div class="revise-content">
+		         <div class="con-title">
+			        <span class="">修改密码</span>
+			        <img src="img/guanbi.png" class="close"/>
+		         </div>
+		         <div class="container">
+			        <form class="form-signin">
+				         <div class="login-wrap">
+					       <input type="text" class="form-text tel-box" placeholder="请输入绑定的手机号" maxlength="11" id="tel-box">
+				        </div>
+				        <div class="mask">
+					        <div class="code-alert">获取验证码成功</div>
+				        </div>
+				       <div class="login-else">
+					        <input type="text" placeholder="请输入验证码" class="form-text test-code" id="code-box">
+					        <button class="getcode" type="button" id="send">发送</button>
+				       </div>
+
+				       <p class="alert-box"></p>
+				       <div class="login-else login-pwd">
+					       <input type="password" placeholder="请输入新密码" class="form-text test-code" id="pwd1">
+					       <button class="getcode" type="button" id="showhidePwd"></button>
+				       </div>
+				       <div class="login-else login-text">
+					       <input type="text" placeholder="请输入新密码" class="form-text test-code" id="pwd2">
+					       <button class="getcode" type="button" id="hideshowPwd"></button>
+				       </div>
+				       <input type="submit" value="确定" class="login">
+			        </form>
+		        </div>
+	        </div>
+        </div>
+		<!--退出登录弹窗-->
+		<div class="quit-overlay">
+			<div class="quit-content">
+		         <div class="con-title">
+			        <span class="">退出登录</span>
+			        <img src="img/guanbi.png" class="close"/>
+		         </div>
+		         <div class="quit-con">
+		   	        <p>确定要退出后台系统吗?</p>
+		   	        <div class="quit-jihe">
+		   	           <button class="sure">确认</button>
+		   	           <button class="cancel">返回</button>
+		   	        </div>
+		        </div>
+		  </div>
+		</div>
+	    <!--主要内容-->
+	    <section class="content-wrap">
+	    	<div class="container">
+	    		<aside>
+	    			<ul class="aside-ul">
+	    				<li class="li">
+	    					<span class="li-title selected" onclick="window.location.href='user-manage.html'">用户管理<img src="img/left-fanhui.png"/></span>
+	    					<ul>
+	    						<li><a href="add-user.html">新增用户</a></li>
+	    					</ul>
+	    				</li>
+	    			</ul>
+	    		</aside>
+	    		<main>
+	    			<div class="main-title">
+	    				<a href="check-user.html">用户个人信息</a>
+	    				<a href="health-data.html">用户设备数据</a>
+	    			</div>
+	    			<ul>
+	    				<li ><a href="check-user.html">用户基本信息</a></li>
+	    				<li><a href="check-userabout.html">用户关联人信息</a></li>
+	    				<li><a href="check-userhealth.html">用户健康信息</a></li>
+	    				<li><a href="check-userhealthrecord.html">用户健康履历</a></li>
+	    				<li><a href="check-userdrug.html">用户用药记录</a></li>
+	    				<li><a href="check-usertest.html">用户体检记录</a></li>
+	    				<li><a href="check-userhobby.html">用户特长爱好</a></li>
+	    				<li><a href="check-useraboutinfo.html">挂钩服务者信息</a></li>
+	    				<div style="clear: both;"></div>
+	    			</ul>
+	    			<div class="table">
+	    			   	  <table>
+	    					<tbody>
+	    						<tr>
+	    							<td class="label" >
+	    								<div>自理能力</div>
+	    							</td>
+	    							<td><input type="text" value="一般" readonly="readonly"/></td>
+	    							<td class="label">
+	    								<div>认知能力</div>
+	    							</td>
+	    							<td><input type="text" value="一般" readonly="readonly"/></select>
+	    							</td>
+	    							<td class="label">
+	    								<div>身体脉率</div>
+	    							</td>
+	    							<td><input type="text" value="60" readonly="readonly"/>次/分钟</td>
+	    							<td class="label">
+	    								<div>身体体温</div>
+	    							</td>
+	    							<td><input type="text" value="35" readonly="readonly"/>°C</td>
+	    						</tr>
+	    						<tr>
+	    							<td class="label">
+	    								<div>身高</div>
+	    							</td>
+	    							<td><input type="text" value="166" readonly="readonly"/>cm</td>
+	    							<td class="label">
+	    								<div>体重</div>               
+	    							</td>
+	    							<td><input type="text" value="65" readonly="readonly"/>kg</td>
+	    							<td class="label">
+	    								<div>腰围</div>
+	    							</td>
+	    							<td><input type="text" value="24" readonly="readonly"/>cm</td>
+	    							<td class="label">
+	    								<div>臀围</div>
+	    							</td>
+	    							<td><input type="text" value="30" readonly="readonly"/>cm</td>
+	    						</tr>
+	    						<tr>
+	    							<td class="label">
+	    								<div>呼吸频率</div>
+	    							</td>
+	    							<td><input type="text" value="60" readonly="readonly"/>次/分钟</td>
+	    							<td class="label">
+	    								<div>体质指数</div>              
+	    							</td>
+	    							<td><input type="text" value="30" readonly="readonly"/>kg/m2</td>
+	    							<td class="label">
+	    								<div>左侧血压</div>
+	    							</td>
+	    							<td><input type="text" value="30" readonly="readonly"/>mmHg</td>
+	    							<td class="label">
+	    								<div>右侧血压</div>
+	    							</td>
+	    							<td><input type="text" value="30" readonly="readonly"/>mmHg</td>
+	    						</tr>
+	    						<tr>
+	    							<td colspan="8" class="thead"><span>生活方式</span></td>
+	    						</tr>
+	    						<tr>
+	    							<td class="label">饮食习惯</td>
+	    							<td><input type="text" value="一般" readonly="readonly"/></td>
+	    							<td class="label">锻炼频率</td>
+	    							<td><input type="text" value="每天" readonly="readonly"/></td>
+	    							<td class="label">吸烟情况</td>
+	    							<td><input type="text" value="是" readonly="readonly"/></td>
+	    							<td class="label">饮酒情况</td>
+	    							<td><input type="text" value="是" readonly="readonly" /></td>
+	    						</tr>
+	    						<tr>
+	    							<td colspan="8" class="thead"><span>职业病</span></td>
+	    						</tr>
+	    						<tr>
+	    							<td class="label">从业时间</td>
+	    							<td><input type="text" value="2015" readonly="readonly"/></td>
+	    							<td class="label">是否在职 </td>
+	    							<td><input type="text" value="是" readonly="readonly"/></td>
+	    							<td class="label">职业工种</td>
+	    							<td><input type="text" value="服务" readonly="readonly"/></td>
+	    							<td class="label">职业病情况</td>
+	    							<td><input type="text" value="是" readonly="readonly"/></td>
+	    						</tr>
+	    						<tr>
+	    							<td class="label">粉尘防护措施</td>
+	    							<td><input type="text" value="有" readonly="readonly"/></td>
+	    							<td class="label">放射物质防护措施</td>
+	    							<td><input type="text" value="有" readonly="readonly"/></td>
+	    							<td class="label">物流因素防护措施</td>
+	    							<td><input type="text" value="有" readonly="readonly"/></td>
+	    							<td class="label">化学物质防护措施</td>
+	    							<td><input type="text" value="有" readonly="readonly"/></td>
+	    						</tr>
+	    						<tr>
+	    							<td colspan="8" class="thead"><span>脏器功能</span></td>
+	    						</tr>
+	    						<tr>
+	    							<td class="label">口唇</td>
+	    							<td><input type="text" value="有" readonly="readonly"/></td>
+	    							<td class="label">齿裂 </td>
+	    							<td><input type="text" value="一般" readonly="readonly"/></td>
+	    							<td class="label">咽部</td>
+	    							<td><input type="text" value="一般" readonly="readonly"/></td>
+	    							<td class="label">听力</td>
+	    							<td><input type="text" value="一般" readonly="readonly"/></td>
+	    						</tr>
+	    						<tr>
+	    							<td class="label">左眼视力</td>
+	    							<td><input type="text" value="1.0" readonly="readonly"/></td>
+	    							<td class="label">右眼视力 </td>
+	    							<td><input type="text" value="0.9" readonly="readonly"/></td>
+	    							<td class="label">矫正左眼视力 </td>
+	    							<td><input type="text" value="0.9" readonly="readonly"/></td>
+	    							<td class="label">矫正右眼视力</td>
+	    							<td><input type="text" value="0.9" readonly="readonly"/></td>
+	    						</tr>
+	    						<tr>
+	    							<td colspan="8" class="thead"><span>查体</span></td>
+	    						</tr>
+	    						<tr>
+	    							<td class="label">皮肤</td>
+	    							<td><input type="text" value="是" readonly="readonly"/></td>
+	    							<td class="label">巩膜 </td>
+	    							<td><input type="text" value="有" readonly="readonly"/></td>
+	    							<td class="label">淋巴结</td>
+	    							<td><input type="text" value="有" readonly="readonly"/></td>
+	    							<td class="label">桶状胸</td>
+	    							<td><input type="text"value="有" readonly="readonly"/></td>
+	    						</tr>
+	    						<tr>
+	    							<td class="label">罗音</td>
+	    							<td><input type="text" value="有" readonly="readonly"/></td>
+	    							<td class="label">心率 </td>
+	    							<td><input type="text" value="有" readonly="readonly"/></td>
+	    							<td class="label">心律</td>
+	    							<td><input type="text" value="有" readonly="readonly"/></td>
+	    							<td class="label">杂音</td>
+	    							<td><input type="text" value="有" readonly="readonly"/></td>
+	    						</tr>
+	    						<tr>
+	    							<td class="label">腹部压痛</td>
+	    							<td><input type="text" value="有" readonly="readonly"/></td>
+	    							<td class="label">腹部包块 </td>
+	    							<td><input type="text" value="有" readonly="readonly"/></td>
+	    							<td class="label">脾大</td>
+	    							<td><input type="text" value="是" readonly="readonly"/></td>
+	    							<td class="label">肝大</td>
+	    							<td><input type="text" value="是" readonly="readonly"/></td>
+	    						</tr>
+	    						<tr>
+	    							<td class="label">腹部移动性浊音</td>
+	    							<td><input type="text" value="是" readonly="readonly"/></td>
+	    							<td class="label">下肢水肿 </td>
+	    							<td><input type="text" value="是" readonly="readonly"/></td>
+	    							<td class="label">足背动脉搏动</td>
+	    							<td><input type="text" value="是" readonly="readonly"/></td>
+	    							<td class="label">肛门</td>
+	    							<td><input type="text" value="是" readonly="readonly"/></td>
+	    						</tr>
+	    						<tr>
+	    							<td class="label">乳腺</td>
+	    							<td><input type="text" value="是" readonly="readonly"/></td>
+	    							<td class="label">肛门 </td>
+	    							<td><input type="text" value="是" readonly="readonly"/></td>
+	    							<td class="label">宫颈</td>
+	    							<td><input type="text" value="是" readonly="readonly"/></td>
+	    							<td class="label">宫体</td>
+	    							<td><input type="text" value="是" readonly="readonly"/></td>
+	    						</tr>
+	    						<tr>
+	    							<td class="label">外阴</td>
+	    							<td><input type="text" value="是" readonly="readonly"/></td>
+	    							<td class="label">阴道 </td>
+	    							<td><input type="text" value="是" readonly="readonly"/></td>
+	    							<td class="label">附件</td>
+	    							<td><input type="text" value="是" readonly="readonly"/></td>
+	    							<td class="label">盆腔</td>
+	    							<td><input type="text" value="是" readonly="readonly"/></td>
+	    						</tr>
+	    						<tr>
+	    							<td colspan="8" class="thead"><span>其他备注信息</span></td>
+	    						</tr>
+	    						<tr>
+	    							<td class="label">其他检查</td>
+	    							<td colspan="7"><input type="text" value="无" readonly="readonly"/></td>
+	    						</tr>
+	    						<tr>
+	    							<td colspan="8" class="button">
+	    								<input type="submit" value="导出"/>
+	    								<input type="reset"  value="打印"/>
+	    							</td>
+	    						</tr>
+	    					</tbody>
+	    				</table>
+	    			</div>
+	    		</main>
+	    		<div style="clear: both;"></div>
+	    	</div>
+	    </section>
+	    <script>
+	    	$(function(){
+	    		$(".selected").siblings().show();
+	    	})
+	    </script>
+	</body>
+</html>

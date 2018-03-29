@@ -1,0 +1,94 @@
+.file-ul{
+	padding: 45px 15px 15px;
+    margin: 15px;
+    background-color: #fafafa;
+    box-shadow: inset 0 3px 6px rgba(0, 0, 0, .05);
+    border-color: #e5e5e5 #eee #eee;
+    border-style: solid;
+    border-width: 1px 0;
+}
+.file-ul .file{
+	width: 19.5%;
+	display: inline-block;
+	position: relative;
+}
+.file-ul .file .file-div{
+	width: 80%;
+    margin: 0 auto;
+    border: 1px dashed #efefef;
+    height: 15vw;
+    position: relative;
+}
+.file-ul .file .file-div input{
+	position: absolute;
+    width: 100%;
+    opacity: 0;
+    height: 100%;
+    z-index: 11;
+}
+.file-ul .file .file-div .img1{
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+.file-ul .file .file-div .img1[src='']{
+	visibility: hidden;
+}
+.file-ul .file .file-overlay{
+	position: absolute;
+    width: 80%;
+    height: 2vw;
+    background-color: rgba(0,0,0,0.4);
+    bottom: 1px;
+    left: 10%;
+    z-index: 12;
+}
+.file-ul .file .file-overlay span{
+	width: 0.72vw;
+    display: inline-block;
+    color: #ccc;
+    line-height: 2vw;
+    float: right;
+    padding-right: 0.4vw;
+    cursor: pointer;
+}
+.btns{
+	position: relative;
+}
+.btns input{
+	background-color: #c30d23;
+    color: #fff;
+    padding: 0.9vw 1.5vw;
+    border: none;
+    border-radius: 4px;
+    position: absolute;
+    right: 4vw;
+    font-size: 1vw;
+    margin-top: 6vw;
+}
+.content-wrap aside ul li span{
+	display: inline-block;
+}
+.content-wrap aside .aside-ul li a{
+	position: relative;
+    width: 100%;
+    display: block;
+}
+.content-wrap aside .aside-ul li a img{
+	width: 0.4vw;
+    display: inline-block;
+    position: absolute;
+    right: 1.3vw;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.content-wrap aside .aside-ul .active {
+	background-color: #FAF6F7;
+}
+.content-wrap aside .aside-ul .active a span{
+	color: #C30D23;
+	font-weight: bold;
+}

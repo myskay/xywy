@@ -1,0 +1,457 @@
+.content-wrap main .service-search{
+	padding: 0.8vw 0;
+	padding-left: 0.8vw;
+}
+.content-wrap main .service-search span{
+	padding: 0.4vw 0.7vw;
+	display: inline-block;
+	background-color: #C30D23;
+	border-radius: 4px;
+}
+.content-wrap main .service-search span a{
+	font-size: 0.72vw;
+	color: #fff;
+	display: block;
+	cursor: pointer;
+}
+/*表格*/
+.content-wrap main table{
+	width: 100%;
+}
+.content-wrap main table tbody tr td{
+	text-align: center;
+}
+.content-wrap main table tbody tr td span{
+	display: inline-block;
+}
+.content-wrap main table tbody tr td span img{
+	display: inline-block;
+}
+.content-wrap main table tr th{
+	font-size: 0.73vw;
+    padding: 0.6vw 1.3vw;
+    background-color: #efefef;
+    border-right: 0.1vw solid #fff;
+}
+.content-wrap main table tr th:last-child{
+	border-right: none;
+}
+.content-wrap main table tr label{
+	padding-left: 0.7vw;
+}
+.content-wrap main table tr td{
+	padding: 0.8vw 0;
+	font-size: 0.72vw;
+	color: #666;
+}
+.content-wrap main table tfoot tr td{
+	text-align: center;
+}
+.content-wrap main table tbody tr:nth-child(odd) td{
+	background-color: #fff;
+}
+.content-wrap main table tbody tr:nth-child(even) td{
+	background-color: #faf9f9;
+}
+.content-wrap main table  tr td a{
+	display: inline-block;
+	cursor: pointer;
+}
+.content-wrap main table  tr td a img{
+	width: 0.93vw;
+	display: inline-block;
+}
+.content-wrap main table  tr td a{
+	margin-right: 0.8vw;
+}
+.content-wrap main table  tr td a:last-child{
+	margin-right: 0;
+}
+/*新增客服弹窗*/
+.service-overlay{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.3);
+	display: none;
+}
+.service-overlay .service-content{
+	width: 50vw;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50% ,-50%);
+    left: 50%;
+}
+.service-overlay .service-content .service-title{
+	width: 100%;
+    background-color: #C30D23;
+    position: relative;
+    padding: 0.5vw 0;
+}
+.service-overlay .service-content .service-title span{
+	color: #fff;
+    font-size: 0.83vw;
+    padding-left: 0.4vw;
+}
+.service-overlay .service-content .service-title img{
+	position: absolute;
+    right: 0.4vw;
+    width: 0.83vw;
+    top: 50%;
+    margin-top: -0.4vw;
+}
+.service-overlay .service-content .service-con table{
+	width: 46vw;
+    margin: 0 auto;
+    margin-top: 2vw;
+}
+.service-overlay .service-content .service-con table tr td{
+	font-size: 0.72vw;
+	color: #666;
+	border: 1px solid #ccc;
+	position: relative;
+}
+.service-overlay .service-content .service-con table tr .label{
+	background-color: #F3F4F7;
+	padding: 0.7vw 0;
+	text-align: center;
+	position: static;
+}
+.service-overlay .service-content .service-con table tr .label span{
+	color: #c30d23;
+}
+.service-overlay .service-content .service-con table tr td input[type='text']{
+	width: 100%;
+	border: none;
+	text-align: center;
+	font-size: 0.72vw;
+	height: 100%;
+}
+.service-overlay .service-content .service-con table tr td input[type='date']{
+	width: 100%;
+	border: none;
+	text-align: center;
+	font-size: 0.72vw;
+	height: 100%;
+}
+.service-overlay .service-content .service-con table tr td select{
+	width: 100%;
+	border: none;
+	text-align: center;
+	font-size: 0.72vw;
+	height: 100%;
+}
+.service-overlay .service-content .service-con table tr td textarea{
+	width: 100%;
+	border: none;
+	text-align: center;
+	font-size: 0.72vw;
+	resize: none;
+}
+.service-overlay .service-content .service-con table tr td .Validform_checktip{
+	position: absolute;
+    top: 50%;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    transform: translateY(-50%);
+}
+.service-overlay .service-content .service-con table tr .file{
+	position: relative;
+	width: 10vw;
+}
+.service-overlay .service-content .service-con table tr .file input{
+	position: absolute;
+	opacity: 0;
+	z-index: 10;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+}
+.service-overlay .service-content .service-con table tr .file .img1{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 9;
+}
+.service-overlay .service-content .service-con table tr .file .img1[src='']{
+	visibility: hidden;
+}
+.service-overlay .service-content .service-con table tr .file button{
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 0.72vw;
+    background-color: #c30d23;
+    color: #fff;
+    padding: 0.4vw 0.7vw;
+    border: none;
+    border-radius: 4px;
+    z-index: 9;
+    top: 43%;
+}
+.service-overlay .service-content .service-con table tr .button{
+	text-align: center;
+    border: none;
+    padding-top: 1.6vw;
+    padding-bottom: 1.2vw;
+}
+.service-overlay .service-content .service-con table tr .button input{
+	text-align: center;
+    border: none;
+    font-size: 0.93vw;
+    background-color: #c30d23;
+    color: #fff;
+    padding: 0.8vw 2.5vw;
+    border-radius: 4px;
+    display: inline-block;
+    width: auto;
+    height: auto;
+}
+.service-overlay .service-content .service-con table tr .button input[type='reset']{
+	background-color: #ccc;
+    margin-left: 2.5vw;
+}
+/*查看客服弹窗*/
+.checkservice-overlay{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.3);
+	display: none;
+}
+.checkservice-overlay .checkservice-content{
+	width: 50vw;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50% ,-50%);
+    left: 50%;
+}
+.checkservice-overlay .checkservice-content .checkservice-title{
+	width: 100%;
+    background-color: #C30D23;
+    position: relative;
+    padding: 0.5vw 0;
+}
+.checkservice-overlay .checkservice-content .checkservice-title span{
+	color: #fff;
+    font-size: 0.83vw;
+    padding-left: 0.4vw;
+}
+.checkservice-overlay .checkservice-content .checkservice-title img{
+	position: absolute;
+    right: 0.4vw;
+    width: 0.83vw;
+    top: 50%;
+    margin-top: -0.4vw;
+}
+.checkservice-overlay .checkservice-content .checkservice-con table{
+	width: 46vw;
+    margin: 0 auto;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+}
+.checkservice-overlay .checkservice-content .checkservice-con table tr td{
+	font-size: 0.72vw;
+	color: #666;
+	border: 1px solid #ccc;
+	position: relative;
+}
+.checkservice-overlay .checkservice-content .checkservice-con table tr .label{
+	background-color: #F3F4F7;
+	padding: 0.7vw 0;
+	text-align: center;
+	position: static;
+}
+.checkservice-overlay .checkservice-content .checkservice-con table tr .label span{
+	color: #c30d23;
+}
+.checkservice-overlay .checkservice-content .checkservice-con table tr td input[type='text']{
+	width: 100%;
+	border: none;
+	text-align: center;
+	font-size: 0.72vw;
+	height: 100%;
+}
+.checkservice-overlay .checkservice-content .checkservice-con table tr td textarea{
+	width: 100%;
+	border: none;
+	text-align: center;
+	font-size: 0.72vw;
+	resize: none;
+}
+.checkservice-overlay .checkservice-content .checkservice-con table tr .file{
+	position: relative;
+	width: 10vw;
+}
+.checkservice-overlay .checkservice-content .checkservice-con table tr .file .img1{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 9;
+}
+/*修改客服弹窗*/
+/*新增客服弹窗*/
+.reviseservice-overlay{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.3);
+	display: none;
+}
+.reviseservice-overlay .reviseservice-content{
+	width: 50vw;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50% ,-50%);
+    left: 50%;
+}
+.reviseservice-overlay .reviseservice-content .reviseservice-title{
+	width: 100%;
+    background-color: #C30D23;
+    position: relative;
+    padding: 0.5vw 0;
+}
+.reviseservice-overlay .reviseservice-content .reviseservice-title span{
+	color: #fff;
+    font-size: 0.83vw;
+    padding-left: 0.4vw;
+}
+.reviseservice-overlay .reviseservice-content .reviseservice-title img{
+	position: absolute;
+    right: 0.4vw;
+    width: 0.83vw;
+    top: 50%;
+    margin-top: -0.4vw;
+}
+.reviseservice-overlay .reviseservice-content .reviseservice-con table{
+	width: 46vw;
+    margin: 0 auto;
+    margin-top: 2vw;
+}
+.reviseservice-overlay .reviseservice-content .reviseservice-con table tr td{
+	font-size: 0.72vw;
+	color: #666;
+	border: 1px solid #ccc;
+	position: relative;
+}
+.reviseservice-overlay .reviseservice-content .reviseservice-con table tr .label{
+	background-color: #F3F4F7;
+	padding: 0.7vw 0;
+	text-align: center;
+	position: static;
+}
+.reviseservice-overlay .reviseservice-content .reviseservice-con table tr .label span{
+	color: #c30d23;
+}
+.reviseservice-overlay .reviseservice-content .reviseservice-con table tr td input[type='text']{
+	width: 100%;
+	border: none;
+	text-align: center;
+	font-size: 0.72vw;
+	height: 100%;
+}
+.reviseservice-overlay .reviseservice-content .reviseservice-con table tr td input[type='date']{
+	width: 100%;
+	border: none;
+	text-align: center;
+	font-size: 0.72vw;
+	height: 100%;
+}
+.reviseservice-overlay .reviseservice-content .reviseservice-con table tr td select{
+	width: 100%;
+	border: none;
+	text-align: center;
+	font-size: 0.72vw;
+	height: 100%;
+}
+.reviseservice-overlay .reviseservice-content .reviseservice-con table tr td textarea{
+	width: 100%;
+	border: none;
+	text-align: center;
+	font-size: 0.72vw;
+	resize: none;
+}
+.reviseservice-overlay .reviseservice-content .reviseservice-con table tr td .Validform_checktip{
+	position: absolute;
+    top: 50%;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    transform: translateY(-50%);
+}
+.reviseservice-overlay .reviseservice-content .reviseservice-con table tr .file{
+	position: relative;
+	width: 10vw;
+}
+.reviseservice-overlay .reviseservice-content .reviseservice-con table tr .file input{
+	position: absolute;
+	opacity: 0;
+	z-index: 10;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+}
+.reviseservice-overlay .reviseservice-content .reviseservice-con table tr .file .img1{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 9;
+}
+.reviseservice-overlay .reviseservice-content .reviseservice-con table tr .file .img1[src='']{
+	visibility: hidden;
+}
+.reviseservice-overlay .reviseservice-content .reviseservice-con table tr .file button{
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 0.72vw;
+    background-color: #c30d23;
+    color: #fff;
+    padding: 0.4vw 0.7vw;
+    border: none;
+    border-radius: 4px;
+    z-index: 9;
+    top: 43%;
+}
+.reviseservice-overlay .reviseservice-content .reviseservice-con table tr .button{
+	text-align: center;
+    border: none;
+    padding-top: 1.6vw;
+    padding-bottom: 1.2vw;
+}
+.reviseservice-overlay .reviseservice-content .reviseservice-con table tr .button input{
+	text-align: center;
+    border: none;
+    font-size: 0.93vw;
+    background-color: #c30d23;
+    color: #fff;
+    padding: 0.8vw 2.5vw;
+    border-radius: 4px;
+    display: inline-block;
+    width: auto;
+    height: auto;
+}
+.reviseservice-overlay .reviseservice-content .reviseservice-con table tr .button input[type='reset']{
+	background-color: #ccc;
+    margin-left: 2.5vw;
+}
